@@ -1,0 +1,12 @@
+.like {
+    border: none !important;
+    padding: none;
+    border-radius: 50px !important;
+    background: red;
+    margin-left: 60px;
+}
+.like img{
+    height: 5px !important;
+    width: 10px !important;  
+    padding: none;;
+}

@@ -1,0 +1,21 @@
+.prod {
+    border: none;
+    margin: 10px;
+    background-color: transparent;
+}
+
+.prod img {
+    height: 20px;
+    width: 100px;
+}
+.prod h5 {
+    color: black;
+    font-weight: 500;
+    font-size: 18px;
+    font-style: normal;
+    text-align: center;
+}
+
+.prod h3 {
+    display: none;
+}

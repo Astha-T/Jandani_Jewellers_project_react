@@ -1,0 +1,104 @@
+
+.login {
+position: absolute;
+  width: 371px;
+  height: 348px;
+  background: #FFFFFF;
+  border-radius: 33px;
+  padding: 5px;
+}
+
+.login  p {
+  font-size: 14px;
+      color: #B22D31;
+      
+}
+
+.login  h2 {
+  font-weight: 700;
+  font-size: 20px;
+  font-family: 'Poppins';
+  padding: 4% 0% 0% 4%;
+  text-align: center;
+ 
+}
+
+.login input {
+  border: 1px solid #f7f7f7;
+  background: #f7f7f7;
+  border-radius: 38px;
+  color: #191919;
+  font-size: 14px;
+  text-align: left;
+  width: 85%;
+  margin: 10px 5px 10px 5px;
+  padding: 3% 8% ;
+}
+
+.login p {
+  font-size: 14px;
+      color: #B22D31;
+    text-align: center;
+}
+
+.login  button {
+margin-left: 5%;
+margin-bottom: 20px;
+margin-top: 20px;
+cursor: pointer;
+height: 30px;
+width: 300px;
+border: #B22D31;
+background: #B22D31;
+border-radius: 39px;
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 19px;
+color: #FFFFFF;
+}
+
+.login  button:disabled {
+  cursor: not-allowed;
+}
+.login  h3{
+
+  font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 17px;
+color: #191919;
+text-align: center;
+
+}
+.login h3 .link {
+  color: #B22D31;
+}
+
+.login h3 .link a{
+  font-weight: bold;
+}
+
+
+@media (max-width : 768px) {
+  .login{
+      left: 5px;
+  }
+  .login .h2{
+    margin-left: 10px;
+  }
+
+  .login input {
+      margin-left: 2%;
+  }
+
+  .login button {
+      margin-left: 2px;
+  }
+
+  .login h3 {
+      margin-left: 20px;
+  }
+}

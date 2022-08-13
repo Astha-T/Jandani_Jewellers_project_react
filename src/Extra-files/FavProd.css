@@ -1,0 +1,40 @@
+.figure {
+  display: block;
+  margin-top: 50px;
+  margin-left: 30px;
+}
+
+.figure .remove {
+  display: block;
+  border: white;
+  margin-left: 35px;
+  border-radius: 24px;
+  background-color: #b22d31;
+  color: white;
+
+}
+.figure img {
+  vertical-align: middle;
+  border-style: none;
+  padding: 11px 20px;
+  margin-top: 5px;
+  height: 200px;
+  width : 250px;
+ }
+
+
+.figure h5 {
+  font-weight: 500;
+  font-size: 18px;
+  font-style: normal;
+  color: #191919;
+  text-align: center;
+ }
+ 
+
+.figure p{
+  font-size: 12px;
+     font-family: 'Poppins';
+     margin-left: 30px;
+     text-align: center;
+ }

@@ -1,0 +1,114 @@
+.footer {
+    margin-top: 50px;
+    padding: 10px 65px 0px 65px;
+}
+
+.footer ul {
+    margin: 0px;
+    padding: 0px;
+    display: inline;
+}
+
+.footer .col1 ul li {
+    display: inline-block;
+}
+
+.footer .col1 img {
+    margin: 10px 20px 20px 0px;
+    display: block;
+}
+.col-md-1.extracol {
+    display: none;
+}
+
+.footer p {
+    font-family: 'Poppins';
+    font-weight: 400;
+    font-size: 16px;
+    width: 80%;
+}
+
+.footer .col2 ul li, .footer .quickcol ul li {
+    list-style-type: none;
+}
+.footer .quickcol ul li a {
+    color: #b22d31;
+}
+
+.footer .col2 img {
+    margin: 0px 7px 10px 0px;
+    vertical-align: top;
+}
+
+.footer .col2 h4 , .footer .quickcol h4{
+    margin: 10px 20px 20px 0px;
+    color: #b22d31;
+    font-size: 21px;
+    font-weight: 600;
+    font-family: 'Poppins';
+}
+
+.footer .col2 ul li a {
+    font-size: 16px;
+    font-weight: 400;
+    font-family: 'Poppins';
+    text-decoration: none;
+    color: #191919;
+    font-style: normal;
+}
+
+.subscribe li {
+    display: inline-block;
+}
+
+.subscribe {
+    margin: 20px 6px;
+}
+
+.subscribe button {
+    background: #b22d31;
+    border: 1px solid #b22d31;
+    height: 40px;
+    border-radius: 40px;
+    padding: 0px 20px 0px 20px;
+    color: #fff;
+    font-family: 'Poppins';
+    font-size: 14px;
+    font-style: normal;
+}
+
+.subscribe input {
+    background: #f6f6f6;
+    height: 40px;
+    border: 1px solid #f6f6f6;
+    border-radius: 40px;
+    padding-left: 21px;
+    padding-bottom: 4px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.subscribe input[type="email"] {
+    outline: 1px solid #b22d31;
+}
+
+.subscribe button:focus {
+    outline: 1px solid yellow;
+}
+
+ul.subscribe {
+    margin-top: 25px;
+}
+
+.col3 {
+    border-top: 1px solid lightgray;
+    margin-top: 40px;
+    padding: 20px;
+}
+
+.col3 h6 {
+    color: #191919;
+    font-weight: 400;
+    font-size: 15px;
+    font-style: normal;
+}

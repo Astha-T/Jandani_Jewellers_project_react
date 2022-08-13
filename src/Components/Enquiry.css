@@ -1,0 +1,23 @@
+.enquiry {
+   display: flex; 
+}
+
+.enquiry button{
+    border-radius: 80px;
+    background-color: #b22d31;
+    border: 1px solid #b22d31;
+    font-size: 18px;
+    font-family: 'Poppins';
+    font-weight: 600;
+    padding: 10px 6%;
+    color: #fff;
+    height: 60px;
+    width: 300px;
+    margin-bottom: 20px; 
+    margin-right: 8px;
+    margin-left: 60px;
+    padding: 10px;
+}
+.enquiry button:focus{
+    outline: none !important;
+}

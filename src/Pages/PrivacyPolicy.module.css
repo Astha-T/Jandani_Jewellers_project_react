@@ -1,0 +1,27 @@
+.privacypolicy{
+
+    padding: 5px;
+
+}
+
+.privacypolicy h2{
+    color: #a52a2a;
+    margin-top: 100px;
+    margin-left: 50px;
+    font-family: 'Poppins';
+    font-weight: 600;
+    text-align: center;
+   
+}
+.privacypolicy h3 {
+    text-align: center;
+    margin-left: 50px;
+    margin-top: 30px;
+    padding: 5px 50px;
+    font-weight: 500;
+    font-size: 18px;
+    font-style: normal;
+    color: #191919;
+    font-family: 'Poppins';
+}
+

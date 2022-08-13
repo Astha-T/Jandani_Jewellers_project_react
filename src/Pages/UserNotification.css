@@ -1,0 +1,39 @@
+.unotification {
+    position: absolute;
+    left: 50px;
+    top: 150px;
+    display: block;
+    background: #FFFFFF;
+    border-radius: 33px;
+  }
+  
+  .unotification  h2 {
+    font-weight: 700;
+    font-size: 20px;
+    font-family: 'Poppins';
+    padding: 4% 0% 0% 0%;
+    text-align: center;
+    margin-left: 500px;
+    margin-bottom: 10px;
+  }
+  .unotification button {
+    margin-left: 580px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    cursor: pointer;
+    height: 30px;
+    width: 300px;
+    border: #B22D31;
+    background: #B22D31;
+    border-radius: 39px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    color: #FFFFFF;
+    }
+
+.unotification button:hover {
+    color: yellow;
+}

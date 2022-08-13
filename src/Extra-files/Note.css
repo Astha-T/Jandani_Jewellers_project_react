@@ -1,0 +1,30 @@
+.n {
+    display: inline-block;
+    margin-top: 50px;
+    margin-left: 30px;
+}
+
+.n img {
+    vertical-align: middle;
+    border-style: none;
+    padding: 11px 20px;
+    height: 200px;
+    width : 500px;
+   }
+
+
+   .n h5 {
+    font-weight: 500;
+    font-size: 18px;
+    font-style: normal;
+    color: #191919;
+    text-align: center;
+   }
+   
+
+   .n p{
+    font-size: 12px;
+       font-family: 'Poppins';
+       margin-left: 30px;
+       text-align: center;
+   }

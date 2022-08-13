@@ -1,0 +1,14 @@
+.category_section {
+  overflow: hidden;
+  padding: 0px 65px;
+}
+
+
+.category_section h4 {
+  text-align: center;
+  margin: 80px 20px 30px 20px;
+  font-family: 'Poppins';
+  font-weight: 600;
+  color: #191919;
+}
+

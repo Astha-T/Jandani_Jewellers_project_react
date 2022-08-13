@@ -1,0 +1,6 @@
+.category-list {
+    display: flex;
+      width: 100%;
+      justify-content: space-between;
+      align-content: space-between;
+  }

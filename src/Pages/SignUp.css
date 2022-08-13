@@ -1,0 +1,111 @@
+
+.sign_up{
+    position: absolute;
+    width: 381px;
+    height: 300px;
+
+    padding: 5px;
+    background: #FFFFFF;
+    border-radius: 33px;
+  }
+  
+ .sign_up  p {
+    font-size: 14px;
+        color: #B22D31;
+        margin-top: 10px;
+  }
+  
+ .sign_up  h2 {
+    font-weight: 700;
+    font-size: 20px;
+    font-family: 'Poppins';
+    padding: 0% 0% 0% 4%;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 0;
+    margin-left: 30px;
+  }
+  
+ .sign_up input {
+    border: 1px solid #f7f7f7;
+    background: #f7f7f7;
+    border-radius: 38px;
+    color: #191919;
+    font-size: 14px;
+    text-align: left;
+    width: 100%;
+    margin: 0px 10px 20px 10px;
+    padding: 3% 10% 3% 10%;
+  }
+  
+ .sign_up p {
+    font-size: 14px;
+        color: #B22D31;
+        margin-left: 40%;
+  }
+  
+ .sign_up .defaultButton {
+  margin-left: 12%;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  cursor: pointer;
+  height: 30px;
+  width: 300px;
+  border: #B22D31;
+  background: #B22D31;
+  border-radius: 39px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  color: #FFFFFF;
+  }
+  
+ .sign_up .defaultButton:disabled {
+    cursor: not-allowed;
+  }
+ .sign_up  h3{
+    margin-left: 38%;
+  margin-bottom: 20px;
+    font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #191919;
+  margin-bottom: 20px;
+  }
+  .sign_up h3 .link {
+    color: #B22D31;
+    border: none;
+    background-color: transparent;
+  }
+  
+  .sign_up h3 .link a{
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  
+  @media (max-width : 768px) {
+    signup{
+        left: 5px;
+    }
+    .sign_up  .h2{
+      margin-left: 10px;
+    }
+  
+    .sign_up  input {
+        margin-left: 2%;
+    }
+  
+    .sign_up button {
+        margin-left: 2px;
+    }
+  
+    .sign_up h3 {
+        margin-left: 20px;
+    }
+  }
+  

@@ -1,0 +1,106 @@
+.singleProduct {
+    display: block;
+}
+
+.singleProduct h2 {
+    text-align: center;
+}
+
+.details_section{
+    overflow: hidden;
+}
+.position_banner{
+    background-image: url(../Pages/images/blackbanner.png);
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    text-align: center;
+    height: 283px;
+    margin: 0 auto !important;
+    padding-top:17px;
+}
+.product {
+    padding: 0px 40px;
+}
+.product mt-5{
+    overflow:hidden;
+  }
+  .product .carousel {
+    position: relative;
+    width: 100%;
+  }
+  .product .carousel-item img {
+    object-fit: contain;
+    margin: 0 auto;
+    width: 50%;
+    height: 200px;
+
+  }
+  .product #carousel-thumbs {
+    /* background: rgba(255,255,255,.3); */
+    margin: 50px 0px 0px 0px;
+    bottom: 0;
+    left: 0;
+    padding: 0 10px;
+    right: 0;
+  }
+  .product #carousel-thumbs img {
+    
+    cursor: pointer;
+  }
+  .product #carousel-thumbs .img-fluid {
+    height: 150px;
+    background: #dee3e7bf;
+    border: 1px solid #dee3e7bf !important;
+    border-radius: 20px;
+    width: fit-content;
+}
+  .product #carousel-thumbs img:hover {
+    border-color: rgba(255,255,255,.3);
+  }
+  .product #carousel-thumbs .selected img {
+    border-color: #fff;
+  }
+  .carousel-thumbs .col-sm-3{
+    max-width: 23% !important;
+    margin: 0px 10px;
+  }
+  
+  .product .carousel-control-prev, .product .carousel-control-next {
+    width: 34px;
+    height: 34px;
+    background: #e98f20;
+    top: 63px;
+    border-radius: 50%;
+}
+.product .carousel-control-prev{
+    margin-left: 50px !important;
+    margin-left: -2px !important;
+}
+.product .carousel-control-next{
+    margin-right: 50px !important;
+    margin-right: -2px !important;
+}
+.slider_col{
+    height: 500px;
+}
+h4{
+    text-transform: uppercase;
+}
+.slider_txt{
+    padding: 0% 6% 4% 2%;
+    font-size: 15px;
+    font-family: 'Poppins';
+    font-weight: 400;
+    text-align: left;
+    margin-bottom: 5px;
+}
+.slider_col p{
+    padding: 2% 10% 4% 2%;
+    text-align: left;
+}
+    
+.details_section{
+        text-align: center;
+        padding: 50px 40px 40px 40px;
+    }
