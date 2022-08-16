@@ -1,8 +1,7 @@
 
 .login {
 position: absolute;
-  width: 371px;
-  height: 348px;
+  
   background: #FFFFFF;
   border-radius: 33px;
   padding: 5px;
@@ -19,7 +18,7 @@ position: absolute;
   font-size: 20px;
   font-family: 'Poppins';
   padding: 4% 0% 0% 4%;
-  text-align: center;
+  text-align: left;
  
 }
 
@@ -30,8 +29,8 @@ position: absolute;
   color: #191919;
   font-size: 14px;
   text-align: left;
-  width: 85%;
-  margin: 10px 5px 10px 5px;
+  width: 420px;
+  margin: 15px 5px 10px 0px;
   padding: 3% 8% ;
 }
 
@@ -42,12 +41,12 @@ position: absolute;
 }
 
 .login  button {
-margin-left: 5%;
+margin-left: 50px;
 margin-bottom: 20px;
 margin-top: 20px;
 cursor: pointer;
-height: 30px;
-width: 300px;
+height: 50px;
+width: 70%;
 border: #B22D31;
 background: #B22D31;
 border-radius: 39px;
@@ -63,15 +62,13 @@ color: #FFFFFF;
   cursor: not-allowed;
 }
 .login  h3{
-
   font-family: 'Inter';
 font-style: normal;
 font-weight: 400;
 font-size: 14px;
 line-height: 17px;
 color: #191919;
-text-align: center;
-
+padding-left: 150px;
 }
 .login h3 .link {
   color: #B22D31;

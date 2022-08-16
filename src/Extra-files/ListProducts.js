@@ -10,7 +10,7 @@ const List_Products = (props) => {
     return (
 
         <button onClick={setProductId} className="prod">
-            <Link to="/jandani_jewellers_react/singleProduct" >
+            <Link to="/singleProduct" >
                 <h3>{props.id}</h3>
                 <h5>{props.name}</h5>
             </Link>

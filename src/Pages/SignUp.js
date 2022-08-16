@@ -57,12 +57,11 @@ const Signup = (props) =>
        event.preventDefault();
   }    
     
-    return ( isReg ?<Navigate to="/jandani_jewellers_react/otp"/>: <>
+    return ( isReg ?<Navigate to="/otp"/>: <>
      <SideBar/> 
       <SignUpBox open={signupopen}>
         <div className='sign_up'>
-            <p>Create your Account...</p>
-            <h2>Sign Up</h2>
+            <h2>SIGN UP</h2>
             <form onSubmit={submitHandler}>
             <input type="text" placeholder=' Name ' name='name' ref={c=>namebox=c} required/>
             <input type="text" placeholder=' Email ' name='email' ref={c=>emailbox=c} required/>
@@ -72,7 +71,7 @@ const Signup = (props) =>
             <button className="defaultButton" type='send'>Sign Up</button>
             <p>{regMsg}</p>
             </form>
-            <h3>Already a User? <Link className="link" to="/jandani_jewellers_react/switch">Login</Link></h3>
+            <h3>Already a User? <Link className="link" to="/switch">Login</Link></h3>
        </div>
        </SignUpBox>
       </>

@@ -11,9 +11,9 @@ const Cate = (props) => {
     }
     return (
                         <button onClick={setCate} className="figure" >
-                            <Link to="/jandani_jewellers_react/productbycate_list" ><img src={props.image}/></Link>
+                            <Link to="/productbycate_list" ><img src={props.image}/></Link>
                              <h3>{props.id}</h3>
-                            <h5><Link to="/jandani_jewellers_react/productbycate_list">{props.name}</Link></h5>
+                            <h5><Link to="/productbycate_list">{props.name}</Link></h5>
                     </button>
                    
 

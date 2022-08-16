@@ -42,22 +42,22 @@ root.render(
       <LoadingSpinner />
     </div>}>
   <Routes>
-            <Route path="/jandani_jewellers_react" element={<App/>}/>
-            <Route path="/jandani_jewellers_react/signup" element={<Signup/>}/>
-            <Route path="/jandani_jewellers_react/switch" element={<Switch/>}/>
-            <Route path="/jandani_jewellers_react/otp" element={<Otp/>}/>
-            <Route path="/jandani_jewellers_react/favourite_products" element={<FavouriteProducts/>}/>
-            <Route path="/jandani_jewellers_react/privacy_policy" element={<PrivacyPolicy1/>}/>
-            <Route path="/jandani_jewellers_react/terms_and_conditions" element={<TermsConditions/>}/>
-            <Route path="/jandani_jewellers_react/notifications" element={<UserNotification/>}/>
-            <Route path="/jandani_jewellers_react/view_profile" element={<ViewProfile/>}/>
-            <Route path="/jandani_jewellers_react/updateProfile" element={<UpdateProfile/>}/>
-            <Route path="/jandani_jewellers_react/aboutus" element={<AboutUs/>}/>
-            <Route path="/jandani_jewellers_react/category_list" element={<CategoryList/>}/>
-            <Route path="/jandani_jewellers_react/product_list" element={<Products/>}/>
-            <Route path="/jandani_jewellers_react/productbycate_list" element={<ProductsByCate/>}/>
-            <Route path="/jandani_jewellers_react/singleProduct" element={<SingleProduct/>}/>
-            <Route path="/jandani_jewellers_react/searchproduct" element={<SearchProduct/>}/>
+            <Route path="/" element={<App/>}/>
+            <Route path="/signup" element={<Signup/>}/>
+            <Route path="/switch" element={<Switch/>}/>
+            <Route path="/otp" element={<Otp/>}/>
+            <Route path="/favourite_products" element={<FavouriteProducts/>}/>
+            <Route path="/privacy_policy" element={<PrivacyPolicy1/>}/>
+            <Route path="/terms_and_conditions" element={<TermsConditions/>}/>
+            <Route path="/notifications" element={<UserNotification/>}/>
+            <Route path="/view_profile" element={<ViewProfile/>}/>
+            <Route path="/updateProfile" element={<UpdateProfile/>}/>
+            <Route path="/aboutus" element={<AboutUs/>}/>
+            <Route path="/category_list" element={<CategoryList/>}/>
+            <Route path="/product_list" element={<Products/>}/>
+            <Route path="/productbycate_list" element={<ProductsByCate/>}/>
+            <Route path="/singleProduct" element={<SingleProduct/>}/>
+            <Route path="/searchproduct" element={<SearchProduct/>}/>
         </Routes>
   </Suspense>
   </BrowserRouter>

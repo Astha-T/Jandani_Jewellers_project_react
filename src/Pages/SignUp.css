@@ -1,12 +1,11 @@
 
 .sign_up{
-    position: absolute;
-    width: 381px;
-    height: 300px;
-
-    padding: 5px;
-    background: #FFFFFF;
-    border-radius: 33px;
+  position: absolute;
+  width: 371px;
+  height: 348px;
+  background: #FFFFFF;
+  border-radius: 33px;
+  padding: 5px;
   }
   
  .sign_up  p {
@@ -16,26 +15,23 @@
   }
   
  .sign_up  h2 {
-    font-weight: 700;
-    font-size: 20px;
-    font-family: 'Poppins';
-    padding: 0% 0% 0% 4%;
-    text-align: center;
-    margin-bottom: 20px;
-    margin-top: 0;
-    margin-left: 30px;
+  font-weight: 700;
+  font-size: 20px;
+  font-family: 'Poppins';
+  padding: 4% 0% 0% 4%;
+  text-align: left;
   }
   
  .sign_up input {
-    border: 1px solid #f7f7f7;
-    background: #f7f7f7;
-    border-radius: 38px;
-    color: #191919;
-    font-size: 14px;
-    text-align: left;
-    width: 100%;
-    margin: 0px 10px 20px 10px;
-    padding: 3% 10% 3% 10%;
+  border: 1px solid #f7f7f7;
+  background: #f7f7f7;
+  border-radius: 38px;
+  color: #191919;
+  font-size: 14px;
+  text-align: left;
+  width: 420px;
+  margin: 10px 5px 0px 5px;
+  padding: 3% 8% ;
   }
   
  .sign_up p {
@@ -45,36 +41,34 @@
   }
   
  .sign_up .defaultButton {
-  margin-left: 12%;
-  margin-bottom: 20px;
-  margin-top: 20px;
-  cursor: pointer;
-  height: 30px;
-  width: 300px;
-  border: #B22D31;
-  background: #B22D31;
-  border-radius: 39px;
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 19px;
-  color: #FFFFFF;
+  margin-left: 30%;
+margin-bottom: 20px;
+margin-top: 20px;
+cursor: pointer;
+height: 50px;
+width: 70%;
+border: #B22D31;
+background: #B22D31;
+border-radius: 39px;
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 19px;
+color: #FFFFFF;;
   }
   
  .sign_up .defaultButton:disabled {
     cursor: not-allowed;
   }
  .sign_up  h3{
-    margin-left: 38%;
-  margin-bottom: 20px;
-    font-family: 'Inter';
+  font-family: 'Inter';
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 17px;
   color: #191919;
-  margin-bottom: 20px;
+  padding-left: 150px;
   }
   .sign_up h3 .link {
     color: #B22D31;

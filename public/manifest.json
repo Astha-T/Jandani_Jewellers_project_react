@@ -18,7 +18,7 @@
       "sizes": "512x512"
     }
   ],
-  "start_url": "https://dev.weblaunchpad.in/jandani_jewellers_react",
+  "start_url": "http://localhost/jandani_jewellers_react/",
   "display": "standalone",
   "theme_color": "#000000",
   "background_color": "#ffffff"

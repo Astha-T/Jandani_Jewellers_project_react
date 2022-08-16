@@ -23,9 +23,9 @@ const Contact = () =>
               
               <h4>Quick Link</h4>
               <ul>
-                  <li><Link to="/jandani_jewellers_react/privacy_policy">Privacy Policy</Link></li>
-                  <li><Link to="/jandani_jewellers_react/terms_and_conditions">Terms and Condition</Link></li>
-                  <li><Link to="/jandani_jewellers_react/aboutus">About Us</Link></li>
+                  <li><Link to="/privacy_policy">Privacy Policy</Link></li>
+                  <li><Link to="/terms_and_conditions">Terms and Condition</Link></li>
+                  <li><Link to="/aboutus">About Us</Link></li>
               </ul>
           </div>
             <div className="col-md-4 col2">

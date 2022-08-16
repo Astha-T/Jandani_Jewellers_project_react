@@ -38,11 +38,10 @@ const Otp = (props) =>
               }
            )}
 
-       return( otpIsValid? <Navigate to="/jandani_jewellers_react/switch"/>:  <><SideBar/> 
+       return( otpIsValid? <Navigate to="/switch"/>:  <><SideBar/> 
        <SignupLoginbox open={open}>
           <div className="enterotp">
           <div>
-          <p>You registered Successfully!!!</p>
           <h2>Enter Otp</h2>
           <form onSubmit ={submitHandler}> 
           <input type="text" placeholder="Phone No." ref={c=>phonebox=c} required/>

@@ -2,6 +2,7 @@
     border: none;
     margin: 10px;
     background-color: transparent;
+    display: block;
 }
 
 .prod img {

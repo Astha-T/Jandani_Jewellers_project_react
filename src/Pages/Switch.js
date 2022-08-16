@@ -56,7 +56,7 @@ const SignUpLogin = (props) =>
 }
 
  return ( islogin?
-   <Navigate to="/jandani_jewellers_react"/>:  <><SideBar/>
+   <Navigate to="/"/>:  <><SideBar/>
    <SignupLoginbox open={open}>
  <div className="login">
  <h2>Login</h2>
@@ -64,7 +64,7 @@ const SignUpLogin = (props) =>
   <input type="text" placeholder=' Phone number' name="email_phone" ref={c=>loginphonebox=c} required/>
   <input type="password" placeholder=" Password " name="password" ref={c=>loginpassbox=c} required />
  <button type="send">Log-in</button>
- <h3>Not having any Account? <Link className="link" to="/jandani_jewellers_react/signup">SignUp</Link></h3>
+ <h3>Not having any Account? <Link className="link" to="/signup">SignUp</Link></h3>
  <p>{loginMsg}</p>
  </form>
  </div>

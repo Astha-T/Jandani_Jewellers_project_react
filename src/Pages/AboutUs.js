@@ -9,7 +9,7 @@ import classes from './AboutUs.module.css'
 const AboutUs = () => {
     const [displayData, setDisplayData] = useState('');
 
-       OtherServices.About_us().then((response)=>response.json()).then(data=> {
+       OtherServices.About_us().then((response)=>response.json.parse()).then(data=> {
             
                 console.log(data.result.description);
             

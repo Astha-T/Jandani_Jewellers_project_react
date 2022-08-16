@@ -126,18 +126,19 @@ const SideBar= (props) => {
                   <div className="collapse navbar-collapse" id="navbarNav">
                     <ul className="navbar-nav ml-auto">
                       <li className="nav-item nav-active">
-                        <Link className="nav-link" to="/jandani_jewellers_react"
+                        <Link className="nav-link" to="/"
                           >Home <span className="sr-only">(current)</span></Link>
                       </li>
                       <li className="nav-item userli">
                         <ul>
                           <li>
-                           <span className="fa fa-search"></span></li>
+                           <span className="fa fa-search"><Link to="#"
+                            data-toggle="dropdown"></Link></span></li>
                           <li className="dropdown"><Link className="nav-link dropdown-toggle" to="#"
                             data-toggle="dropdown">Search By</Link>
                               <div className="dropdown-menu">
-                                <Link className="dropdown-item" to="/jandani_jewellers_react/category_list" >Category</Link>
-                                <Link className="dropdown-item" to="/jandani_jewellers_react/product_list" >Product</Link>
+                                <Link className="dropdown-item" to="/category_list" >Category</Link>
+                                <Link className="dropdown-item" to="/product_list" >Product</Link>
                                 <Link className="dropdown-item" to="#" onClick={displaySearcharBar} >Search Single Product</Link>
                               </div>
                             </li>
@@ -151,9 +152,9 @@ const SideBar= (props) => {
                          <li className="dropdown"><Link className="nav-link dropdown-toggle" to="#"
                            data-toggle="dropdown">User Settings</Link>
                              <div className="dropdown-menu">
-                               <Link className="dropdown-item" to="/jandani_jewellers_react/view_profile" >Your Profile</Link>
-                               <Link className="dropdown-item" to="/jandani_jewellers_react/favourite_products" >Favourite Products</Link>
-                               <Link className="dropdown-item" to="/jandani_jewellers_react/notifications" >Notifications</Link>
+                               <Link className="dropdown-item" to="/view_profile" >Your Profile</Link>
+                               <Link className="dropdown-item" to="/favourite_products" >Favourite Products</Link>
+                               <Link className="dropdown-item" to="/notifications" >Notifications</Link>
                      
                              </div>
                            </li>

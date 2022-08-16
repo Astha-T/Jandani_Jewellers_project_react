@@ -10,14 +10,14 @@
     border-radius: 0px 0px 32px 32px;
     border: 1px solid #fff4f5;
     overflow: hidden;
-    padding: 20px 60px;
+    padding: 20px 0px 0px 0px;
     margin-top: 50px;
+    margin-left: 25px;
 }
 
 .sec_section .banner img {
     width: 100%;
-    object-fit: fill;
-    margin: 0 auto;
+    margin: 0px;
     border: 1px solid transparent;
     border-radius: 32px;
 }

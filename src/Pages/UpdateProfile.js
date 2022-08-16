@@ -46,7 +46,7 @@ const UpdateProfile = (props) =>
   }    
   
     
-    return (  isReg ?<Navigate to="/jandani_jewellers_react"/>: <>
+    return (  isReg ?<Navigate to="/"/>: <>
     <SideBar/>
         <div className='update'>
             <h2>Update Profile</h2>

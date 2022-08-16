@@ -33,7 +33,7 @@ const ViewProfile = (props) =>
     <p>Name: <b>{username}</b></p>
     <p>Email: <b>{useremail}</b></p>
     <p>Mobile: <b>{usermobile}</b></p>
-    <h3>Update your Profile? <Link to="/jandani_jewellers_react/updateProfile" className="link">Update</Link></h3>
+    <h3>Update your Profile? <Link to="/updateProfile" className="link">Update</Link></h3>
     </div>
     </div>
  )

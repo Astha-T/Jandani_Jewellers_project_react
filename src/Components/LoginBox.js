@@ -3,46 +3,42 @@ import Login from '../Pages/Login'
 import {Link} from 'react-router-dom'
 
 let dialogStyles = {
-    width: '420px',
-    height: '420px',
-    maxWidth: '100%',
+    width: '500px',
+    height: '360px',
     margin: '0',
     position: 'fixed',
-    border: "solid #B22D31",
+    border: "none",
     borderRadius: "33px",
-    left: '620px',
-    top: '25%',
+    left: '50%',
+    top: '45%',
     transform: 'translate(-50%,-50%)',
     zIndex: '999',
     fontWeight: 'bold',
     backgroundColor: 'white',
     padding: '10px 20px 0px',
-    display: 'flex',
+    display: 'inline',
     flexDirection: 'column'
 };
 
 let dialogCloseButtonStyles = {
-    padding: '5px 8px',
     cursor: 'pointer',
-    borderRadius: '8px',
     border: 'none',
-    backgroundColor: '#B22D31',
-    color : 'white',
-    width: '30px',
-    margin: '20px 500px 0px 0px',
-    height: '30px',
-    fontWeight: 'bold'
+    color : 'grey',
+    width: '50px',
+    height: '50px',
+    backgroundColor: 'transparent',
+    fontWeight: 'bold',
+    padding: '70px 430px',
+    margin: '0px '
 };
 
 
 const LoginBox = (props) => {
   
         let dialog = (
-            <div style={dialogStyles}>
-                 <Link to = "/jandani_jewellers_react" onClick={props.onClose} style={dialogCloseButtonStyles}>x</Link>
-
-                <div><Login/>
-                </div>
+            <div style={dialogStyles}>          
+              <Link to = "/" onClick={props.onClose} style={dialogCloseButtonStyles}>X</Link>
+            <div><Login/></div>
             </div>
         );
 
