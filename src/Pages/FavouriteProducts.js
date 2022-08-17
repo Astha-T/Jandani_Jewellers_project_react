@@ -1,4 +1,4 @@
-import { useState} from "react";
+iimport { useState} from "react";
 import React from 'react'
 
 import SideBar from '../Components/SideBaar'
@@ -29,7 +29,7 @@ const FavouriteProducts = () => {
         <div>
             <SideBar/>
         <div className="favProd">
-            <h2>Your Favourite Products</h2>
+            <h2>YOUR FAVOURITE PRODUCTS</h2>
             <FavProdList products={products}/> 
         </div>
         </div>
