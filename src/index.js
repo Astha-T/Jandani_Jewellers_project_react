@@ -32,6 +32,7 @@ const AboutUs = React.lazy(() => import('./Pages/AboutUs'));
 const SingleProduct = React.lazy(() => import('./Pages/SingleProduct'))
 const SearchProduct = React.lazy(() => import("./Components/SearchProducts"))
 
+//this is my changes
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <Provider store={Store}>
