@@ -10,7 +10,6 @@ const UserNotification = () => {
     
     const [notification,setNotification] = useState([]);
 
-    const fetchNotification = () => {
        OtherServices.UNotification().then((response)=>response.json()).then(data=> {
             
                 console.log(data)
@@ -27,14 +26,13 @@ const UserNotification = () => {
           setNotification(updatedNotifications)
         }
         )
-    }
 
     return(
         <div>
              <SideBar/>
         <div className="unotification">
             <h2>Your Notifications</h2>
-           <button onClick={fetchNotification}>Click here to see Notifications</button>
+
             <NotificationList notification={notification}/> 
         </div>
         </div>

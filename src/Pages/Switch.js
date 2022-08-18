@@ -4,7 +4,6 @@ import { Link, Navigate} from 'react-router-dom'
 import Store from '../Redux/Store'
 import {ACTION_USER_LOGIN_LOGOUT} from '../Redux/Actions/UserAction'
 import './Login.css'
-import SideBar from '../Components/SideBaar';
 import SignupLoginbox  from '../Components/SignupLoginbox'
 import UserService from '../Services/UserServices'
 
@@ -56,15 +55,15 @@ const SignUpLogin = (props) =>
 }
 
  return ( islogin?
-   <Navigate to="/"/>:  <><SideBar/>
+   <Navigate to="/"/>:  <>
    <SignupLoginbox open={open}>
- <div className="login">
- <h2>Login</h2>
+   <div className="login">
+ <h2>LOGIN</h2>
  <form onSubmit ={submitHandler}>
   <input type="text" placeholder=' Phone number' name="email_phone" ref={c=>loginphonebox=c} required/>
   <input type="password" placeholder=" Password " name="password" ref={c=>loginpassbox=c} required />
- <button type="send">Log-in</button>
- <h3>Not having any Account? <Link className="link" to="/signup">SignUp</Link></h3>
+ <button className="defaultButton" type="send">Log-in</button>
+ <h3>Not having any Account?<Link className="link" to="/signup"> SignUp</Link></h3>
  <p>{loginMsg}</p>
  </form>
  </div>

@@ -10,13 +10,16 @@ const Cate = (props) => {
         localStorage.setItem('category_id', props.id)
     }
     return (
-                        <button onClick={setCate} className="figure" >
-                            <Link to="/productbycate_list" ><img src={props.image}/></Link>
-                             <h3>{props.id}</h3>
-                            <h5><Link to="/productbycate_list">{props.name}</Link></h5>
-                    </button>
-                   
-
+        <span className='span'>
+        <button onClick={setCate} className="figure">
+        <Link to="/productbycate_list" >
+            <p className='circle'>
+            <img className= "productimg" src={props.image}/></p> 
+        </Link>
+   </button>
+   <h3>{props.id}</h3>
+   <h5 style={{color: 'black'}}><Link to="/productbycate_list">{props.name}</Link></h5>
+   </span>
 
     )
     }

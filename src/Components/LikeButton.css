@@ -1,12 +1,16 @@
 .like {
-    border: none !important;
+    border-color: transparent !important;
     padding: none;
     border-radius: 50px !important;
-    background: red;
+    background-color: transparent;
     margin-left: 60px;
 }
-.like img{
-    height: 5px !important;
-    width: 10px !important;  
-    padding: none;;
+.like button {
+    padding: 3px;
+    border: transparent !important;
+    background-color: transparent;
 }
+
+
+
+

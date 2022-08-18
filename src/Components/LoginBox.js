@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom'
 
 let dialogStyles = {
     width: '500px',
-    height: '360px',
+    height: '400px',
     margin: '0',
     position: 'fixed',
     border: "none",

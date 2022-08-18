@@ -1,4 +1,5 @@
 import { faBottleDroplet } from '@fortawesome/free-solid-svg-icons';
+import { getSuggestedQuery } from '@testing-library/react';
 import { removeData } from 'jquery';
 import React from 'react';
 
@@ -7,13 +8,13 @@ let dialogStyles = {
     maxWidth: '100%',
     margin: '0 auto',
     position: 'fixed',
-    border: "solid #B22D31",
+    border: "solid grey",
     left: '50%',
-    top: '8%',
+    top: '10%',
     transform: 'translate(-50%,-50%)',
     zIndex: '999',
     fontWeight: 'bold',
-    color: '#B22D31',
+    color: 'black',
     backgroundColor: 'white',
     padding: '5px 20px 30px',
     borderRadius: '8px',
@@ -22,13 +23,14 @@ let dialogStyles = {
 };
 
 let dialogCloseButtonStyles = {
-    marginBottom: '15px',
-    padding: '3px 8px',
+    marginBottom: '5px',
+    padding: '0px 10px',
     cursor: 'pointer',
     borderRadius: '50%',
     border: 'none',
-    width: '30px',
-    height: '30px',
+    width: '50px',
+    height: '50px',
+    color: 'grey',
     fontWeight: 'bold',
     alignSelf: 'flex-end'
 };
@@ -39,7 +41,7 @@ const Dialog = (props) => {
 
         let dialog = (
             <div style={dialogStyles}>
-                <button style={dialogCloseButtonStyles} onClick={props.onClose}>x</button>
+                <button style={dialogCloseButtonStyles} onClick={props.onClose}>X</button>
 
                 <div>{props.children}</div>
             </div>

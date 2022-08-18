@@ -10,7 +10,7 @@ const store = createStore(combineReducers({
 },{
     user : {loginstatus:false, user_id:undefined, mobile:undefined, full_name:undefined},
     category : {category_id: undefined},
-    product : {product_id: undefined, keyValue: undefined},
+    product : {product_id: undefined, keyValue: undefined, likeStatus: false},
 }))
 
 export default store;

@@ -10,7 +10,7 @@ let dialogStyles = {
     border: "none",
     borderRadius: "33px",
     left: '50%',
-    top: '60%',
+    top: '48%',
     transform: 'translate(-50%,-50%)',
     zIndex: '999',
     fontWeight: 'bold',
