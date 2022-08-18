@@ -23,10 +23,7 @@ const LikeButton = (props) => {
     const Like= () => {
     
     if(props.loginstatus===true) {
-
-       localStorage.getItem('product_id')
-       localStorage.getItem('user_id')
-
+        
        if(like===true)
       {
         ProductServices.Add_fav().then((response)=>response.json()).then(data=> {

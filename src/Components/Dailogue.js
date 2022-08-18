@@ -32,7 +32,8 @@ let dialogCloseButtonStyles = {
     height: '50px',
     color: 'grey',
     fontWeight: 'bold',
-    alignSelf: 'flex-end'
+    alignSelf: 'flex-end',
+    backgroundColor: 'transparent'
 };
 
 
