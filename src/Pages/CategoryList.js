@@ -36,7 +36,7 @@ const CategoryList = (props) => {
         <div className="category_section">
         <h4>Shop by categories</h4>
         <div className="row">
-        <div className="col-md-3 col-xs-6 col-sm-6 col-6">
+        <div className="col-md-12">
             <Cate_List categories={categories}/> 
         </div>
         </div>

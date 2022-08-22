@@ -1,37 +1,118 @@
-.span {
-    display: block;
-    height: fit-content;
-    }
-    
-    .span  h5 {
-        color: black !important;
+
+    figure {
+        background: #FFFFFF;
+        box-shadow: 0px 4px 19px rgb(0 0 0 / 7%);
+        border-radius: 24px;
+        height: 220px;
+        padding: 30px 10px 10px 10px;
+        width: 100%;
+        text-align: center;
+      }
+      .circle{
+        display: block;
+      }
+      figure:hover{
+        box-shadow: 0px 5px 22px rgb(17 17 18 / 7%);
+        border-radius: 24px;
+        background: #f5d6d9cc;
+      }
+      
+     figure img {
+        vertical-align: middle;
+        border-style: none;
+        padding: 11px 10px;
+        width: 70%;
+        object-fit: contain;
+      }
+      
+      h5 {
         font-weight: 500;
         font-size: 18px;
         font-style: normal;
+        color: #191919;
         text-align: center;
-    }
-    .figure {
-        height: 220px;
-        width : 250px;
-        border: none;
-        margin: 20px 30px 10px 0px !important;
-        border-radius: 24px;
-        background-color: white;
-     }
-     
-    .figure .productimg {
-        height: 150px !important;
-        width: 150px !important;
-        border-radius: 24px;
-        box-shadow: none !important;
-        border-color: white !important;
-        padding: 10px 10px 25px 10px !important;
-    }
-    .span h3 {
-        font-size: 5px;
-        color: #FFFFFF;
-    }
+      }
+
+      h3 {
+          display: none;
+      }
+      
+      figure p {
+        background: #f5d6d9cc;
+        border: 1px solid #f5d6d9cc;
+        border-radius: 50%;
+        margin: 0px 20px;
+        position: absolute;
+        width: 140px;
+        height: 140px;
+        z-index: 0;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        top: 34px;
+      }
+      
+      .gold figure p {
+        background-color: #f3d9221a !important;
+        border: 1px solid white;
+        border-radius: 50%;
+        position: absolute;
+        width: 140px;
+        height: 140px;
+        z-index: 0;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        top: 34px;
+      }
+      
+      .gold .col-md-4 {
+        margin-top: 25px;
+      }
+      
+      a {
+        color: #191919 !important;
+      }
+      
+      a:hover {
+        color: #b22d31 !important;
+        text-decoration: none;
+      }
+      
+      figure img {
+        height: 155px;
+        z-index: 9;
+        position: relative;
+        width: 100%;
+      }
+
+      @media only screen and (max-width: 600px) {
+
+       figure {
+            height: 158px;
+            padding: 28px 0px 0px 0px;
+        }
     
-    .figure:hover {
-      background-color: #f5d6d9cc;
-    }
+        figure img {
+            height: 108px;
+            z-index: 9;
+            position: relative;
+            width: 100%;
+        }
+    
+        figure p {
+            background: #f5d6d9cc;
+            border: 1px solid #f5d6d9cc;
+            border-radius: 50%;
+            margin: 0 auto;
+            position: absolute;
+            width: 85px;
+            height: 85px;
+            z-index: 0;
+            left: 0;
+            top: 34px;
+        }
+    
+        
+      }
+      

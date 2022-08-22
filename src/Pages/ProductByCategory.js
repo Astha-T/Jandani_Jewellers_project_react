@@ -32,14 +32,12 @@ const ProductsByCate = (props) => {
         })
 
     return(
-        <div>
-            <SideBar/>
         <div className="category_section">
+            <SideBar/>
         <h4>Shop by Products</h4>
         <div className="row">
-        <div className="col-md-3 col-xs-6 col-sm-6 col-6">
+        <div className="col-md-12">
             <Product_list products={products}/> 
-        </div>
         </div>
         </div>
         </div>

@@ -1,9 +1,8 @@
 .searchInputs {
     margin-top: 105px;
-    display: flex;
+    display: block;
   }
-  
-  .search input {
+  .searchInputs {
     background-color: white;
     border: 0;
     border-radius: 2px;

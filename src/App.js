@@ -1,20 +1,19 @@
 import React from 'react';
 
-import Home from './Pages/Home';
+import Home from './Pages/HomeDummy'
 import './App.css'
 
 const App = (props) =>
 {
     
     return (
-    <table>
-        <tbody>
-        <tr>
-            <td><Home/></td>
-        </tr>
-        </tbody>
-    </table>
+    <div><Home/></div>
     )
     }
 
 export default App;
+
+
+
+
+
