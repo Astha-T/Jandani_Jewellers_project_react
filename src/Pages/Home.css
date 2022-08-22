@@ -1,7 +1,7 @@
 .home {
     display: block;
 }
-.home Link a{
-    text-align: center;
-    font-weight: bold;
+.home .slider{
+    margin-top: 30px;
+    width: 100%;
 }

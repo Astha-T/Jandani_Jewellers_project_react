@@ -2,30 +2,7 @@ import urls from './WebUrl'
 
 class Product_Serives 
 {
- Get_Products= (data) => {
-    return fetch(urls.Get_Products)
-}
-
-Get_Categories = (data) => {
-    return fetch(urls.Get_Category)
-}
-Get_FavoriteProducts = (data) => {
-    const userId = localStorage.getItem('user_id');
-    return fetch(urls.Get_FavouriteProducts+userId);
-}
-
-Get_ProductsbyCate = (data) => {
-   const categoryId = localStorage.getItem('category_id'); 
-   console.log(categoryId)
-    return fetch(urls.Get_Products_By_category+categoryId)
-}
-
-Get_SingleProduct = (data) => {
-    const productId = localStorage.getItem('product_id');
-    console.log(productId)
-    return fetch(urls.Get_Single_Product+productId)
-}
-
+ 
 Save_Product_Enquiry = (data) => {
     const productId = localStorage.getItem('product_id');
     const mobile = localStorage.getItem('mobile');

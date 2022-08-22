@@ -5,7 +5,8 @@ import FavProd from  "./FavProd"
 
 const FavProdList = (props) => {
     return (
-        <div className='product-list'>
+        <div className='product-list row'>
+            {/* <div className="col-md-1 d-sm-block d-none"></div> */}
             {props.products.map((prod)=> (
                 <FavProd
                 name = {prod.name}
@@ -13,6 +14,7 @@ const FavProdList = (props) => {
                 id = {prod.id}
                 />
             ))}    
+        {/* <div className="col-md-1 d-sm-block d-none"></div>       */}
         </div>
     );
 };

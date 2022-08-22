@@ -1,30 +1,86 @@
-.n {
-    display: inline-block;
-    margin-top: 50px;
-    margin-left: 30px;
-}
+.abc{
+    flex: 0 0 25%;
+    max-width: 25%;
+    float: left;
+    padding-bottom: 3%;
+  }
+      .note {
+        background: #FFFFFF;
+        box-shadow: 0px 4px 19px rgb(0 0 0 / 7%);
+        border-radius: 24px;
+        height: 200px;
+        padding: 30px 0px 20px 0px;
+        width: 200px;
+        text-align: center;
+        }
 
-.n img {
-    vertical-align: middle;
-    border-style: none;
-    padding: 11px 20px;
-    height: 200px;
-    width : 500px;
-   }
-
-
-   .n h5 {
-    font-weight: 500;
-    font-size: 18px;
-    font-style: normal;
-    color: #191919;
-    text-align: center;
-   }
-   
-
-   .n p{
-    font-size: 12px;
-       font-family: 'Poppins';
-       margin-left: 30px;
-       text-align: center;
-   }
+       .note img {
+          vertical-align: middle;
+          border-style: none;
+          padding: 11px 10px;
+          width: 180px;
+          height: 180px;
+          object-fit: contain;
+        }
+        
+        h5 {
+          font-weight: 500;
+          font-size: 18px;
+          font-style: normal;
+          color: #191919;
+          text-align: center;
+          margin: 5px;
+        }
+  
+        h3 {
+           color: white;
+           font-size: 1px;
+        }
+        
+  
+        a {
+          color: #191919 !important;
+        }
+        
+        a:hover {
+          color: #b22d31 !important;
+          text-decoration: none;
+        }
+        
+        .note img {
+          height: 155px;
+          z-index: 9;
+          position: relative;
+          width: 120px;
+        }
+  
+        @media only screen and (max-width: 600px) {
+  
+         .note {
+              height: 158px;
+              padding: 28px 0px 0px 0px;
+          }
+      
+          .note img {
+              height: 108px;
+              z-index: 9;
+              position: relative;
+              width: 100%;
+          }
+      
+          .note p {
+              background: #f5d6d9cc;
+              border: 1px solid #f5d6d9cc;
+              border-radius: 50%;
+              margin: 0 auto;
+              position: absolute;
+              width: 85px;
+              height: 85px;
+              z-index: 0;
+              left: 0;
+              top: 34px;
+          }
+      
+          
+        }
+        

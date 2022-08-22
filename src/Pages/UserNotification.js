@@ -28,14 +28,16 @@ const UserNotification = () => {
         )
 
     return(
-        <div>
-             <SideBar/>
-        <div className="unotification">
-            <h2>Your Notifications</h2>
+        <div className="product_section">
+                <SideBar/>
+        <h4>YOUR NOTIFICATION</h4>
+        <div className="row">
+        <div className="col-md-12">
+        <NotificationList notification={notification}/> 
+        </div>
+        </div>
+        </div>
 
-            <NotificationList notification={notification}/> 
-        </div>
-        </div>
     )
 }
 export default UserNotification;

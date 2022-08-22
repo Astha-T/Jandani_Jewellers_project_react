@@ -104,3 +104,136 @@ h4{
         text-align: center;
         padding: 50px 40px 40px 40px;
     }
+
+    @media all and (max-width: 767px) {
+
+      .product .carousel-container #carousel-thumbs img {
+        border-width: 3px;
+      }
+  
+    }
+    @media all and (min-width: 576px) {
+      /* .product .carousel-container #carousel-thumbs {
+        position: absolute;
+      } */
+    }
+    @media all and (max-width: 576px) {
+      /* .product .carousel-container #carousel-thumbs {
+        background: #ccccce;
+      } */
+    }
+
+    @media only screen and (max-width: 600px) {
+      .position_banner{
+        height: 195px !important;
+        padding-top: 0px !important;
+    }
+    .slider_col {
+        height: 320px;
+    }
+    .details_section p{
+        text-align: justify;
+        margin-top: 0px;
+    }
+    .product .carousel-item img {
+        object-fit: contain;
+        margin: 0 auto;
+        width: 70% !important;
+    }
+    .product .carousel-control-prev, .product .carousel-control-next{
+        width: 19px !important;
+        height: 19px !important;
+        top: 26px;
+    }
+    .carousel-control-next-icon, .carousel-control-prev-icon{
+        width: 10px !important;
+        height: 25px !important;
+    }
+    #carousel-thumbs .mx-0 {
+        margin-right: -15px!important;
+    }
+    #carousel-thumbs .row .col-3 {
+        -ms-flex: 0 0 25%;
+        flex: 0 0 25%;
+        max-width: 22% !important;
+        padding: 0px !important;
+        margin: 0px 3px;
+    }
+    .product #carousel-thumbs {
+        margin: 10px 0px 0px 0px !important;
+        bottom: 0;
+        left: 0;
+        padding: 0 16px;
+        right: 0;
+    }
+    .product #carousel-thumbs .img-fluid {
+        height: 67px;
+        background: #dee3e7bf;
+        border: 1px solid #dee3e7bf !important;
+        border-radius: 20px;
+        width: fit-content;
+        padding: 5px;
+        width: 100% !important;
+    }
+    }
+    @media (min-width: 600px) and (max-width: 667px) {
+      .position_banner{
+        height: 260px !important;
+        padding-top: 27px;
+    }
+    .details_section {
+        text-align: center;
+        padding: 40px 20px;
+    }
+    .product .carousel-item img{
+        width: 45%;
+    }
+    .product .carousel-control-next{
+        margin-right: -21px !important;
+    }
+    .product .carousel-control-prev{
+        margin-left: -21px !important;
+    }
+    .slider_txt {
+        padding: 0% 4% 4% 4% !important;
+    }
+    .enquiry{
+        padding: 10px 20%;
+        margin-top: 50px;
+        margin-bottom: 0px;
+        margin-left: 19%;
+    }
+    .product #carousel-thumbs{
+        margin: 5px;
+        padding: 0px 0px;
+    }
+    .col-3{
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    }
+    @media only screen and (max-width: 360px) {
+
+      .position_banner {
+          height: 183px;
+      }
+      .product #carousel-thumbs{
+          top: 27px;
+      }
+  }
+  
+@media only screen and (max-width: 393px){
+  .position_banner {
+      height: 202px;
+  }
+}
+
+
+@media only screen and (max-width: 414px){
+  .position_banner {
+      height: 240px;
+  }
+  .details_section p{
+      margin-top: 10px;
+  }
+}

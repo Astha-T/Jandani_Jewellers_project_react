@@ -1,9 +1,8 @@
-import { useState} from "react";
+import { useState , useEffect } from "react";
 import React from 'react'
 
 import SideBar from '../Components/SideBaar'
 import FavProdList from "../Extra-files/FavProdList";
-import ProductServices from "../Services/ProductServices";
 import './FavouriteProducts.css'
 
 const FavouriteProducts = () => {
@@ -11,9 +10,12 @@ const FavouriteProducts = () => {
     const [products,setProducts] = useState([])
 
         const imgurl = 'https://dev.weblaunchpad.in/jandani_jewellers/public/product/';
+        const userId = localStorage.getItem('user_id');
 
-       ProductServices.Get_FavoriteProducts().then((response)=>response.json()).then(data=> {
-        console.log(data) 
+        useEffect(()=>{
+            fetch("https://dev.weblaunchpad.in/jandani_jewellers/api/customer/get_favorite_product?user_id="+userId)
+            .then(res => res.json())
+            .then(data => {
          const updatedProductList = data.result.map((productData)=> {
                 return{
                     id: productData.id,
@@ -24,13 +26,16 @@ const FavouriteProducts = () => {
            )
           setProducts(updatedProductList)
         })
+    },[]);
 
     return(
-        <div>
-            <SideBar/>
-        <div className="favProd">
-            <h2>YOUR FAVOURITE PRODUCTS</h2>
-            <FavProdList products={products}/> 
+        <div className="product_section">
+                <SideBar/>
+        <h4>YOUR FAVOURITE PRODUCUTS</h4>
+        <div className="row">
+        <div className="col-md-12">
+        <FavProdList products={products}/> 
+        </div>
         </div>
         </div>
     )

@@ -9,7 +9,7 @@
     
 }
 
-.content_section h4 {
+.content h4 {
     color: #fff;
     font-weight: 600;
     font-size: 26px;
@@ -17,7 +17,7 @@
     font-family: 'Poppins';
 }
 
-.content_section p {
+.content p {
     font-weight: 400;
     font-size: 16px;
     color: #fff;
@@ -28,14 +28,37 @@
     font-style: normal;
 }
 
-.content_section button {
+.content button {
     background: #ffb800;
     border: 1px solid #ffb800;
     border-radius: 80px;
     width: 168px;
     height: 42px;
-    margin-top: 27px;
+    margin: 27px 2px 0px 0px !important;
     font-weight: 600;
     font-size: 18px;
     color: #000;
+}
+
+@media only screen and (max-width: 600px) {
+
+.content_section {
+    margin: 50px 25px 0px 25px;
+    padding: 27px 0px;
+}
+
+.content_section h4 {
+    font-size: 21px;
+}
+
+.content_section p {
+    width: 80%;
+    font-size: 12px;
+}
+
+.content_section button {
+    font-weight: 600;
+    font-size: 16px;
+    color: #000;
+}
 }

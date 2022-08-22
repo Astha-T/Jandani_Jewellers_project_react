@@ -7,7 +7,7 @@ body {
 .my-navbar {
     box-shadow: 0px 10px 30px rgba(225,225,225, 100%);
     position: absolute;
-    width: 100%;
+    width: 100% !important;
     background: #fff4f5;
 }
 
@@ -16,8 +16,9 @@ body {
     border-radius: 40px;
     background: #fff4f5;
     color: #b22d31 !important;
-    padding: 7px 10px;
+    padding: 4px 10px !important;
     margin: 0px 10px;
+   height: 35px;
 }
 
 .navbar-brand {
@@ -144,14 +145,20 @@ a.nav-link {
     display: block;
   }
 
-@media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 600px) {
+
 
     .nav-link {
-        color: red !important;
+        color: #000 !important;
     }
     .dropdown-toggle{
         padding-left: 26px;
     }
+
+    /* ul.navbar-nav,
+    .fa-search {
+        padding-left: 22px;
+    } */
 
     a.nav-link:hover {
         background: #f9f9f9;
@@ -188,6 +195,16 @@ a.nav-link {
     border: 1px solid transparent !important;
     }
 
+    /* nav .fa-search {
+        border: none;
+        background-color: transparent;
+        position: absolute;
+        right: 60px;
+        font-size: 19px;
+        color: #646060;
+        top: 21px;
+    } */
+
     nav .fa-search:focus {
         color: #b22d31;
         outline: none;
@@ -200,7 +217,8 @@ a.nav-link {
     .navbar-nav .dropdown-menu{
         background: transparent;
     }
-    
+}
+
 
 @media (min-width: 720px) and (max-width: 767px){
     .navbar-form-search{
@@ -265,48 +283,7 @@ a.nav-link {
     nav ul {
         padding-left: 20px !important;
     }
-    .position_banner{
-        height: 260px !important;
-        padding-top: 27px;
-    }
-    .details_section {
-        text-align: center;
-        padding: 40px 20px;
-    }
-    .product .carousel-item img{
-        width: 45%;
-    }
-    .product .carousel-control-next{
-        margin-right: -21px !important;
-    }
-    .product .carousel-control-prev{
-        margin-left: -21px !important;
-    }
-    .slider_txt {
-        padding: 0% 4% 4% 4% !important;
-    }
-    .enquiry{
-        padding: 10px 20%;
-        margin-top: 50px;
-        margin-bottom: 0px;
-        margin-left: 19%;
-    }
-    .product #carousel-thumbs{
-        margin: 5px;
-        padding: 0px 0px;
-    }
-    .col-3{
-        padding-left: 5px;
-        padding-right: 5px;
-    }
-    .sec_section .banner img {
-        height: 335px !important;
-        border: 1px solid transparent;
-        border-radius: 100px;
-    }
-    .subscribe button{
-        height: 42px;
-    }
+
     .userli ul{
         padding: 0px 20px 0px 20px;
         margin: 16px 10px 10px -12px;
@@ -344,7 +321,16 @@ a.nav-link {
     
 }
 
+
 @media (min-width: 768px) and (max-width: 1024px) {
+
+    /* .fa-search {
+        border: none;
+        background-color: transparent;
+        position: absolute;
+        top: 21px;
+        right: 90px;
+    } */
 
     .signup {
         padding: 7px 10px !important;
@@ -356,7 +342,6 @@ a.nav-link {
         padding-left: 20px !important;
     }
 
-   
     .navbar-form{
         position: absolute;
         right: 65px;
@@ -387,10 +372,10 @@ a.nav-link {
     .nav-item .dropdown-menu{
         background: transparent;
     }
-
 }
 
 @media all and (width: 740px) and (height: 360px) and (orientation:landscape){
+
     .fa-search{
         position: absolute;
         top: 22px;
@@ -404,7 +389,6 @@ a.nav-link {
     #navbarNav{
         padding-left: 21px;
     }
-    
     .navbar-form-search{
         position: absolute;
         top: 3px !important;
@@ -442,76 +426,15 @@ a.nav-link {
 
 }
 
+@media all and (width: 915px) and (height: 412px) and (orientation:landscape){
 
-@media all and (width: 720px) and (height: 540px) and (orientation:landscape){
-    
-    .navbar-form-search {
-        position: absolute;
-        right: 60px;
-        top: 12px;
+    .position_banner {
+        height: 268px;
     }
-    .signupli{
-        width: fit-content;
-    }
-    .signupli .signup {
-        padding: 7px 14px !important;
-        margin-left: -9px;
-    }
-    .userli ul {
-        margin-top: 11px;
-        margin-left: -9px;
-        padding: 0px 20px;
-        width: fit-content;
-    }
-    .userli .dropdown-menu{
-        background-color: transparent;
-    }
-    .userli .dropdown{
-        padding-left: 8px;
-    }
-    .userli .dropdown a{
-        font-size: 15px;
+    .product .carousel-item img{
+        width: 60%;
     }
 
 }
 
-@media all and (width: 1024px) and (height: 768px) and (orientation:landscape) {
-    .fa-search {
-        right: 30px;
-    }
-    .nav-item ul{
-        margin: 0px 10px 0px 15px;
-    }
 
-    nav ul li {
-        width: fit-content;
-        text-align: center;
-        margin-top: 14px;
-    }
-  
-    .userli {
-        padding-left: 5px;
-    }
-    .navbar-form {
-        position: absolute;
-        right: 20px;
-        top: 20px;
-    }
-    .navbar-form-search .search-form-container {
-        right: 30px;
-        top: 45px;
-    }
-    
-    .signupli{
-        padding-left: 40px;
-    }
-    .userli .dropdown-toggle{
-        padding: 7px;
-    }
-    .userli ul li{
-        margin-top: 0px;
-    }
-
-}
-
-}

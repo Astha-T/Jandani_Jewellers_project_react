@@ -1,9 +1,8 @@
-import { useState } from "react";
+import { useState , useEffect} from "react";
 import React from 'react'
 import {Link} from 'react-router-dom'
 
 import SideBar from "../Components/SideBaar";
-import ProductServices from "../Services/ProductServices";
 import './SingleProduct.css';
 import Contact from "../Components/Contact";
 import Enquiry from "../Components/Enquiry";
@@ -17,7 +16,12 @@ const SingleProduct = (props) => {
  const [displayProductImage,setDisplayProductImage] = useState();
  const [displayProductDes,setDisplayProductDes] = useState('');
 
-ProductServices.Get_SingleProduct().then((response)=>response.json()).then(data=> {
+ const productId = localStorage.getItem('product_id');
+    console.log(productId)
+useEffect(()=>{
+  fetch('https://dev.weblaunchpad.in/jandani_jewellers/api/customer/get_single_product?product_id='+productId)
+  .then(res => res.json())
+  .then(data => {
        console.log(data)
 
        const updatedproductImage = data.result.image
@@ -30,6 +34,7 @@ ProductServices.Get_SingleProduct().then((response)=>response.json()).then(data=
        setDisplayProductDes(updatedDescription)
        
     })
+  },[productId])
 
     return(
         <div className="singleProduct">

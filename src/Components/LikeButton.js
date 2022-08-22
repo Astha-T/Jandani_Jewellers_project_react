@@ -26,24 +26,30 @@ const LikeButton = (props) => {
         
        if(like===true)
       {
+
         ProductServices.Add_fav().then((response)=>response.json()).then(data=> {
         console.log(data)
         setOpen(true)
         setMsg(data.message)
         if(data.status==="1")
-        setLike(false)
+        {
         setSpan(true)
+        setLike(false)
+        }
     })}
 
      else if(like===false)
      {
+        
         ProductServices.Remove_fav().then((response)=>response.json()).then(data=> {
             console.log(data)
             setOpen(true)
             setMsg(data.message)
             if(data.status==="1")
+            {
             setSpan(false)
             setLike(true)
+            }
         })}
     }
 
@@ -54,15 +60,15 @@ const LikeButton = (props) => {
     }
 
     return (
-        <span className="like">
-      <button onClick={Like} style={{borderColor : 'transparent' , backgroundColor : ' #f5d6d9cc'}}>
+        <div className="like">
+      <button onClick={Like}>
     {span===false ? <span className='fa fa-heart' style={{color : "white", fontSize: '25px'}}/>
      :  <span className='fa fa-heart' style={{color : "red" , fontSize: '25px'}}/>                                                                       }
     </button>
     <Dialog open={open} onClose={(e) => setOpen(false)}>
     {msg}
     </Dialog>
-    </span>
+    </div>
     )
     }
 

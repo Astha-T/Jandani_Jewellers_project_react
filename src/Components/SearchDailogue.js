@@ -15,7 +15,7 @@ let dialogStyles = {
     fontWeight: 'bold',
     color: '#B22D31',
     backgroundColor: 'white',
-    padding: '5px 20px 30px',
+    padding: '5px 20px 0px',
     borderRadius: '8px',
     display: 'flex',
     flexDirection: 'column'

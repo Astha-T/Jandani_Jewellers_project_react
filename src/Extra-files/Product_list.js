@@ -5,7 +5,8 @@ import All_Products from  "./All_Products";
 
 const Product_list = (props) => {
     return (
-        <div className='product-list'>
+        <div className='product-list row'>
+            {/* <div className="col-md-1 d-sm-block d-none"></div> */}
             {props.products.map((prod)=> (
                 <All_Products
                 name = {prod.name}
@@ -13,6 +14,7 @@ const Product_list = (props) => {
                 id = {prod.id}
                 />
             ))}    
+        {/* <div className="col-md-1 d-sm-block d-none"></div>       */}
         </div>
     );
 };

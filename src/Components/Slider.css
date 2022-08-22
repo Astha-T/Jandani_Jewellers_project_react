@@ -5,19 +5,19 @@
   }
 
 .sec_section {
-    width: 100%;
-    background-color: #FFF4F5;
-    border-radius: 0px 0px 32px 32px;
+    background-color: #fff4f5;
     border: 1px solid #fff4f5;
+    border-radius: 0 0 32px 32px;
+    margin-left: 0px;
+    
     overflow: hidden;
-    padding: 20px 0px 0px 0px;
-    margin-top: 50px;
-    margin-left: 25px;
+    padding: 70px 35px 20px 35px;
+    width: 100%;
 }
 
 .sec_section .banner img {
     width: 100%;
-    margin: 0px;
+    margin-top: 2px!important;
     border: 1px solid transparent;
     border-radius: 32px;
 }
@@ -30,4 +30,11 @@
    margin-top: 20px;
    margin-left: 5px;
 }
-
+.carousel-control-prev:hover, .carousel-control-next:hover {
+    background-color: transparent;
+}
+@media only screen and (max-width: 600px) {
+    .sec_section .banner img {
+        margin-top: 30px !important;
+    }
+}

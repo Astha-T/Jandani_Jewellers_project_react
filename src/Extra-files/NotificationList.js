@@ -1,11 +1,11 @@
 import React from "react"
 
-import './NotificationList.module.css'
+import './NotificationList.css'
 import Note from "./Note";
 
 const NotificationList = (props) => {
     return (
-        <div className='notification-list'>
+        <div className='notification_list row'>
             {props.notification.map((list)=> (
                 <Note
                 name = {list.name}

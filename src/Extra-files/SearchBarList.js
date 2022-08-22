@@ -7,12 +7,14 @@ const Search_list = (props) => {
 
     return (
         <div className='product-list'>
+            <ul>
             {props.products.map((prod)=> (
                 <List_Products
                 name = {prod.name}
                 id = {prod.id}
                 />
-            ))}    
+            ))}
+            </ul>    
         </div>
     );
 };

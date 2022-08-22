@@ -22,19 +22,21 @@ const FavProd = (props) => {
     }
 
     return (
-        <span className="span">
+        <div className="col-md-3 col-sm-6 col-6 abc">
             <RemoveFav/>
-        <button onClick={setProductId} className="figure">
-            <Link to="/singleProduct" >
-            <img className= "productimg" src={props.image}/> 
-            </Link>
-       </button>
-       <h3>{props.id}</h3>
-        <h5><Link to="/singleProduct">{props.name}</Link></h5>
+<figure>
+    <Link onClick={setProductId} to="/singleProduct" >
+            {/* <p className= 'circle'> */}
+            <img src={props.image}/>
+            {/*</p> */}
+        </Link>
+        </figure>
+   <h3>{props.id}</h3>
+   <h5 style={{color: 'black'}}><Link to="/singleProduct">{props.name}</Link></h5>
       <Dialog open={open} onClose={(e) => setOpen(false)}>
       {msg}
       </Dialog>
-      </span>
+      </div>
     )
 }
 

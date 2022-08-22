@@ -1,14 +1,27 @@
 .like {
-    border-color: transparent !important;
-    padding: none;
-    border-radius: 50px !important;
+    border-radius: 50% !important;
     background-color: transparent;
     margin-left: 60px;
+    position: absolute;
+    z-index: 99;
+    right: 10%;
+    border: 1px solid white;
+
 }
 .like button {
-    padding: 3px;
-    border: transparent !important;
-    background-color: transparent;
+    padding-top: 2px;
+    background-color: rgba(245, 214, 217, 0.8);
+    border: 1px solid white !important;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+
+.fa {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
 }
 
 
