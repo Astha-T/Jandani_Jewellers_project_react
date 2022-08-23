@@ -3,7 +3,11 @@
   padding: 0px 65px;
 }
 
+<<<<<<< HEAD
 .product_section h4 {
+=======
+.category_section h4 {
+>>>>>>> c6230da2a65090dc862c19683f43d48923176048
   text-align: center;
   margin: 80px 20px 30px 20px;
   font-family: 'Poppins';
@@ -24,6 +28,7 @@
   text-transform: uppercase;
 }
 
+<<<<<<< HEAD
 .product_section figure {
   background: #FFFFFF;
   box-shadow: 0px 4px 19px rgb(0 0 0 / 7%);
@@ -31,17 +36,31 @@
   height: 210px !important;
   padding: 30px 0px 0px 0px;
   width: 250px !important;
+=======
+.category_section figure {
+  background: #FFFFFF;
+  box-shadow: 0px 4px 19px rgb(0 0 0 / 7%);
+  border-radius: 24px;
+  height: 210px;
+  padding: 30px 0px 0px 0px;
+  width: 100%;
+>>>>>>> c6230da2a65090dc862c19683f43d48923176048
   text-align: center;
 }
 .circle{
   display: block;
 }
+<<<<<<< HEAD
 .product_section figure:hover{
+=======
+.category_section figure:hover{
+>>>>>>> c6230da2a65090dc862c19683f43d48923176048
   box-shadow: 0px 5px 22px rgb(17 17 18 / 7%);
   border-radius: 24px;
   background: #f5d6d9cc;
 }
 
+<<<<<<< HEAD
 .product_section figure img {
   vertical-align: middle;
   border-style: none;
@@ -52,6 +71,17 @@
 }
 
 .product_section h5 {
+=======
+.category_section figure img {
+  vertical-align: middle;
+  border-style: none;
+  padding: 11px 0px;
+  width: 70%;
+  object-fit: contain;
+}
+
+.category_section h5 {
+>>>>>>> c6230da2a65090dc862c19683f43d48923176048
   font-weight: 500;
   font-size: 18px;
   font-style: normal;
@@ -59,7 +89,11 @@
   text-align: center;
 }
 
+<<<<<<< HEAD
 .product_section figure p {
+=======
+.category_section figure p {
+>>>>>>> c6230da2a65090dc862c19683f43d48923176048
   background: #f5d6d9cc;
   border: 1px solid #f5d6d9cc;
   border-radius: 50%;
@@ -101,12 +135,20 @@ a:hover {
   text-decoration: none;
 }
 
+<<<<<<< HEAD
 .product_section figure img {
   height: 155px;
   z-index: 9;
   position: relative;
   width: 120px;
   height: 150px;
+=======
+.category_section figure img {
+  height: 155px;
+  z-index: 9;
+  position: relative;
+  width: 100%;
+>>>>>>> c6230da2a65090dc862c19683f43d48923176048
 }
 
 .content_section {
@@ -152,6 +194,7 @@ a:hover {
 
 @media only screen and (max-width: 600px) {
 
+<<<<<<< HEAD
   .product_section {
       padding: 0px 23px;
   }
@@ -165,6 +208,20 @@ a:hover {
   .product_section h4 {
       text-align: left;
       margin: 80px 50px 30px 0px;
+=======
+  .category_section {
+      padding: 0px 23px;
+  }
+
+  .category_section figure {
+      height: 158px;
+      padding: 28px 0px 0px 0px;
+  }
+
+  .category_section h4 {
+      text-align: left;
+      margin: 50px 0px 30px 0px;
+>>>>>>> c6230da2a65090dc862c19683f43d48923176048
   }
 
   .goldpage .gold h4 {
@@ -172,6 +229,7 @@ a:hover {
       margin: 50px 0px 0px 0px;
   }
 
+<<<<<<< HEAD
   .product_section figure img {
       height: 108px;
       z-index: 9;
@@ -180,6 +238,16 @@ a:hover {
   }
 
   .product_section figure p {
+=======
+  .category_section figure img {
+      height: 108px;
+      z-index: 9;
+      position: relative;
+      width: 100%;
+  }
+
+  .category_section figure p {
+>>>>>>> c6230da2a65090dc862c19683f43d48923176048
       background: #f5d6d9cc;
       border: 1px solid #f5d6d9cc;
       border-radius: 50%;

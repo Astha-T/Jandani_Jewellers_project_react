@@ -10,9 +10,14 @@ const All_Products = (props) => {
     }
 
     return (
+<<<<<<< HEAD
         
 <div className="col-md-3 col-sm-6 col-6 abc">
 <figure className='figureProd'>
+=======
+<div className="col-md-2 col-sm-6 col-6">
+<figure>
+>>>>>>> c6230da2a65090dc862c19683f43d48923176048
 <LikeButton/>
     <Link onClick={setProductId} to="/singleProduct" >
             {/* <p className= 'circle'> */}

@@ -35,6 +35,6 @@
 }
 @media only screen and (max-width: 600px) {
     .sec_section .banner img {
-        margin-top: 30px !important;
+        margin-top: px !important;
     }
 }

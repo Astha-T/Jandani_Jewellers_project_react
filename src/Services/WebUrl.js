@@ -12,7 +12,11 @@ var urls= {
     Get_FavouriteProducts : "https://dev.weblaunchpad.in/jandani_jewellers/api/customer/get_favorite_product?user_id=",
     Get_Products : "https://dev.weblaunchpad.in/jandani_jewellers/api/customer/get_all_product_list",
     Get_Products_By_category : "https://dev.weblaunchpad.in/jandani_jewellers/api/customer/get_product_by_category?category_id=",
+<<<<<<< HEAD
     Add_Favourite : "https://dev.weblaunchpad.in/jandani_jewellers/api/customer/add_favorite?product_id=",
+=======
+    Add_Favourite : "https://dev.weblaunchpad.in/jandani_jewellers/api//customer/add_favorite?product_id=",
+>>>>>>> c6230da2a65090dc862c19683f43d48923176048
     Remove_Favourite : "https://dev.weblaunchpad.in/jandani_jewellers/api/customer/remove_favorite?product_id=",
     Get_Single_Product : "https://dev.weblaunchpad.in/jandani_jewellers/api/customer/get_single_product?product_id=",
     Save_Enquiry : "https://dev.weblaunchpad.in/jandani_jewellers/api/customer/save-product-enquiry?product_id=",

@@ -37,7 +37,11 @@ const ProductsByCate = (props) => {
     },[]);
 
     return(
+<<<<<<< HEAD
         <div className="product_section">
+=======
+        <div className="category_section">
+>>>>>>> c6230da2a65090dc862c19683f43d48923176048
             <SideBar/>
         <h4>Shop by Products</h4>
         <div className="row">
