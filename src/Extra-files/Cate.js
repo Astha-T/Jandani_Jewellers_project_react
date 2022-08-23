@@ -11,11 +11,7 @@ const Cate = (props) => {
     }
     return (
         <div className="col-md-2 col-sm-6 col-6">
-<<<<<<< HEAD
             <figure className='figureCate'>
-=======
-            <figure>
->>>>>>> c6230da2a65090dc862c19683f43d48923176048
     <Link onClick={setCate} to="/productbycate_list">
             {/* <p className= 'circle'> */}
             <img src={props.image}/>

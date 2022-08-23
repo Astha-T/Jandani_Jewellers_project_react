@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 .abc{
   flex: 0 0 25%;
   max-width: 25%;
@@ -13,44 +13,19 @@
       padding: 30px 0px 19px 0px;
       width: 120px !important;
       text-align: center;
-=======
-
-    figure {
-        background: #FFFFFF;
-        box-shadow: 0px 4px 19px rgb(0 0 0 / 7%);
-        border-radius: 24px;
-        height: 220px;
-        padding: 30px 10px 10px 10px;
-        width: 100%;
-        text-align: center;
->>>>>>> c6230da2a65090dc862c19683f43d48923176048
-      }
-      .circle{
-        display: block;
-      }
-<<<<<<< HEAD
+    }
  .figureProd:hover{
-=======
-      figure:hover{
->>>>>>> c6230da2a65090dc862c19683f43d48923176048
+
         box-shadow: 0px 5px 22px rgb(17 17 18 / 7%);
         border-radius: 24px;
         background: #f5d6d9cc;
       }
       
-<<<<<<< HEAD
 .figureProd img {
         vertical-align: middle;
         border-style: none;
         padding: 11px 10px;
         width: 120px;
-=======
-     figure img {
-        vertical-align: middle;
-        border-style: none;
-        padding: 11px 10px;
-        width: 70%;
->>>>>>> c6230da2a65090dc862c19683f43d48923176048
         object-fit: contain;
       }
       
@@ -60,7 +35,6 @@
         font-style: normal;
         color: #191919;
         text-align: center;
-<<<<<<< HEAD
         height: 100px;
       }
 
@@ -69,48 +43,7 @@
          font-size: 1px;
       }
       
- .figureProd p {
-=======
-      }
-
-      h3 {
-          display: none;
-      }
-      
-      figure p {
->>>>>>> c6230da2a65090dc862c19683f43d48923176048
-        background: #f5d6d9cc;
-        border: 1px solid #f5d6d9cc;
-        border-radius: 50%;
-        margin: 0px 20px;
-        position: absolute;
-        width: 140px;
-        height: 140px;
-        z-index: 0;
-        left: 0;
-        right: 0;
-        margin: 0 auto;
-        top: 34px;
-      }
-      
-      .gold figure p {
-        background-color: #f3d9221a !important;
-        border: 1px solid white;
-        border-radius: 50%;
-        position: absolute;
-        width: 140px;
-        height: 140px;
-        z-index: 0;
-        left: 0;
-        right: 0;
-        margin: 0 auto;
-        top: 34px;
-      }
-      
-      .gold .col-md-4 {
-        margin-top: 25px;
-      }
-      
+ 
       a {
         color: #191919 !important;
       }
@@ -120,24 +53,15 @@
         text-decoration: none;
       }
       
-<<<<<<< HEAD
+
  .figureProd img {
         height: 155px;
         z-index: 9;
         position: relative;
         width: 120px;
-=======
-      figure img {
-        height: 155px;
-        z-index: 9;
-        position: relative;
-        width: 100%;
->>>>>>> c6230da2a65090dc862c19683f43d48923176048
       }
 
       @media only screen and (max-width: 600px) {
-
-<<<<<<< HEAD
 
         .abc {
           flex: 0 0 25%;
@@ -166,35 +90,6 @@
             position: relative;
             width: 100px !important;
         }
-    
-   .figureProd p {
-=======
-       figure {
-            height: 158px;
-            padding: 28px 0px 0px 0px;
-        }
-    
-        figure img {
-            height: 108px;
-            z-index: 9;
-            position: relative;
-            width: 100%;
-        }
-    
-        figure p {
->>>>>>> c6230da2a65090dc862c19683f43d48923176048
-            background: #f5d6d9cc;
-            border: 1px solid #f5d6d9cc;
-            border-radius: 50%;
-            margin: 0 auto;
-            position: absolute;
-            width: 85px;
-            height: 85px;
-            z-index: 0;
-            left: 0;
-            top: 34px;
-        }
-    
         
       }
       

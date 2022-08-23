@@ -14,11 +14,7 @@ const Home = (props) => {
      return (
         <div className='home'> 
           <div><SideBar/></div>
-<<<<<<< HEAD
           <div><Slider/></div> 
-=======
-          <div className="slider"><Slider/></div> 
->>>>>>> c6230da2a65090dc862c19683f43d48923176048
           <div><CategoryList/></div>
           <div><Join/></div>
           <div><Contact/></div>
