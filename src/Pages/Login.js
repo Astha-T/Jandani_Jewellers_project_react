@@ -54,9 +54,9 @@ const Login = (props) =>
    <Navigate to="/"/> :  
  <div className="login">
  <h2>LOGIN</h2>
- <form onSubmit ={submitHandler}>
-  <input type="text" placeholder=' Phone number' name="email_phone" ref={c=>loginphonebox=c} required/>
-  <input type="password" placeholder=" Password " name="password" ref={c=>loginpassbox=c} required />
+ <form className='loginform' onSubmit ={submitHandler}>
+  <input className="phone" type="text" placeholder=' Phone number' name="email_phone" ref={c=>loginphonebox=c} required/>
+  <input className='pass' type="password" placeholder=" Password " name="password" ref={c=>loginpassbox=c} required />
  <button className="defaultButton" type="send">Log-in</button>
  <h3>Not having any Account?<Link className="link" to="/signup"> SignUp</Link></h3>
  <p>{loginMsg}</p>

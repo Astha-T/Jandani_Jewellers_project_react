@@ -1,6 +1,7 @@
 import React from 'react'
 
 import ProductServices from '../Services/ProductServices'
+import './RemoveFav.css'
 
 const RemoveFavourite = () => {
 
@@ -14,9 +15,7 @@ const RemoveFavourite = () => {
     })}
 
     return (
-      <button onClick={RemoveFav}>
-            <img src='./images/like1 (1).png'/>
-    </button>
+      <button className='remove' onClick={RemoveFav}>Remove</button>
     )
 }
 

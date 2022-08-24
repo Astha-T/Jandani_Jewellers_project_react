@@ -12,7 +12,7 @@ const List_Products = (props) => {
         <button onClick={setProductId} className="prod">
           <li className='li'>  <Link to="/singleProduct" >
                 <h3>{props.id}</h3>
-                <h5 className='h5'>{props.name}</h5>
+                <h6 className='h5'>{props.name}</h6>
             </Link></li>
        </button>
 

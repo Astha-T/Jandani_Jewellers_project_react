@@ -8,20 +8,19 @@ let dialogStyles = {
     maxWidth: '100%',
     margin: '0 auto',
     position: 'fixed',
-    left: '80%',
-    top: '30%',
+    left: '50%',
+    top: '40%',
     transform: 'translate(-50%,-25%)',
     zIndex: '999',
     fontWeight: 'bold',
     color: '#B22D31',
     backgroundColor: 'white',
-    padding: '5px 20px 0px',
+    padding: '5px 15px 0px',
     borderRadius: '8px',
     display: 'flex',
-    flexDirection: 'column'
+    flexDirection: 'row'
+
 };
-
-
 
 const SearchDialog = (props) => {
 

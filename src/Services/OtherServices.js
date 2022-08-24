@@ -11,7 +11,8 @@ TermsandConditions = (data) => {
 }
 
 UNotification = (data) => {
-    return fetch(urls.Notifications)
+    const userId = localStorage.getItem('user_id');
+    return fetch(urls.Notifications+userId)
 }
 
 About_us = (data) => {

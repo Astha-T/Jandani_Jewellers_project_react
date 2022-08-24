@@ -11,7 +11,7 @@ const All_Products = (props) => {
 
     return (
 <div className="col-md-3 col-sm-6 col-6 abc">
-<figure>
+<figure className='figureProd' onClick={setProductId}>
 <LikeButton/>
     <Link onClick={setProductId} to="/singleProduct" >
             {/* <p className= 'circle'> */}
@@ -20,7 +20,7 @@ const All_Products = (props) => {
         </Link>
         </figure>
    <h3>{props.id}</h3>
-   <h5 style={{color: 'black'}}><Link to="/singleProduct">{props.name}</Link></h5>
+   <h5 style={{color: 'black'}}><Link  onClick={setProductId} to="/singleProduct">{props.name}</Link></h5>
    </div>
     )
 }

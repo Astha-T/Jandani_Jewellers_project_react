@@ -84,16 +84,44 @@ padding-left: 150px;
   .enterotp{
         left: 5px;
     }
-  .enterotp .h2{
-      margin-left: 10px;
-    }
-  
-  .enterotp input {
-        margin-left: 2%;
-    }
+    .enterotp  h2 {
+      font-weight: 700;
+      font-size: 20px;
+      font-family: 'Poppins';
+      padding: 0% 30% 0% 4%;
+      text-align: left;
+       
+      }
+      .enterotp input {
+        border: 1px solid #f7f7f7;
+        background: #f7f7f7;
+        border-radius: 20px;
+        color: #191919;
+        font-size: 14px;
+        text-align: left;
+        width: 250px;
+        height: 30px;
+        margin: 10px 15px 10px 0px;
+        padding: 0% 20% ;
+        }
+        
   
   .enterotp button {
-        margin-left: 2px;
+    margin-left: 15%;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    cursor: pointer;
+    height: 30px;
+    width: 150px;
+    border: #B22D31;
+    background: #B22D31;
+    border-radius: 39px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    color: #FFFFFF;
     }
   
   .enterotp h3 {

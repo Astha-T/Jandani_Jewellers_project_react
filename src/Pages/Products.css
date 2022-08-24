@@ -5,16 +5,17 @@
 
 
 .product_section h4 {
-  text-align: center;
   margin: 80px 20px 30px 20px;
   font-family: 'Poppins';
   font-weight: 600;
   color: #191919;
+  margin: 13% 20px 30px;
+  text-align: center;
 }
 
 .details_section h4 {
   text-align: left;
-  margin: 0px 20px 20px 0px;
+  margin: 20px 20px 20px 0px;
   font-family: 'Poppins';
   font-weight: 600;
   color: #191919;
@@ -75,7 +76,7 @@ a:hover {
   .product_section figure {
       height: 180px;
       padding: 28px 0px 30px 0px;
-      width: 100% !important;
+      width: 150px !important;
   }
 
 
@@ -83,11 +84,10 @@ a:hover {
       height: 108px;
       z-index: 9;
       position: relative;
-      width: 50% !important;
   }
-
-
-
-  
+  .product_section h4 {
+    text-align: center;
+    margin-top: 100px;
+  }
 }
 

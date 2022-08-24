@@ -37,12 +37,12 @@ const RemoveFav = (props) => {
 }
 
     return (
-        <span className="like">
-      <button className='remove' onClick={Remove}> Remove Favourite </button>
+        <>
+      <button className='remove' onClick={Remove}> Remove</button>
     <Dialog open={open} onClose={(e) => setOpen(false)}>
     {msg}
     </Dialog>
-    </span>
+    </>
     )
     }
 

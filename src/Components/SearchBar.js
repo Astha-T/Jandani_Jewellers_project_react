@@ -9,7 +9,14 @@ function SearchBar({ placeholder, data }) {
   const handleFilter = (event) => {
     const searchWord = event.target.value;
     setWordEntered(searchWord);
-    ProductServices.Search_ProductbyKeyWord(searchWord).then(response=>response.json()).then(data=>{
+
+    const userId = localStorage.getItem('user_id');
+    const keyWord = localStorage.getItem('keyValue')
+
+    useEffect(()=>{
+      fetch('https://dev.weblaunchpad.in/jandani_jewellers/api/customer/search-product?user_id='+userId+"&key_word="+keyWord)
+      .then(res => res.json())
+      .then(data => {
     const newFilter = data.filter((value) => {
       return value.name.toLowerCase().includes(searchWord.toLowerCase());
     });
@@ -20,7 +27,8 @@ function SearchBar({ placeholder, data }) {
       setFilteredData(newFilter);
     }
   });
-  }
+  },[])
+}
 
   return (
     <div className="search">

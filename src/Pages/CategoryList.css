@@ -11,8 +11,6 @@
   color: #191919;
 }
 
-<<<<<<< HEAD
-=======
 .details_section h4 {
   text-align: left;
   margin: 0px 20px 20px 0px;
@@ -26,7 +24,6 @@
   text-transform: uppercase;
 }
 
->>>>>>> c6230da2a65090dc862c19683f43d48923176048
 .category_section figure {
   background: #FFFFFF;
   box-shadow: 0px 4px 19px rgb(0 0 0 / 7%);
@@ -36,12 +33,11 @@
   width: 100%;
   text-align: center;
 }
-<<<<<<< HEAD
-=======
+
 .circle{
   display: block;
 }
->>>>>>> c6230da2a65090dc862c19683f43d48923176048
+
 .category_section figure:hover{
   box-shadow: 0px 5px 22px rgb(17 17 18 / 7%);
   border-radius: 24px;
@@ -79,8 +75,6 @@
   top: 34px;
 }
 
-<<<<<<< HEAD
-=======
 .gold figure p {
   background-color: #f3d9221a !important;
   border: 1px solid white;
@@ -99,7 +93,6 @@
   margin-top: 25px;
 }
 
->>>>>>> c6230da2a65090dc862c19683f43d48923176048
 a {
   color: #191919 !important;
 }

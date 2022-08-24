@@ -1,12 +1,22 @@
 import { useState} from "react";
 import React from "react";
+import { connect } from 'react-redux'
+import { Navigate } from "react-router-dom";
 
 import SideBar from '../Components/SideBaar'
 import NotificationList from "../Extra-files/NotificationList";
 import OtherServices from '../Services/OtherServices';
 import './UserNotification.css'
 
-const UserNotification = () => {
+function mapStateToProps(state){
+    return {
+        loginstatus : state.user.loginstatus,
+        full_name : state.user.full_name,
+        user_id : state.user.user_id
+    }
+ }
+ 
+const UserNotification = (props) => {
     
     const [notification,setNotification] = useState([]);
 
@@ -28,6 +38,7 @@ const UserNotification = () => {
         )
 
     return(
+        (props.loginstatus===true ?
         <div className="product_section">
                 <SideBar/>
         <h4>YOUR NOTIFICATION</h4>
@@ -37,7 +48,8 @@ const UserNotification = () => {
         </div>
         </div>
         </div>
+        : <Navigate to="/"/>)
 
     )
 }
-export default UserNotification;
+export default connect(mapStateToProps)(UserNotification);

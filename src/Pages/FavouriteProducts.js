@@ -1,11 +1,21 @@
 import { useState , useEffect } from "react";
 import React from 'react'
+import { connect } from 'react-redux'
 
 import SideBar from '../Components/SideBaar'
 import FavProdList from "../Extra-files/FavProdList";
 import './FavouriteProducts.css'
+import { Navigate } from "react-router-dom";
 
-const FavouriteProducts = () => {
+function mapStateToProps(state){
+    return {
+        loginstatus : state.user.loginstatus,
+        full_name : state.user.full_name,
+        user_id : state.user.user_id
+    }
+ }
+ 
+const FavouriteProducts = (props) => {
     
     const [products,setProducts] = useState([])
 
@@ -26,9 +36,10 @@ const FavouriteProducts = () => {
            )
           setProducts(updatedProductList)
         })
-    },[]);
+    },[userId]);
 
     return(
+        (props.loginstatus===true ? 
         <div className="product_section">
                 <SideBar/>
         <h4>YOUR FAVOURITE PRODUCUTS</h4>
@@ -38,6 +49,7 @@ const FavouriteProducts = () => {
         </div>
         </div>
         </div>
+        : <Navigate to="/"/>)
     )
 }
-export default FavouriteProducts;
+export default connect(mapStateToProps)(FavouriteProducts);

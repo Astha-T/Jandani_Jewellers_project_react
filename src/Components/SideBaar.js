@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import $ from 'jquery'
 import {Link, nav} from 'react-router-dom'
 import { connect } from 'react-redux'
 
@@ -100,6 +101,7 @@ const SideBar= (props) => {
       setTimeout(logout,18000000)
       setTimeout(Warning, 15000000)
     }
+
     return ( 
       <div className="main_header" id="headerup">
             <nav className="navbar my-navbar navbar-expand-lg navbar-light">
@@ -108,7 +110,7 @@ const SideBar= (props) => {
                    <Logo/>
                     </Link>
                   
-                  <button
+                 <button
                     className="navbar-toggler border-0"
                     type="button"
                     data-toggle="collapse"
@@ -118,7 +120,7 @@ const SideBar= (props) => {
                     aria-label="Toggle navigation">
 
                     <span
-                      className="iconify bar-icon"
+                      className="iconify fa fa-bars"
                       data-icon="fa-solid:bars"
                       data-inline="false"
                     ></span>
@@ -184,7 +186,7 @@ const SideBar= (props) => {
                      </ul>
                   </div>
 
-                  <form role="search" onSubmit={handleFilter}>
+                  <form className="searchform" role="search" onSubmit={handleFilter}>
                   {searchbar===false && <button type="submit" onClick={displaySearcharBar} className='searchbutton'><span className="fa fa-search"
                        ></span></button>} &nbsp;&nbsp;
                           {searchbar===true &&<> <input className="searchbar" type="text" 

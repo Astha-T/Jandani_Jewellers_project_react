@@ -25,16 +25,19 @@
     text-align: center;
 
 }
-
+.slider-section .carousel-item img {
+    height: 42vh;
+}
 .sec_section .icon {
-   margin-top: 20px;
-   margin-left: 5px;
+   /* margin-top: 20px;
+   margin-left: 5px; */
+   display: none;
 }
 .carousel-control-prev:hover, .carousel-control-next:hover {
     background-color: transparent;
 }
 @media only screen and (max-width: 600px) {
     .sec_section .banner img {
-        margin-top: px !important;
+        margin-top: 30px !important;
     }
 }

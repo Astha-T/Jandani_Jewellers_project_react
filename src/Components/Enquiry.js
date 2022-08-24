@@ -36,12 +36,12 @@ const Enquiry = (props) => {
     }
 
 return (
-    <span className="enquiry">
+    <div className="enquiry">
         <button type="btn" onClick={SaveEnquiry}>ENQUIRY NOW</button>
         <Dialog open={open} onClose={(e) => setOpen(false)}>
         {msg}
         </Dialog>
-        </span>
+        </div>
 )
 }
 

@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Link, Navigate} from 'react-router-dom';
 
 import UserService from '../Services/UserServices'
-import SideBar from '../Components/SideBaar';
+// import SideBar from '../Components/SideBaar';
 import SignUpBox from '../Components/SignUpBox';
 import './SignUp.css'
 
@@ -58,7 +58,7 @@ const Signup = (props) =>
   }    
     
     return ( isReg ?<Navigate to="/otp"/>: <>
-     <SideBar/> 
+     {/* <SideBar/>  */}
       <SignUpBox open={signupopen}>
         <div className='sign_up'>
             <h2>SIGN UP</h2>

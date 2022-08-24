@@ -20,7 +20,7 @@ const Signup = React.lazy(() => import('./Pages/SignUp'));
 const Switch = React.lazy(() => import('./Pages/Switch'))
 const Otp = React.lazy(() => import('./Pages/OTP'));
 const Products = React.lazy(() =>  import ('./Pages/Products') )
-const CategoryList = React.lazy(()=> import('./Pages/CategoryList'))
+const Category = React.lazy(()=> import('./Components/Category'))
 const ProductsByCate = React.lazy(()=> import('./Pages/ProductByCategory'))
 const FavouriteProducts = React.lazy(() => import('./Pages/FavouriteProducts'));
 const PrivacyPolicy1 = React.lazy(() => import('./Pages/PrivacyPolicy'));
@@ -54,7 +54,7 @@ root.render(
             <Route path="/view_profile" element={<ViewProfile/>}/>
             <Route path="/updateProfile" element={<UpdateProfile/>}/>
             <Route path="/aboutus" element={<AboutUs/>}/>
-            <Route path="/category_list" element={<CategoryList/>}/>
+            <Route path="/category_list" element={<Category/>}/>
             <Route path="/product_list" element={<Products/>}/>
             <Route path="/productbycate_list" element={<ProductsByCate/>}/>
             <Route path="/singleProduct" element={<SingleProduct/>}/>

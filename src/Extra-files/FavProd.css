@@ -1,37 +1,27 @@
-.remove {
-  background-color: #B22D31 !important;
-  margin-left: 25px !important;
-  margin-bottom: 5px !important;
-  color: white;
-  height: 25px;
-  width: 200px;
-  border-radius: none !important;
-}
+
 .abc{
   flex: 0 0 25%;
   max-width: 25%;
   float: left;
   padding-bottom: 3%;
 }
-    figure {
+   figure {
       background: #FFFFFF;
       box-shadow: 0px 4px 19px rgb(0 0 0 / 7%);
       border-radius: 24px;
       height: 216px;
       padding: 30px 0px 19px 0px;
-      width: 120px;
+      width: 120px !important;
       text-align: center;
-      }
-      .circle{
-        display: block;
-      }
-      figure:hover{
+    }
+figure:hover{
+
         box-shadow: 0px 5px 22px rgb(17 17 18 / 7%);
         border-radius: 24px;
         background: #f5d6d9cc;
       }
       
-     figure img {
+figure img {
         vertical-align: middle;
         border-style: none;
         padding: 11px 10px;
@@ -53,39 +43,7 @@
          font-size: 1px;
       }
       
-      figure p {
-        background: #f5d6d9cc;
-        border: 1px solid #f5d6d9cc;
-        border-radius: 50%;
-        margin: 0px 20px;
-        position: absolute;
-        width: 140px;
-        height: 140px;
-        z-index: 0;
-        left: 0;
-        right: 0;
-        margin: 0 auto;
-        top: 34px;
-      }
-      
-      .gold figure p {
-        background-color: #f3d9221a !important;
-        border: 1px solid white;
-        border-radius: 50%;
-        position: absolute;
-        width: 140px;
-        height: 140px;
-        z-index: 0;
-        left: 0;
-        right: 0;
-        margin: 0 auto;
-        top: 34px;
-      }
-      
-      .gold .col-md-4 {
-        margin-top: 25px;
-      }
-      
+ 
       a {
         color: #191919 !important;
       }
@@ -95,7 +53,8 @@
         text-decoration: none;
       }
       
-      figure img {
+
+figure img {
         height: 155px;
         z-index: 9;
         position: relative;
@@ -104,31 +63,33 @@
 
       @media only screen and (max-width: 600px) {
 
-       figure {
+        .abc {
+          flex: 0 0 25%;
+          max-width: 25%;
+          float: left;
+          padding-bottom: 3%;
+      }
+      .col-6 {
+          flex: 0 0 50%;
+          max-width: 50% !important;
+      }
+ figure {
             height: 158px;
-            padding: 28px 0px 0px 0px;
+            background: #FFFFFF;
+            box-shadow: 0px 4px 10px rgb(0 0 0 / 7%);
+            margin:0;
+            padding: 0;
+            border-radius: 24px;
+            text-align: center;
         }
+        
     
-        figure img {
+  figure img {
             height: 108px;
             z-index: 9;
             position: relative;
-            width: 100%;
+            width: 100px !important;
         }
-    
-        figure p {
-            background: #f5d6d9cc;
-            border: 1px solid #f5d6d9cc;
-            border-radius: 50%;
-            margin: 0 auto;
-            position: absolute;
-            width: 85px;
-            height: 85px;
-            z-index: 0;
-            left: 0;
-            top: 34px;
-        }
-    
         
       }
       

@@ -1,6 +1,7 @@
 import { useState , useEffect} from "react";
 import React from 'react'
 import {Link} from 'react-router-dom'
+import SliderApp from '../Components/change'
 
 import SideBar from "../Components/SideBaar";
 import './SingleProduct.css';
@@ -43,8 +44,11 @@ useEffect(()=>{
            <div className="details_section">
     
     <div className="row">
-      <div className="col-md-6 col-12 slider_col">
-        <div className="container-fluid  product">
+      <div className="col-md-6 col-12 slider_col" id="app">
+           {/* <SliderApp/> */}
+
+
+         <div className="container-fluid  product">
           <div className="carousel-container position_banner row">
 
             <div id="myCarousel" className="carousel slide" data-ride="carousel">
@@ -161,7 +165,7 @@ useEffect(()=>{
             </div>
 
           </div>
-        </div>
+        </div> *
       
       </div>
 

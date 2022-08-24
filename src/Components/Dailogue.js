@@ -10,7 +10,7 @@ let dialogStyles = {
     position: 'fixed',
     border: "solid grey",
     left: '50%',
-    top: '10%',
+    top: '20%',
     transform: 'translate(-50%,-50%)',
     zIndex: '999',
     fontWeight: 'bold',

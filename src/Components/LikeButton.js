@@ -33,10 +33,11 @@ const LikeButton = (props) => {
         setMsg(data.message)
         if(data.status==="1")
         {
-        setSpan(true)
-        setLike(false)
+        setSpan(true) 
         }
-    })}
+    })
+    setLike(false)
+}
 
      else if(like===false)
      {
@@ -48,9 +49,11 @@ const LikeButton = (props) => {
             if(data.status==="1")
             {
             setSpan(false)
-            setLike(true)
             }
-        })}
+        })
+      setLike(true)
+    }
+
     }
 
     else {
@@ -62,8 +65,8 @@ const LikeButton = (props) => {
     return (
         <div className="like">
       <button onClick={Like}>
-    {span===false ? <span className='fa fa-heart' style={{color : "white", fontSize: '25px'}}/>
-     :  <span className='fa fa-heart' style={{color : "red" , fontSize: '25px'}}/>                                                                       }
+    {span===false ? <span className='fa fa-heart' style={{color : "white", fontSize: '17px'}}/>
+     :  <span className='fa fa-heart' style={{color : "red" , fontSize: '17px'}}/>                                                                       }
     </button>
     <Dialog open={open} onClose={(e) => setOpen(false)}>
     {msg}
