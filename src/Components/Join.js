@@ -8,7 +8,7 @@ const Join = () =>
     <div className="row">
         <div className="col-md-12">
             <div className="content">
-                <h4>#joinJandhani Jewellers</h4>
+                <h4 className='joinh4'>#joinJandhani Jewellers</h4>
                 <p>Aenean euismod bibendum laoreet. Proin gravida
                      dolor sit amet lacus accumsan et viverra justo commodo.</p>
                 <button>JOIN</button>

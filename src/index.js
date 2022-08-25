@@ -29,7 +29,7 @@ const UserNotification = React.lazy(() => import('./Pages/UserNotification'));
 const ViewProfile = React.lazy(() => import('./Pages/ViewProfile'));
 const UpdateProfile = React.lazy(()=> import('./Pages/UpdateProfile'))
 const AboutUs = React.lazy(() => import('./Pages/AboutUs'));
-const SingleProduct = React.lazy(() => import('./Pages/SingleProd'))
+const SingleProduct = React.lazy(() => import('./Pages/SingleProduct'))
 const SearchProduct = React.lazy(() => import("./Components/SearchProducts"))
 
 //this is my changes

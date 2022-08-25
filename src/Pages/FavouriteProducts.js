@@ -3,6 +3,8 @@ import React from 'react'
 import { connect } from 'react-redux'
 
 import SideBar from '../Components/SideBaar'
+import Contact  from '../Components/Contact';
+import Join from '../Components/Join';
 import FavProdList from "../Extra-files/FavProdList";
 import './FavouriteProducts.css'
 import { Navigate } from "react-router-dom";
@@ -38,8 +40,8 @@ const FavouriteProducts = (props) => {
         })
     },[userId]);
 
-    return(
-        (props.loginstatus===true ? 
+    return(<>
+        {props.loginstatus!==true && <Navigate to="/"/>}
         <div className="product_section">
                 <SideBar/>
         <h4>YOUR FAVOURITE PRODUCUTS</h4>
@@ -48,8 +50,10 @@ const FavouriteProducts = (props) => {
         <FavProdList products={products}/> 
         </div>
         </div>
+        <div className="join"><Join/></div>
+        <div><Contact/></div>
         </div>
-        : <Navigate to="/"/>)
+        </>
     )
 }
 export default connect(mapStateToProps)(FavouriteProducts);

@@ -7,7 +7,7 @@ const LoginBox = (props) => {
   
         let dialog = (
             <div className='dialogStylesLogin'>          
-              <Link to = "/" onClick={props.onClose} className='dialogCloseButtonStylesLogin'>X</Link>
+               <button onClick={props.onClose} className="dialogCloseButtonStylesLogin">X</button>
             <div>{props.children}</div>
             </div>
         );

@@ -1,51 +1,38 @@
-import React from 'react'
+import React, { useRef, useState } from 'react'
+import { Swiper, SwiperSlide } from "swiper/react";
 import { Link } from 'react-router-dom';
+
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import { Navigation, Pagination, Mousewheel, Keyboard, Autoplay } from "swiper";
 
 import './Slider.css'
 
 const Slider = () => {
-    return(
+    return (
         <div className="sec_section">
-        <div className="row">
-        <div className="col-md-12 banner">
-        <section className="slider-section">
-        <div id="carousel" className="carousel slide" data-ride="carousel">
-           
-            <ol className="carousel-indicators">
-                <li data-target="#carousel" data-slide-to="0" className="active"></li>
-                <li data-target="#carousel" data-slide-to="1"></li>
-                <li data-target="#carousel" data-slide-to="2"></li>
-            </ol> 
-    
-          
-            <div className="carousel-inner" role="listbox">
-                <div className="carousel-item active">
-                <img src={require('./images/banner_jwellry.jpg')} alt="img"/>
-                </div> 
-    
-                <div className="carousel-item">
-                    <img src={require('./images/banner_jwellry2.jpg')} alt="img"/>
-                </div> 
-    
-                <div className="carousel-item">
-                    <img src={require('./images//banner_jwellry3.jpg')} alt="img"/>
-                </div>
-                </div>
+            <div className="row">
+                <div className="col-md-12 banner">
 
-            <Link to="#carousel" className="carousel-control-prev" role="button" data-slide="prev">
-                <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span className="sr-only"></span>
-            </Link>
-            <Link to="#carousel" className="carousel-control-next" role="button" data-slide="next">
-                <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                <span className="sr-only"></span>
-            </Link>
-        </div> 
-    </section>
-    </div>
-    </div>
-    <div className='icon'><img src={require("./images/Group 8428.png")} alt="img"/></div> 
-      </div>
+                    <Swiper
+                        cssMode={true}
+                        navigation={true}
+                        pagination={true}
+                        autoplay={{delay:5000}}
+                        mousewheel={true}
+                        keyboard={true}
+                        modules={[Navigation, Pagination, Mousewheel, Keyboard, Autoplay]}
+                        className="mySwiper"
+                    >
+                        <SwiperSlide>    <img src={require('./images/banner_jwellry.jpg')} alt="img"/></SwiperSlide>
+                        <SwiperSlide> <img src={require('./images/banner_jwellry2.jpg')} alt="img"/></SwiperSlide>
+                        <SwiperSlide>  <img src={require('./images//banner_jwellry3.jpg')} alt="img"/></SwiperSlide>
+                      
+                    </Swiper>
+                </div>
+            </div>
+        </div>
     )
 }
 

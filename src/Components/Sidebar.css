@@ -84,7 +84,6 @@ a.nav-link {
  
   }
 
-  se
   .searchbutton:active, .searchbutton:hover, .searchbutton:focus {
     color: #000;
     outline: none;
@@ -212,7 +211,7 @@ a.nav-link {
         background: #f9f9f9;
         border: 1px solid #f9f9f9;
         border-radius: 40px;
-        padding-left: 26px;
+        /* padding-left: 26px; */
     }
 
     .signup {
@@ -406,6 +405,8 @@ a.nav-link {
     .signupli{
         padding-left:26px;
         padding-bottom: 15px;
+        width: fit-content;
+        margin-top: 2%;
     }
     .userli {
         width: fit-content;
@@ -424,6 +425,17 @@ a.nav-link {
     .nav-item .dropdown-menu{
         background: transparent;
     }
+
+   
+        form.searchform {
+            position: absolute;
+            right: 12%;
+            top: 0;
+    margin-top: 3%;
+        }
+    
+
+
 }
 
 @media all and (width: 740px) and (height: 360px) and (orientation:landscape){

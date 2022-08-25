@@ -5,6 +5,7 @@ import SideBar from "../Components/SideBaar";
 import OtherServices from '../Services/OtherServices';
 import classes from './PrivacyPolicy.module.css'
 import Contact from "../Components/Contact";
+import Join from '../Components/Join';
 
 const PrivacyPolicy1 = () => {
     const [displayPrivacyPolicy, setDisplayPrivacyPolicy] = useState('');
@@ -23,6 +24,7 @@ const PrivacyPolicy1 = () => {
             <SideBar/>
             <h2>Privacy Policy</h2>
             <h3>{displayPrivacyPolicy}</h3>
+            <Join/>
             <Contact/>
         </div>
     )

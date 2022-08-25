@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import { Link, Navigate } from 'react-router-dom'
 import { connect } from 'react-redux'
 
+// import Contact  from '../Components/Contact';
+// import Join from '../Components/Join';
 import './ViewProfile.css'
 import UserServices from '../Services/UserServices'
 import SideBar from '../Components/SideBaar'
@@ -34,7 +36,8 @@ const ViewProfile = (props) =>
          
            
  return (
-   (props.loginstatus===true ?
+   <div>
+   {props.loginstatus!==true && <Navigate to="/"/>}
     <div>
      <SideBar/>
     <div className="profile">
@@ -45,8 +48,9 @@ const ViewProfile = (props) =>
     <h3>Update your Profile? <Link to="/updateProfile" className="link">Update</Link></h3>
     </div>
     </div>
-    : <Navigate to="/"/>)
-
+    {/* <Join/>
+   <Contact/> */}
+    </div>
  )
  }
 export default connect(mapStateToProps)(ViewProfile);

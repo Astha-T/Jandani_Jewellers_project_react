@@ -4,7 +4,7 @@ import './Logo.css'
 const Logo = () =>
 {
     return (
-        <Link className="navbar-brand" to="#">
+        <Link className="navbar-brand" to="/">
         <img src={require("./images/image 1.png")} alt="" />
         </Link>
     )

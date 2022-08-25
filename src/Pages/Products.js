@@ -1,6 +1,8 @@
 import { useState, useEffect} from "react";
 import React from 'react'
 
+import Contact  from '../Components/Contact';
+import Join from '../Components/Join';
 import Store from '../Redux/Store' 
 import {ACTION_SHOW_PRODUCT} from '../Redux/Actions/ProductAction'
 import Product_list from "../Extra-files/Product_list";
@@ -35,6 +37,7 @@ const Products = (props) => {
     },[]);
 
     return(
+        <div>
             <div className="product_section">
                 <SideBar/>
         <h4>Shop by Products</h4>
@@ -43,6 +46,9 @@ const Products = (props) => {
             <Product_list products={products}/> 
         </div>
         </div>
+        </div>
+        <div><Join/></div>
+          <div><Contact/></div>
         </div>
     )
 }

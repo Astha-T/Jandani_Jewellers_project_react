@@ -172,10 +172,12 @@ useEffect(()=>{
       <div className="col-md-6 col-12 slider_txt">
         <h4>{displayProductName}</h4>
         <p>{displayProductDes}</p>
-          <Enquiry/>   
-          <GetQuotation/>
-          <BookJewellery/> 
-          <BooKAppointment/>
+        <ul className="buton_lst">
+          <li><Enquiry/></li>   
+          <li><GetQuotation/></li>
+          <li><BookJewellery/></li> 
+          <li><BooKAppointment/></li>
+          </ul>
       </div>
       </div>
 

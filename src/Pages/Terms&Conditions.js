@@ -2,6 +2,7 @@ import { useState } from "react";
 import React from 'react'
 
 import SideBar from "../Components/SideBaar";
+import Join from '../Components/Join';
 import OtherServices from "../Services/OtherServices";
 import './Terms&Conditions.css';
 import Contact from "../Components/Contact";
@@ -21,6 +22,7 @@ const TermsConditions = () => {
            <SideBar/>
             <h2>Terms and Conditions</h2>
             <h3>{displayTermsandConditions}</h3>
+            <Join/>
             <Contact/>
         </div>
     )

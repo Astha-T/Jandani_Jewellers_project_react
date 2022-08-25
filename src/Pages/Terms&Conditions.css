@@ -25,3 +25,20 @@
     font-family: 'Poppins';
 }
 
+
+@media all and (max-width: 600px){
+
+    .tandc h2{
+        margin-left: 0px;
+        padding: 20px;
+        font-size: 28px;
+    }
+    .tandc h3{
+        text-align: justify;
+    margin-left: 0px;
+    margin-top: 30px;
+    padding: 5px 20px;
+    }
+
+
+}

@@ -6,7 +6,7 @@
   .login .loginform {
     position: absolute;
     right: 19%;
-    top: 0;
+    top: 10%;
 }
   
   .login  p {
@@ -19,7 +19,8 @@
     font-weight: 700;
     font-size: 20px;
     font-family: 'Poppins';
-    padding: 4% 0% 0% 4%;
+    padding: 0 10px;
+    margin-bottom: 5px !important;
     text-align: left;
    
   }
@@ -73,32 +74,23 @@
   }
   .login  h3{
     font-family: 'Inter';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 17px;
-  color: #191919;
-  padding-left: 150px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #191919;
+    padding-left: 150px;
   }
   .login h3 .link {
     color: #B22D31;
+    border: none;
+    background-color: transparent;
   }
   
   .login h3 .link a{
     font-weight: bold;
+    text-align: center;
   }
-  .login h3 .link {
-    color :#191919;
-    border: none;
-    background-color: transparent;
-    font-size: 14px;
-    margin: 0;
-  }
-
-  .login h3 .link:hover {
-    color: #B22D31;
-  }
-  
   @media (max-width : 768px) {
     .login{
         top: 100px;
@@ -106,7 +98,7 @@
 
     }
     .login h2{
-      padding: 4% 45% 0% 5%;
+    margin : 5px;
     }
   
     .login input {
@@ -129,7 +121,7 @@
       margin-top: 10px !important;
       margin-left: 25%;
     }
-    .login button {
+    .login .defaultButton {
       margin-left: 100px;
       margin-bottom: 5px;
       margin-top: 20px;
@@ -148,9 +140,8 @@
     }
   
     .login h3 {
-        margin-left: 85px;
-        padding-left: 10px;
-        margin-top: 10px;
+      margin-left: 15%;
+      padding-left: 18%;
     }
   }
   

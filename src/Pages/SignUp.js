@@ -62,12 +62,10 @@ const Signup = (props) =>
   }    
 
   const otp = () => {
-    if(isReg===true) {
       setOtpOpen(true)
       setLoginOpen(false)
       setSignupOpen(false)
-     
-    }
+    
   }
     
     return ( <>

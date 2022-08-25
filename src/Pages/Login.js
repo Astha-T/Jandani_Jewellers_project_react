@@ -63,8 +63,8 @@ const Login = (props) =>
 
  return ( islogin?
    <Navigate to="/"/> : <>
-   <LoginBox open={loginOpen}>
- <div className="login">
+   <LoginBox open={loginOpen} onClose={(e) => setLoginOpen(false)}>
+ {<div className="login">
  <h2>LOGIN</h2>
  <form className='loginform' onSubmit ={submitHandler}>
   <input className="phone" type="text" placeholder=' Phone number' name="email_phone" ref={c=>loginphonebox=c} required/>
@@ -73,7 +73,7 @@ const Login = (props) =>
  <h3>Not having any Account?<button onClick={signup} className="link" > SignUp</button></h3>
  <p>{loginMsg}</p>
  </form>
- </div>
+ </div>}
  </LoginBox> 
  <SignUpBox open={signupopen} onClose={(e) => setSignupOpen(false)}><SignUp/></SignUpBox></>
 )
