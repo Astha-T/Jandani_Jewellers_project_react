@@ -6,6 +6,7 @@ import { connect } from 'react-redux'
 import Logo from './Logo'
 import Dialog from './Dailogue'
 import LoginBox from '../Components/LoginBox'
+import Login from '../Pages/Login'
 import SearchDialog from './SearchDailogue'
 import ProductServices from '../Services/ProductServices'
 import Store from '../Redux/Store'
@@ -179,7 +180,8 @@ const SideBar= (props) => {
                     <li className="nav-item signupli"> 
                       
                       <Link className="nav-link signup" to="#" onClick={openDailogue} data-toggle="modal" data-target="#basicModal">Login/Signup</Link>
-                      <LoginBox open={loginOpen} onClose={(e) => setLoginOpen(false)}/>
+                      <LoginBox open={loginOpen} onClose={(e) => setLoginOpen(false)}><Login/>
+                      </LoginBox>
                       </li>
                     
                      }

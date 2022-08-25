@@ -188,6 +188,12 @@ a.nav-link {
         margin-right: 10px;
 
     }
+
+    .fa-user{
+        margin-top: 5px;
+        margin-left: 150px;
+        margin-right: 10px;
+    }
     /* ul.navbar-nav,
     .fa-search {
         padding-left: 22px;

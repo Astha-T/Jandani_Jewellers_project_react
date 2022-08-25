@@ -2,6 +2,7 @@ import { useState , useEffect} from "react";
 import React from 'react'
 import {Link} from 'react-router-dom'
 import SliderApp from '../Components/change'
+// import ScriptTag from 'react-script-tag'
 
 import SideBar from "../Components/SideBaar";
 import './SingleProduct.css';
@@ -10,8 +11,10 @@ import Enquiry from "../Components/Enquiry";
 import BookJewellery from "../Components/BookJewellery";
 import GetQuotation from "../Components/GetQuotation";
 import BooKAppointment from "../Components//BooKAppointment";
+import NewPage from "./abcd";
 
 const SingleProduct = (props) => {
+{/* <ScriptTag type="text/javascript" src="/path/to/../../public/asset/query.js" /> */}
 
  const [displayProductName, setDisplayProductName] = useState('');
  const [displayProductImage,setDisplayProductImage] = useState();
@@ -47,8 +50,8 @@ useEffect(()=>{
       <div className="col-md-6 col-12 slider_col" id="app">
            {/* <SliderApp/> */}
 
-
-         <div className="container-fluid  product">
+<NewPage/>
+         {/* <div className="container-fluid  product">
           <div className="carousel-container position_banner row">
 
             <div id="myCarousel" className="carousel slide" data-ride="carousel">
@@ -165,7 +168,7 @@ useEffect(()=>{
             </div>
 
           </div>
-        </div> *
+        </div> * */}
       
       </div>
 

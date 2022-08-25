@@ -2,15 +2,20 @@ import React, { useState } from 'react'
 import { Link, Navigate} from 'react-router-dom';
 
 import UserService from '../Services/UserServices'
+import LoginBox from '../Components/LoginBox'
+import Login from './Login'
 // import SideBar from '../Components/SideBaar';
 import SignUpBox from '../Components/SignUpBox';
+import SignupLoginbox from '../Components/SignUpBox'
+import Otp from './OTP'
 import './SignUp.css'
 
 const Signup = (props) =>
 {
   
-  const [signupopen,setSignupOpen] = useState(true)
-  const [open,setOpen] = useState(false)
+  const [loginOpen,setLoginOpen] =useState(false);
+       const [signupopen,setSignupOpen] = useState(true)
+       const [Otpopen,setOtpOpen] = useState(false)
 
     var namebox = undefined;
     var emailbox = undefined;
@@ -21,12 +26,11 @@ const Signup = (props) =>
     const [regMsg,setRegMsg] = useState('');
     const [isReg,setIsReg] = useState(false);
 
-   const loginOption = () =>{
-    
+   const login = () =>{
     setSignupOpen(false)
-    setOpen(true)
+    setLoginOpen(true)
    }
-  
+    
     const submitHandler = (event) => {
             
          setRegMsg('Registration in Process...')
@@ -56,10 +60,18 @@ const Signup = (props) =>
            
        event.preventDefault();
   }    
+
+  const otp = () => {
+    if(isReg===true) {
+      setOtpOpen(true)
+      setLoginOpen(false)
+      setSignupOpen(false)
+     
+    }
+  }
     
-    return ( isReg ?<Navigate to="/otp"/>: <>
-     {/* <SideBar/>  */}
-      <SignUpBox open={signupopen}>
+    return ( <>
+<SignUpBox open={signupopen} onClose={(e) => setSignupOpen(false)}>
         <div className='sign_up'>
             <h2>SIGN UP</h2>
             <form onSubmit={submitHandler}>
@@ -68,12 +80,14 @@ const Signup = (props) =>
             <input type="text" placeholder=' Phone Numbers ' name='phone' ref={c=>phonebox=c} required />
             <input type="password" placeholder=' Password' name='password' ref={c=>passbox=c} required/>
             <input type="password" placeholder='Confirm Password' name='confirmpassword' ref={c=>confirmPass=c} required />
-            <button className="defaultButton" type='send'>Sign Up</button>
+            <button onClick ={otp} className="defaultButton" type='send'>Sign Up</button>
             <p>{regMsg}</p>
             </form>
-            <h3>Already a User? <Link className="link" to="/switch">Login</Link></h3>
+            <h3>Already a User? <button onClick={login} className="link" >Login</button></h3>
        </div>
        </SignUpBox>
+       <LoginBox open={loginOpen}><Login/></LoginBox>
+       <SignupLoginbox open={Otpopen}><Otp/></SignupLoginbox>
       </>
       )
 }

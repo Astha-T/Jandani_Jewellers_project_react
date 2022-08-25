@@ -50,7 +50,7 @@
       text-align: center;
   }
   
-  .login  button {
+  .login  .defaultButton {
   margin-left: 100px;
   margin-bottom: 20px;
   margin-top: 20px;
@@ -87,7 +87,17 @@
   .login h3 .link a{
     font-weight: bold;
   }
-  
+  .login h3 .link {
+    color :#191919;
+    border: none;
+    background-color: transparent;
+    font-size: 14px;
+    margin: 0;
+  }
+
+  .login h3 .link:hover {
+    color: #B22D31;
+  }
   
   @media (max-width : 768px) {
     .login{
