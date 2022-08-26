@@ -31,6 +31,8 @@ const CategoryList = (props) => {
         });
     },[]);
 
+    
+
     return(
         <div className="category_section">
         <h4>Shop by categories</h4>

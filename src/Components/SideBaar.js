@@ -4,6 +4,8 @@ import {Link, nav} from 'react-router-dom'
 import Logo from './Logo'
 import Dialog from './Dailogue'
 import LoginBox from '../Components/LoginBox'
+import SignUpBox from './SignUpBox'
+import Signup from '../Pages/SignUp'
 import Login from '../Pages/Login'
 import SearchDialog from './SearchDailogue'
 import ProductServices from '../Services/ProductServices'
@@ -12,7 +14,8 @@ import './Sidebar.css'
 const SideBar= (props) => {
   
   const [open,setOpen] = useState(false)
-  const [loginOpen,setLoginOpen] = useState(false)
+  const [loginOpen,setLoginOpen] = useState(true)
+  const [signupOpen,setSignUpOpen] = useState(false)
   const [searchOpen,setSearchOpen] = useState(false)
   const [searchbar,setSearchBar] = useState(false)
 
@@ -24,6 +27,16 @@ const SideBar= (props) => {
     setSearchBar(true)
   }
 
+  const change= () => {
+    if(loginOpen===true){
+      setLoginOpen(false)
+      setSignUpOpen(true)
+    }
+    else {
+      setLoginOpen(true)
+      setSignUpOpen(false)
+    }
+  }
   const removeSearchBar = () => {
     setSearchBar(false)
     setSearchOpen(false)
@@ -163,8 +176,16 @@ const loginStatus = localStorage.getItem('loginstatus')
                     <li className="nav-item signupli"> 
                       
                       <Link className="nav-link signup" to="#" onClick={openDailogue} data-toggle="modal" data-target="#basicModal">Login/Signup</Link>
-                      <LoginBox open={loginOpen} onClose={(e) => setLoginOpen(false)}><Login/>
-                      </LoginBox>
+                     {loginOpen===true&&  <LoginBox open={loginOpen} onClose={(e) => setLoginOpen(false)}>
+                        <><Login/>
+                        <h3 className='loginh3'>Not having any Account?<button onClick={change} className="link" > SignUp</button></h3> 
+                        </>
+                        </LoginBox>}
+                    {signupOpen===true && <SignUpBox open={signupOpen} onClose={(e) => setSignUpOpen(false)}><><Signup/>
+                        <h3 className='signuph3'>Already a User? <button onClick={change} className="link" >Login</button></h3>
+                        </>
+                        </SignUpBox>}
+                      
                       </li>
                     
                      }

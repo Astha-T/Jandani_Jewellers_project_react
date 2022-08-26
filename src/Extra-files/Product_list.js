@@ -14,6 +14,7 @@ const Product_list = (props) => {
                 name = {prod.name}
                 image = {prod.image}
                 id = {prod.id}
+                favorite = {prod.favorite}
                 />
             ))}    
 

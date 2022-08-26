@@ -69,7 +69,6 @@ const Signup = (props) =>
   }
     
     return ( <>
-<SignUpBox open={signupopen} onClose={(e) => setSignupOpen(false)}>
         <div className='sign_up'>
             <h2>SIGN UP</h2>
             <form onSubmit={submitHandler}>
@@ -81,11 +80,9 @@ const Signup = (props) =>
             <button onClick ={otp} className="defaultButton" type='send'>Sign Up</button>
             <p>{regMsg}</p>
             </form>
-            <h3>Already a User? <button onClick={login} className="link" >Login</button></h3>
+            {/* <h3>Already a User? <button onClick={login} className="link" >Login</button></h3> */}
        </div>
-       </SignUpBox>
-       <LoginBox open={loginOpen}><Login/></LoginBox>
-       <SignupLoginbox open={Otpopen}><Otp/></SignupLoginbox>
+    
       </>
       )
 }

@@ -12,15 +12,20 @@ import SideBar from "../Components/SideBaar";
 const ProductsByCate = (props) => {
     
     const [products,setProducts] = useState([])
+    const [fav,setFav] = useState(false)
 
     const categoryId = localStorage.getItem('category_id'); 
-        console.log(categoryId)
+    const userId =  localStorage.getItem('user_id')
+    const loginStatus = localStorage.getItem('loginstatus')
+
     useEffect(()=>{
+        if(loginStatus===0)
+        {
         fetch('https://dev.weblaunchpad.in/jandani_jewellers/api/customer/get_product_by_category?category_id='+categoryId)
         .then(res => res.json())
         .then(data => {
-         const updatedProd= data.result.map((productData)=> {
             console.log(data)
+         const updatedProd= data.result.map((productData)=> {
             if(data.status==='1') {
                 localStorage.setItem('product_id', data.result.id)
                  Store.dispatch({...ACTION_SHOW_PRODUCT,payload: {
@@ -36,6 +41,32 @@ const ProductsByCate = (props) => {
         
           setProducts(updatedProd);
         })
+    }
+    else {
+        fetch('https://dev.weblaunchpad.in/jandani_jewellers/api/customer/get_product_by_category?category_id='+categoryId+'&user_id='+userId)
+        .then(res => res.json())
+        .then(data => {
+            console.log(data)
+         const updatedProd= data.result.map((productData)=> {
+            if(data.status==='1') {
+                localStorage.setItem('product_id', data.result.id)
+                 Store.dispatch({...ACTION_SHOW_PRODUCT,payload: {
+                    'product_id': data.result.id
+                      }})
+        
+                return{
+                    name : productData.name,
+                    image : productData.image,
+                    id : productData.id,
+                    favorite : productData.favorite
+                }
+                
+            }
+            });
+        
+          setProducts(updatedProd);
+        })  
+    }  
     },[]);
 
     return(

@@ -7,44 +7,38 @@ import './LikeButton.css'
 const LikeButton = (props) => {
 
   const loginStatus = localStorage.getItem('loginstatus')
-    const [like,setLike] = useState(true)
     const [msg,setMsg] = useState('')
     const [open,setOpen] = useState(false)
-    const [span,setSpan] = useState(false)
+    const [like,setLike] = useState(true)
 
     const Like= () => {
     
     if(loginStatus==='1') {
-        
-       if(like===true)
-      {
-
+    
+      if(like===true){
         ProductServices.Add_fav().then((response)=>response.json()).then(data=> {
+          if(data.status==='1')
+          {
+            setLike(false)
+          }
         console.log(data)
         setOpen(true)
         setMsg(data.message)
-        if(data.status==="1")
-        {
-        setSpan(true) 
-        }
+       
     })
-    setLike(false)
-}
+  }
 
-     else if(like===false)
-     {
-        
-        ProductServices.Remove_fav().then((response)=>response.json()).then(data=> {
-            console.log(data)
-            setOpen(true)
-            setMsg(data.message)
-            if(data.status==="1")
-            {
-            setSpan(false)
-            }
-        })
+  else {
+    ProductServices.Remove_fav().then((response)=>response.json()).then(data=> {
+      console.log(data)
+      if(data.status===1)
+      {
       setLike(true)
-    }
+      }
+      setOpen(true)
+      setMsg(data.message)
+  })
+  }
 
     }
 
@@ -57,8 +51,8 @@ const LikeButton = (props) => {
     return (
         <div className="like">
       <button onClick={Like}>
-    {span===false ? <span className='fa fa-heart' style={{color : "white", fontSize: '17px'}}/>
-     :  <span className='fa fa-heart' style={{color : "red" , fontSize: '17px'}}/>                                                                       }
+    {like===true && <span className='fa fa-heart' style={{color : "white", fontSize: '17px'}}/> }                                                   
+    {like===false && <span className='fa fa-heart' style={{color : "red" , fontSize: '17px'}}/>}
     </button>
     <Dialog open={open} onClose={(e) => setOpen(false)}>
     {msg}

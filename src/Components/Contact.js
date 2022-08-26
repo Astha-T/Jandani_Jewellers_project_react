@@ -19,7 +19,9 @@ const Contact = (props) =>
         email : emailbox.value
     }
     console.log(obj)
+
     const loginStatus = localStorage.getItem('loginstatus')
+    
     if(loginStatus==='1'){
     OtherServices.Subscribe_here(obj).then(response=>response.json()).then(data=>
         {

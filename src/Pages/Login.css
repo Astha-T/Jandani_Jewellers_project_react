@@ -72,25 +72,7 @@
   .login  button:disabled {
     cursor: not-allowed;
   }
-  .login  h3{
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 17px;
-    color: #191919;
-    padding-left: 150px;
-  }
-  .login h3 .link {
-    color: #B22D31;
-    border: none;
-    background-color: transparent;
-  }
   
-  .login h3 .link a{
-    font-weight: bold;
-    text-align: center;
-  }
   @media (max-width : 768px) {
     .login{
         top: 100px;

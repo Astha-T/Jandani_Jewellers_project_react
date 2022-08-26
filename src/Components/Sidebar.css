@@ -152,7 +152,51 @@ a.nav-link {
   .fa-close {
     margin-right: 17px;
 }
+.loginh3{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #191919;
+    padding-left: 120px;
+    /* margin-top: 100px; */
+    padding-top: 250px;
+  }
+  
+ .loginh3 .link {
+    color: #B22D31;
+    border: none;
+    background-color: transparent;
+  }
+  
+.loginh3 .link a{
+    font-weight: bold;
+    text-align: center;
+  }
 
+  .signuph3{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #191919;
+    padding-left: 150px;
+    /* margin-top: 100px; */
+    padding-top: 420px;
+  }
+  
+ .signuph3 .link {
+    color: #B22D31;
+    border: none;
+    background-color: transparent;
+  }
+  
+ .signuph3 .link a{
+    font-weight: bold;
+    text-align: center;
+  }
   @media only screen and (max-width: 600px) {
 
   .nav-link {
