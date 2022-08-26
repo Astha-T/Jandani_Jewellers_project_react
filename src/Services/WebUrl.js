@@ -17,6 +17,8 @@ var urls= {
     Book_Appointment : "https://dev.weblaunchpad.in/jandani_jewellers/api/customer/book-appointment?product_id=",
     Book_Jewellery : "https://dev.weblaunchpad.in/jandani_jewellers/api/customer/book-jewellery?product_id=",
 
+    Subscribe: 'https://dev.weblaunchpad.in/jandani_jewellers/api/customer/subscribe?email=',
+    Join: 'https://dev.weblaunchpad.in/jandani_jewellers/api/customer/join?user_id=',
     Privacy__Policy : "https://dev.weblaunchpad.in/jandani_jewellers/api/customer/get_privacy_policy",
     Terms_and_Conditions : "https://dev.weblaunchpad.in/jandani_jewellers/api/customer/get_terms_conditions",
     Notifications : "https://dev.weblaunchpad.in/jandani_jewellers/api/customer/get_user_notification?user_id=",

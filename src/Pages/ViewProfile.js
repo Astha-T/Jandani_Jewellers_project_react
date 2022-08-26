@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import { Link, Navigate } from 'react-router-dom'
-import { connect } from 'react-redux'
 
 // import Contact  from '../Components/Contact';
 // import Join from '../Components/Join';
@@ -8,16 +7,10 @@ import './ViewProfile.css'
 import UserServices from '../Services/UserServices'
 import SideBar from '../Components/SideBaar'
 
-function mapStateToProps(state){
-   return {
-       loginstatus : state.user.loginstatus,
-       full_name : state.user.full_name,
-       user_id : state.user.user_id
-   }
-}
-
 const ViewProfile = (props) => 
 {
+
+   const loginStatus = localStorage.getItem('loginstatus')
        const [username,setUserName] = useState('');
        const [useremail,setUserEmail] = useState('');
        const [usermobile,setUserMobile] = useState('');
@@ -37,7 +30,7 @@ const ViewProfile = (props) =>
            
  return (
    <div>
-   {props.loginstatus!==true && <Navigate to="/"/>}
+   {loginStatus==='1' && <Navigate to="/"/>}
     <div>
      <SideBar/>
     <div className="profile">
@@ -53,4 +46,4 @@ const ViewProfile = (props) =>
     </div>
  )
  }
-export default connect(mapStateToProps)(ViewProfile);
+export default ViewProfile;

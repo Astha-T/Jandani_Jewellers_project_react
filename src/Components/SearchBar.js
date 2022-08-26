@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-// import "./SearchBar.css";
-import ProductServices from '../Services/ProductServices'
 
 function SearchBar({ placeholder, data }) {
   const [filteredData, setFilteredData] = useState([]);

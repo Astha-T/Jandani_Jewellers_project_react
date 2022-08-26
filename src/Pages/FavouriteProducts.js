@@ -1,6 +1,5 @@
 import { useState , useEffect } from "react";
 import React from 'react'
-import { connect } from 'react-redux'
 
 import SideBar from '../Components/SideBaar'
 import Contact  from '../Components/Contact';
@@ -9,16 +8,9 @@ import FavProdList from "../Extra-files/FavProdList";
 import './FavouriteProducts.css'
 import { Navigate } from "react-router-dom";
 
-function mapStateToProps(state){
-    return {
-        loginstatus : state.user.loginstatus,
-        full_name : state.user.full_name,
-        user_id : state.user.user_id
-    }
- }
- 
 const FavouriteProducts = (props) => {
     
+    const loginStatus = localStorage.getItem('loginstatus')
     const [products,setProducts] = useState([])
 
         const imgurl = 'https://dev.weblaunchpad.in/jandani_jewellers/public/product/';
@@ -41,7 +33,7 @@ const FavouriteProducts = (props) => {
     },[userId]);
 
     return(<>
-        {props.loginstatus!==true && <Navigate to="/"/>}
+        {loginStatus!=='1' && <Navigate to="/"/>}
         <div className="product_section">
                 <SideBar/>
         <h4>YOUR FAVOURITE PRODUCUTS</h4>
@@ -56,4 +48,4 @@ const FavouriteProducts = (props) => {
         </>
     )
 }
-export default connect(mapStateToProps)(FavouriteProducts);
+export default FavouriteProducts;

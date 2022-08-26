@@ -1,18 +1,9 @@
 import React, { useState } from 'react'
-import { connect } from 'react-redux'
 
 import UserService from '../Services/UserServices'
 import {Navigate} from 'react-router-dom'
 import SideBar from '../Components/SideBaar';
 import './UpdateProfile.css';
-
-function mapStateToProps(state){
-  return {
-      loginstatus : state.user.loginstatus,
-      full_name : state.user.full_name,
-      user_id : state.user.user_id
-  }
-}
 
 const UpdateProfile = (props) =>
 {
@@ -22,6 +13,7 @@ const UpdateProfile = (props) =>
     var passbox = undefined;
     var confirmPass = undefined;
 
+    const loginStatus = localStorage.getItem('loginstatus')
     const [regMsg,setRegMsg] = useState('');
     const [isReg,setIsReg] = useState(false);
    
@@ -55,7 +47,7 @@ const UpdateProfile = (props) =>
   }    
   
     
-    return (  isReg===true && props.loginstatus!==true ? <Navigate to="/"/>: <>
+    return (  isReg===true && loginStatus!=='1' ? <Navigate to="/"/>: <>
     
     <SideBar/>
    
@@ -75,4 +67,4 @@ const UpdateProfile = (props) =>
     )
 }
 
-export default connect(mapStateToProps)(UpdateProfile);
+export default UpdateProfile;

@@ -1,25 +1,17 @@
 import React, { useState } from 'react'
-import {connect} from "react-redux"
 
 import ProductServices from '../Services/ProductServices'
 import Dialog from '../Components/Dailogue'
 import './Enquiry.css'
 
-function mapStateToProps(state){
-    return {
-        loginstatus : state.user.loginstatus,
-        full_name : state.user.full_name,
-        user_id : state.user.user_id
-    }
-}
-
 const BookJewellery = (props) => {
 
+    const loginStatus = localStorage.getItem('loginstatus')
     const[msg,setMsg] = useState('')
     const[open,setOpen] = useState(false)
 
     const BookNow = () => {
-        if(props.loginstatus===true) {
+        if(loginStatus==='1') {
         ProductServices.Book().then((response)=>response.json()).then(data=> {
         console.log(data)
        setMsg(data.message)
@@ -43,4 +35,4 @@ return (
 )
 }
 
-export default connect(mapStateToProps)(BookJewellery);
+export default BookJewellery;

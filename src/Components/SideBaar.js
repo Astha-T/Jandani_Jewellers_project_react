@@ -1,7 +1,5 @@
 import React, {useState} from 'react'
-import $ from 'jquery'
 import {Link, nav} from 'react-router-dom'
-import { connect } from 'react-redux'
 
 import Logo from './Logo'
 import Dialog from './Dailogue'
@@ -9,17 +7,7 @@ import LoginBox from '../Components/LoginBox'
 import Login from '../Pages/Login'
 import SearchDialog from './SearchDailogue'
 import ProductServices from '../Services/ProductServices'
-import Store from '../Redux/Store'
-import {ACTION_USER_LOGIN_LOGOUT} from '../Redux/Actions/UserAction'
 import './Sidebar.css'
-
-function mapStateToProps(state){
-    return {
-        loginstatus : state.user.loginstatus,
-        full_name : state.user.full_name,
-        user_id : state.user.user_id
-    }
-}
 
 const SideBar= (props) => {
   
@@ -78,30 +66,27 @@ const SideBar= (props) => {
 });
   
 }
-
-
+const loginStatus = localStorage.getItem('loginstatus')
+ const Full_name = localStorage.getItem('full_name')
     var logout = ()=>{
     
-        Store.dispatch({...ACTION_USER_LOGIN_LOGOUT,payload:{
-            loginstatus : false,
-            full_name : undefined,
-            user_id : undefined
-         }})
-                  window.localStorage.removeItem('loginstatus')
-                  window.localStorage.removeItem('user_id')
-                  window.localStorage.removeItem('mobile')
-                  window.localStorage.removeItem('full_name')
+         localStorage.setItem('user_id', undefined);
+         localStorage.setItem('mobile',undefined);
+         localStorage.setItem('loginstatus',undefined);
+         localStorage.setItem('full_name', undefined);
+         localStorage.setItem('email',undefined);
          alert("Logging Out...")
+
     }
 
-    const Warning = () => {
-      alert("Logging Out in 5 minutes...")
-    }
+    // const Warning = () => { 
+    //   alert("Logging Out in 5 minutes...")
+    // }
 
-    if(props.loginstatus ===true) {
-      setTimeout(logout,18000000)
-      setTimeout(Warning, 15000000)
-    }
+    // if(loginStatus ===true) {
+    //   setTimeout(logout,18000000)
+    //   setTimeout(Warning, 15000000)
+    // }
 
     return ( 
       <div className="main_header" id="headerup">
@@ -142,12 +127,11 @@ const SideBar= (props) => {
                               <div className="dropdown-menu">
                                 <Link className="dropdown-item" to="/category_list" >Category</Link>
                                 <Link className="dropdown-item" to="/product_list" >Product</Link>
-                                <Link className="dropdown-item" to="#" onClick={displaySearcharBar} >Search Single Product</Link>
                               </div>
                             </li>
                         </ul>
                       </li>
-                      {props.loginstatus ===true ? <>
+                      {loginStatus==='1' ? <>
                        <li className="nav-item userli">
                        <ul>
                      <li>
@@ -157,8 +141,7 @@ const SideBar= (props) => {
                              <div className="dropdown-menu">
                                <Link className="dropdown-item" to="/view_profile" >Your Profile</Link>
                                <Link className="dropdown-item" to="/favourite_products" >Favourite Products</Link>
-                               <Link className="dropdown-item" to="/notifications" >Notifications</Link>
-                     
+                               <Link className="dropdown-item" to="/notifications" >Check Notifications</Link>
                              </div>
                            </li>
                            </ul>
@@ -168,14 +151,14 @@ const SideBar= (props) => {
                        <li>
                         <span className="fa fa-user"></span></li>
                        <li className="dropdown"><Link className="nav-link dropdown-toggle" to="#"
-                         data-toggle="dropdown">Hi {props.full_name}</Link>
+                         data-toggle="dropdown">Hi {Full_name}</Link>
                            <div className="dropdown-menu">
                              <Link className="dropdown-item" to="#" onClick={logout}>Logout</Link>
                            </div>
                          </li>
                      </ul>
                    </li></>
-                    : 
+                   :
                    
                     <li className="nav-item signupli"> 
                       
@@ -206,4 +189,4 @@ const SideBar= (props) => {
     )
 }
 
-export default connect(mapStateToProps)(SideBar);
+export default SideBar;

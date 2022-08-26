@@ -41,14 +41,16 @@ const Login = (props) =>
                     console.log(data)
                     localStorage.setItem('user_id', data.user_id);
                     localStorage.setItem('mobile',data.data.mobile);
-                    localStorage.setItem('loginstatus',true);
+                    localStorage.setItem('loginstatus',data.status);
                     localStorage.setItem('full_name', data.data.full_name);
+                    localStorage.setItem('email',data.data.email);
                     
                     Store.dispatch({...ACTION_USER_LOGIN_LOGOUT,payload: {
-                     loginstatus : true,
+                     loginstatus : data.status,
                      full_name : data.data.full_name,
                      user_id : data.data.user_id,
-                     mobile : data.data.mobile
+                     mobile : data.data.mobile,
+                     email : data.data.email
                   }})
 
                     setIsLogin(true)

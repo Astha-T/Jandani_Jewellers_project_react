@@ -174,9 +174,9 @@ useEffect(()=>{
         <p>{displayProductDes}</p>
         <ul className="buton_lst">
           <li><Enquiry/></li>   
-          <li><GetQuotation/></li>
+          <li className="sec_btn"><GetQuotation/></li>
           <li><BookJewellery/></li> 
-          <li><BooKAppointment/></li>
+          <li className="frth_btn"><BooKAppointment/></li>
           </ul>
       </div>
       </div>

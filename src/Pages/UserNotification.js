@@ -1,23 +1,15 @@
 import { useState} from "react";
 import React from "react";
-import { connect } from 'react-redux'
 import { Navigate } from "react-router-dom";
 
 import SideBar from '../Components/SideBaar'
 import NotificationList from "../Extra-files/NotificationList";
 import OtherServices from '../Services/OtherServices';
 import './UserNotification.css'
-
-function mapStateToProps(state){
-    return {
-        loginstatus : state.user.loginstatus,
-        full_name : state.user.full_name,
-        user_id : state.user.user_id
-    }
- }
  
 const UserNotification = (props) => {
     
+    const loginStatus = localStorage.getItem('loginstatus')
     const [notification,setNotification] = useState([]);
 
        OtherServices.UNotification().then((response)=>response.json()).then(data=> {
@@ -38,7 +30,7 @@ const UserNotification = (props) => {
         )
 
     return(
-        (props.loginstatus===true ?
+        (loginStatus==='1' ?
         <div className="product_section">
                 <SideBar/>
         <h4>YOUR NOTIFICATION</h4>
@@ -52,4 +44,4 @@ const UserNotification = (props) => {
 
     )
 }
-export default connect(mapStateToProps)(UserNotification);
+export default UserNotification;

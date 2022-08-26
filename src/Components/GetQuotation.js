@@ -1,25 +1,17 @@
 import React , {useState} from 'react'
-import {connect} from "react-redux"
 
 import ProductServices from '../Services/ProductServices'
 import Dialog from '../Components/Dailogue'
 import './Enquiry.css'
 
-function mapStateToProps(state){
-    return {
-        loginstatus : state.user.loginstatus,
-        full_name : state.user.full_name,
-        user_id : state.user.user_id
-    }
-}
-
 const GetQuotation= (props) => {
 
+    const loginStatus = localStorage.getItem('loginstatus')
     const [open,setOpen] = useState(false)
     const [msg,setMsg] = useState('')
 
     const Getquot = () => {
-        if(props.loginstatus===true) {
+        if(loginStatus==='1') {
         ProductServices.GetQ().then((response)=>response.json()).then(data=> {
         console.log(data)
         setMsg(data.message)
@@ -43,4 +35,4 @@ return (
 )
 }
 
-export default connect(mapStateToProps)(GetQuotation);
+export default GetQuotation;

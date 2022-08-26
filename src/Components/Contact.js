@@ -1,10 +1,39 @@
-import React from 'react'
-import {Link} from 'react-router-dom'
 
+import React , {useState} from 'react'
+import {Link} from 'react-router-dom'
+import {connect} from "react-redux"
+
+import OtherServices from '../Services/OtherServices'
+import Dialog from '../Components/Dailogue'
 import './Contact.css'
 
-const Contact = () =>
+const Contact = (props) =>
 {
+    var emailbox= undefined;
+    const [msg,setMsg] = useState('');
+    const [open,setOpen] = useState(false)
+    
+    const Subscribe = () => {
+      
+    var obj = {
+        email : emailbox.value
+    }
+    console.log(obj)
+    const loginStatus = localStorage.getItem('loginstatus')
+    if(loginStatus==='1'){
+    OtherServices.Subscribe_here(obj).then(response=>response.json()).then(data=>
+        {
+            console.log(data)
+        setOpen(true)
+        setMsg(data.message)
+         } 
+         )}
+
+         else {
+            setOpen(true)
+        setMsg("Please Login to your account!!!")
+         }}
+
   return (
     <div className="footer">
     <footer>
@@ -35,14 +64,17 @@ const Contact = () =>
                     <li><img src={require("./images/Vector (2).jpg")}/>6391 Elgin St. Celina, Delaware 10299</li>
                 </ul>
                 <ul className="subscribe">
-                    <li><input type="email" placeholder="Email"/></li>
-                    <li><button>Subscribe</button></li>
+                    <li><input type="text" placeholder="Email" ref={c=>emailbox=c} required/></li>
+                    <li><button onClick={Subscribe} type='submit'>Subscribe</button></li>
                 </ul>
             </div>
             <div className="col-md-12 col3">
                 <h6 className="text-center">Copyright © 2022 JandaniJewellers</h6>
             </div>
         </div>
+        <Dialog open={open} onClose={(e) => setOpen(false)}>
+        {msg}
+        </Dialog>
     </footer>
     
 </div>

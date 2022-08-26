@@ -10,28 +10,13 @@ import './Home.css'
 
 const Home = (props) => { 
 
-
      return (
         <div className='home'> 
-       <table>
-        <tbody>
-       <tr>
-       <td><SideBar/></td>
-       </tr>
-        <tr>
-      <td><Slider/></td> 
-       </tr>
-       <tr>
-         <td><CategoryList/></td>
-       </tr>
-       <tr>
-         <td><Join/></td>
-       </tr>
-       <tr>
-         <td><Contact/></td>
-       </tr>
-       </tbody>
-       </table>
+          <div><SideBar/></div>
+          <div><Slider/></div> 
+          <div><CategoryList/></div>
+          <div><Join/></div>
+          <div><Contact/></div>
 </div>
      )
 }

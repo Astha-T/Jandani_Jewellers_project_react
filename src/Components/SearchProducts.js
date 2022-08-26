@@ -1,4 +1,4 @@
-import { useState, useEffect} from "react";
+import { useState} from "react";
 import React from "react";
 
 import Search_list from "../Extra-files/SearchBarList";
@@ -12,14 +12,9 @@ const SearchProduct = (props) => {
     
     const [products,setProducts] = useState([])
 
-    const userId = localStorage.getItem('user_id');
-    const keyWord = localStorage.getItem('keyValue')
-
-    useEffect(()=>{
-      fetch('https://dev.weblaunchpad.in/jandani_jewellers/api/customer/search-product?user_id='+userId+"&key_word="+keyWord)
-      .then(res => res.json())
-      .then(data => {
+       ProductServices.Search_ProductbyKeyWord().then((response)=>response.json()).then(data=> {
          const updatedProd= data.result.map((productData)=> {
+            console.log(data)
             if(data.status===1) {
                 localStorage.setItem('product_id', data.result.id)
                  Store.dispatch({...ACTION_SHOW_PRODUCT,payload: {
@@ -40,7 +35,7 @@ const SearchProduct = (props) => {
         
           setProducts(updatedProd);
         })
-      },[])
+
         return(
 
                 <Search_list products={products}/> 

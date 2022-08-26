@@ -17,7 +17,6 @@ import Store from './Redux/Store';
 import SideBar from './Components/SideBaar';
 
 const Signup = React.lazy(() => import('./Pages/SignUp'));
-const Switch = React.lazy(() => import('./Pages/Switch'))
 const Otp = React.lazy(() => import('./Pages/OTP'));
 const Products = React.lazy(() =>  import ('./Pages/Products') )
 const Category = React.lazy(()=> import('./Components/Category'))
@@ -45,7 +44,6 @@ root.render(
   <Routes>
             <Route path="/" element={<App/>}/>
             <Route path="/signup" element={<Signup/>}/>
-            <Route path="/switch" element={<Switch/>}/>
             <Route path="/otp" element={<Otp/>}/>
             <Route path="/favourite_products" element={<FavouriteProducts/>}/>
             <Route path="/privacy_policy" element={<PrivacyPolicy1/>}/>

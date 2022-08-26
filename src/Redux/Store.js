@@ -8,7 +8,7 @@ const store = createStore(combineReducers({
     category : CategoryReducer,
     product : ProductReducer
 },{
-    user : {loginstatus:false, user_id:undefined, mobile:undefined, full_name:undefined},
+    user : {loginstatus:undefined, user_id:undefined, mobile:undefined, full_name:undefined, email:undefined},
     category : {category_id: undefined},
     product : {product_id: undefined, keyValue: undefined, likeStatus: false},
 }))

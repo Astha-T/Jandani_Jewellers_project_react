@@ -1,18 +1,9 @@
 import React, {useState} from 'react'
 import {Link } from 'react-router-dom'
-import {connect} from 'react-redux'
 
 import Dialog from '../Components/Dailogue'
 import './FavProd.css'
-import RemoveFav from '../Components/RemoveFav'
 
-function mapStateToProps(state){
-    return {
-        loginstatus : state.user.loginstatus,
-        full_name : state.user.full_name,
-        user_id : state.user.user_id
-    }
-}
 const FavProd = (props) => {
     const [msg,setMsg] = useState('')
     const [open,setOpen] = useState(false)
@@ -23,7 +14,6 @@ const FavProd = (props) => {
 
     return (
         <div className="col-md-3 col-sm-6 col-6 abc">
-            <RemoveFav/>
 <figure>
     <Link onClick={setProductId} to="/singleProduct" >
             {/* <p className= 'circle'> */}
@@ -40,4 +30,4 @@ const FavProd = (props) => {
     )
 }
 
-export default connect(mapStateToProps)(FavProd);
+export default FavProd;

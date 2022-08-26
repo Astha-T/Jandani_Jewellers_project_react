@@ -1,7 +1,3 @@
-import React from 'react' 
-
-const ImageSlider = () => {
-    return(
 <div>
       <Header size={cart.length} setOpenmodel={setOpenmodel} />
 
@@ -391,6 +387,3 @@ const ImageSlider = () => {
       <Footer />
 
     </div>
-)}
-
-export default ImageSlider;
