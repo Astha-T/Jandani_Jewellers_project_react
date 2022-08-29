@@ -18,11 +18,8 @@ const Products = (props) => {
 
     useEffect(()=>{
 
-<<<<<<< HEAD
        if(loginStatus==='0')
        {
-=======
->>>>>>> 747834d17b718f7bc2168f89cc92ae45c4696d6f
         fetch("https://dev.weblaunchpad.in/jandani_jewellers/api/customer/get_all_product_list")
         .then(res => res.json())
         .then(data => {
@@ -45,7 +42,7 @@ const Products = (props) => {
           setProducts(updatedProd);
         }
         );
-<<<<<<< HEAD
+
     }
 
     else {
@@ -74,8 +71,6 @@ const Products = (props) => {
         }
         );
     }
-=======
->>>>>>> 747834d17b718f7bc2168f89cc92ae45c4696d6f
         },[]);
 
     return(

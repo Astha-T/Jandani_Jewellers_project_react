@@ -1,15 +1,11 @@
 import { useState, useEffect} from "react";
 import React from "react";
 
-<<<<<<< HEAD
+import Productbycate_list from "../Extra-files/Productbycate_list";
 import Contact  from '../Components/Contact';
 import Join from '../Components/Join';
-import Productbycate_list from "../Extra-files/Productbycate_list";
-=======
-// import Contact  from '../Components/Contact';
-// import Join from '../Components/Join';
 import Product_list from "../Extra-files/Product_list";
->>>>>>> 747834d17b718f7bc2168f89cc92ae45c4696d6f
+
 import Store from '../Redux/Store'
 import {ACTION_SHOW_PRODUCT} from '../Redux/Actions/ProductAction'
 import './ProductByCate.css'
@@ -85,8 +81,8 @@ const ProductsByCate = (props) => {
         </div>
         </div>
         </div>
-        {/* <div><Join/></div>
-        <div><Contact/></div> */}
+        <div><Join/></div>
+        <div><Contact/></div>
         </div>
     )
 }
