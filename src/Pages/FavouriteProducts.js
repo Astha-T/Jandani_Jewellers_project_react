@@ -2,8 +2,8 @@ import { useState , useEffect } from "react";
 import React from 'react'
 
 import SideBar from '../Components/SideBaar'
-// import Contact  from '../Components/Contact';
-// import Join from '../Components/Join';
+import Contact  from '../Components/Contact';
+import Join from '../Components/Join';
 import FavProdList from "../Extra-files/FavProdList";
 import './FavouriteProducts.css'
 import { Navigate } from "react-router-dom";
@@ -43,14 +43,9 @@ const FavouriteProducts = (props) => {
         <FavProdList products={products}/> 
         </div>
         </div>
-<<<<<<< HEAD
         </div>
         <div className="join"><Join/></div>
         <div><Contact/></div>
-=======
-        {/* <div className="join"><Join/></div>
-        <div><Contact/></div> */}
->>>>>>> 747834d17b718f7bc2168f89cc92ae45c4696d6f
         </div>
         
     )
