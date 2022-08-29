@@ -1,8 +1,8 @@
 import { useState, useEffect} from "react";
 import React from 'react'
 
-import Contact  from '../Components/Contact';
-import Join from '../Components/Join';
+// import Contact  from '../Components/Contact';
+// import Join from '../Components/Join';
 import Store from '../Redux/Store' 
 import {ACTION_SHOW_PRODUCT} from '../Redux/Actions/ProductAction'
 import Product_list from "../Extra-files/ProductList";
@@ -18,8 +18,11 @@ const Products = (props) => {
 
     useEffect(()=>{
 
+<<<<<<< HEAD
        if(loginStatus==='0')
        {
+=======
+>>>>>>> 747834d17b718f7bc2168f89cc92ae45c4696d6f
         fetch("https://dev.weblaunchpad.in/jandani_jewellers/api/customer/get_all_product_list")
         .then(res => res.json())
         .then(data => {
@@ -42,6 +45,7 @@ const Products = (props) => {
           setProducts(updatedProd);
         }
         );
+<<<<<<< HEAD
     }
 
     else {
@@ -70,6 +74,8 @@ const Products = (props) => {
         }
         );
     }
+=======
+>>>>>>> 747834d17b718f7bc2168f89cc92ae45c4696d6f
         },[]);
 
     return(
@@ -83,8 +89,8 @@ const Products = (props) => {
         </div>
         </div>
         </div>
-        <div><Join/></div>
-          <div><Contact/></div>
+        {/* <div><Join/></div>
+          <div><Contact/></div> */}
         </div>
     )
 }

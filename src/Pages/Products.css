@@ -65,7 +65,14 @@ a:hover {
       padding: 28px 0px 30px 0px;
       width: 150px !important;
   }
+<<<<<<< HEAD
  
+=======
+ .product_section .like .likebutton {
+   display: none;
+ }
+
+>>>>>>> 747834d17b718f7bc2168f89cc92ae45c4696d6f
   .product_section figure img {
       height: 108px;
       z-index: 9;

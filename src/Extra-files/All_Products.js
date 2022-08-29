@@ -19,25 +19,38 @@ const All_Products = (props) => {
 
     if(loginStatus==='1') {
     
+<<<<<<< HEAD
         if(like===0){
+=======
+        if(like==='0'){
+>>>>>>> 747834d17b718f7bc2168f89cc92ae45c4696d6f
           ProductServices.Add_fav().then(response=>response.json()).then(data=> {
           console.log(data)
           setOpen(true)
           setMsg(data.message)
           if(data.status==='1')
             {
+<<<<<<< HEAD
               setLike(1)
+=======
+              setLike('1')
+>>>>>>> 747834d17b718f7bc2168f89cc92ae45c4696d6f
             }
       })
     }
 
+<<<<<<< HEAD
     else if(like===1) {
+=======
+    else if(like==='1') {
+>>>>>>> 747834d17b718f7bc2168f89cc92ae45c4696d6f
         ProductServices.Remove_fav().then(response=>response.json()).then(data=> {
           console.log(data)
           setOpen(true)
           setMsg(data.message)
           if(data.status==='1')
           {
+<<<<<<< HEAD
           setLike(0)
           }
       })
@@ -51,11 +64,25 @@ const All_Products = (props) => {
            setMsg("Please Login to your Account")
         }
         
+=======
+          setLike('0')
+          }
+      })
+      }
+      else {
+        setOpen(true)
+         setMsg("Please Login to your Account")
+    }
+}
+        }
+
+>>>>>>> 747834d17b718f7bc2168f89cc92ae45c4696d6f
     return (
 <div className="col-md-3 col-sm-6 col-6 abc">
 <figure className='figureProd' onClick={setProductId}>
 
 <div className="like">
+<<<<<<< HEAD
    {loginStatus==='1' && <button className="likebutton" onClick={Like}>
     {like===0 && <span className='fa fa-heart' style={{color : "white", fontSize: '17px'}}/> }                                                   
     {like===1 && <span className='fa fa-heart' style={{color : "red" , fontSize: '17px'}}/>}
@@ -66,6 +93,12 @@ const All_Products = (props) => {
     <span className='fa fa-heart' style={{color : "white", fontSize: '17px'}}/>      
     </button>       
     }
+=======
+      <button className="likebutton" onClick={Like}>
+    {like==='0' && <span className='fa fa-heart' style={{color : "white", fontSize: '17px'}}/> }                                                   
+    {like==='1' && <span className='fa fa-heart' style={{color : "red" , fontSize: '17px'}}/>}
+    </button>
+>>>>>>> 747834d17b718f7bc2168f89cc92ae45c4696d6f
     </div>
     <Dialog open={open} onClose={(e) => setOpen(false)}>
     {msg}

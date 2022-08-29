@@ -10,8 +10,8 @@ import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/navigation";
 import "swiper/css/thumbs";
-import Join from '../Components/Join';
-import Contact from "../Components/Contact";
+// import Join from '../Components/Join';
+// import Contact from "../Components/Contact";
 import Enquiry from "../Components/Enquiry";
 import BookJewellery from "../Components/BookJewellery";
 import GetQuotation from "../Components/GetQuotation";
@@ -138,8 +138,8 @@ const SingleProduct = (props) => {
         </div>
 
       </div>
-      <Join/>
-      <Contact />
+      {/* <Join/>
+      <Contact /> */}
     </>
   )
 

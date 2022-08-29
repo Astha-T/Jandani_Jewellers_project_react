@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import React, {useState,useEffect} from 'react'
+=======
+import React, {useState} from 'react'
+>>>>>>> 747834d17b718f7bc2168f89cc92ae45c4696d6f
 import {Link, Navigate} from 'react-router-dom'
 
 import Logo from './Logo'
@@ -41,12 +45,15 @@ const SideBar= (props) => {
     const [otpmsg,setotpMsg] = useState('');
     const [otpIsValid,setOtpIsValid] = useState(false);
 
+<<<<<<< HEAD
     // useEffect(() => {
     //   const body = document.querySelector('body');
     //   body.style.overflow = loginOpen? 'hidden' : 'auto';
     //   body.style.background = loginOpen ? 'grey' : 'transparent'
     // }, [loginOpen])
 
+=======
+>>>>>>> 747834d17b718f7bc2168f89cc92ae45c4696d6f
     const submitHandler = (event) =>  { 
       event.preventDefault();
        setLoginMsg("Login in Process...")
@@ -68,7 +75,10 @@ const SideBar= (props) => {
 
                   setIsLogin('1')
                   setLoginMsg("Login Successfully...")
+<<<<<<< HEAD
                   window.location.reload(true)
+=======
+>>>>>>> 747834d17b718f7bc2168f89cc92ae45c4696d6f
                   setLoginOpen(false)
              }
                 else {
@@ -99,7 +109,10 @@ const SideBar= (props) => {
                 setRegMsg('Registration Done...')
                 setSignUpOpen(false)
                 setOtpopen(true)
+<<<<<<< HEAD
                 setLoginOpen(false)
+=======
+>>>>>>> 747834d17b718f7bc2168f89cc92ae45c4696d6f
                 
               }
               else {
@@ -148,8 +161,11 @@ const SideBar= (props) => {
     setLoginMsg('')
     setRegMsg('')
     setotpMsg('')
+<<<<<<< HEAD
 
     window.location.reload(true)
+=======
+>>>>>>> 747834d17b718f7bc2168f89cc92ae45c4696d6f
 }
 
   const change= () => {
@@ -265,7 +281,11 @@ const SideBar= (props) => {
                       
                       {islogin==='1' ?
                       <>
+<<<<<<< HEAD
                        <li className="nav-item userli ">
+=======
+                       <li className="nav-item userli">
+>>>>>>> 747834d17b718f7bc2168f89cc92ae45c4696d6f
                        <ul>
                      <li>
                           <span className="fa fa-cog"><Link to="#"
@@ -298,6 +318,7 @@ const SideBar= (props) => {
                     <li className="nav-item signupli"> 
                       
                       <Link className="nav-link signup" to="#" onClick={()=>setLoginOpen(true)} data-toggle="modal" data-target="#basicModal">Login/Signup</Link>
+<<<<<<< HEAD
                       
                         {loginOpen===true && 
                       <LoginBox open={loginOpen} onClose={(e) => setLoginOpen(false)}>
@@ -343,6 +364,51 @@ const SideBar= (props) => {
                       </div>
                      </SignupLoginbox>
                       
+=======
+                     {loginOpen===true &&  <LoginBox open={loginOpen} onClose={(e) => setLoginOpen(false)}>
+                        <div className="login">
+                             <h2>LOGIN</h2>
+                        <form className='loginform' onSubmit ={submitHandler}>
+                        <input className="phone" type="text" placeholder=' Phone number' name="email_phone" ref={c=>loginphonebox=c} required/>
+                        <input className='pass' type="password" placeholder=" Password " name="password" ref={c=>loginpassbox=c} required />
+                        <button onClick={submitHandler} className="defaultButton" type="send">Log-in</button>
+                        <p>{loginMsg}</p>
+                        </form>
+                        <h3 className='loginh3' >Not having any Account?<button onClick={change} className="link" > SignUp</button></h3> 
+                        </div>
+                        </LoginBox>}
+
+                    {signupOpen===true && <SignUpBox open={signupOpen} onClose={(e) => setSignUpOpen(false)}>
+                       <div className='sign_up'>
+                        <h2>SIGN UP</h2>
+                       <form onSubmit={submitHandler2}>
+                       <input type="text" placeholder=' Name ' name='name' ref={c=>namebox=c} required/>
+                       <input type="text" placeholder=' Email ' name='email' ref={c=>emailbox=c} required/>
+                       <input type="text" placeholder=' Phone Numbers ' name='phone' ref={c=>phonebox=c} required />
+                       <input type="password" placeholder=' Password' name='password' ref={c=>passbox=c} required/>
+                      <input type="password" placeholder='Confirm Password' name='confirmpassword' ref={c=>confirmPass=c} required />
+                       <button className="defaultButton" type='send'>Sign Up</button>
+                       <p>{regMsg}</p>
+                       </form>
+                      <h3>Already a User? <button onClick={change} className="link" >Login</button></h3> 
+                      </div> 
+                        </SignUpBox>}
+
+                      <SignupLoginbox open={Otpopen} onClose={(e) => setOtpopen(false)}>
+                         <div className="enterotp">
+                        <div>
+                        <h2>Enter Otp</h2>
+                        <form onSubmit ={submitHandler3}> 
+                        <input type="text" placeholder="Phone No." ref={c=>otpphonebox=c} required/>
+                        <input type="text" placeholder=' OTP' name="otp" ref={c=>otpbox=c} required/>
+                       <button type="send">Submit</button>
+                      <p>{otpmsg}</p>
+                      </form>
+                      </div>
+                      </div>
+                     </SignupLoginbox>
+                      
+>>>>>>> 747834d17b718f7bc2168f89cc92ae45c4696d6f
                       </li>}
                      </ul>
                   </div>

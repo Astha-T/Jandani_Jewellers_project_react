@@ -4,8 +4,12 @@ import sanitizeHtml from 'sanitize-html'
 import striptags from 'striptags'
 
 import SideBar from "../Components/SideBaar";
+<<<<<<< HEAD
  import Contact from "../Components/Contact";
  import Join from '../Components/Join'
+=======
+// import Contact from "../Components/Contact";
+>>>>>>> 747834d17b718f7bc2168f89cc92ae45c4696d6f
 import OtherServices from '../Services/OtherServices';
 import './AboutUs.css'
 
@@ -28,8 +32,12 @@ const AboutUs = () => {
             <SideBar/>
             <h2>About Us</h2>
             <h3 className='data'>{displayData}</h3>
+<<<<<<< HEAD
             <Join/>
             <Contact/> 
+=======
+            {/* <Contact/> */}
+>>>>>>> 747834d17b718f7bc2168f89cc92ae45c4696d6f
         </div>
     )
 }
