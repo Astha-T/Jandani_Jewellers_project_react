@@ -4,7 +4,7 @@ import React from "react";
 import Productbycate_list from "../Extra-files/Productbycate_list";
 import Contact  from '../Components/Contact';
 import Join from '../Components/Join';
-import Product_list from "../Extra-files/Product_list";
+// import Product_list from "../Extra-files/Product_list";
 
 import Store from '../Redux/Store'
 import {ACTION_SHOW_PRODUCT} from '../Redux/Actions/ProductAction'
