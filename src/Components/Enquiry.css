@@ -51,20 +51,32 @@
  
  @media all and (max-width: 600px) {
     .enquiry button{
-        border-radius: 80px;
-        background-color: #b22d31;
-        border: 1px solid #b22d31;
-        font-size: 18px;
-        font-family: 'Poppins';
-        font-weight: 600;
-        padding: 10px 6%;
-        color: #fff;
-        height: 60px;
-        width: 225px;
-        margin-bottom: 20px; 
-        margin-right: 8px;
-        margin-left: 10px;
-        padding: 10px;
-        margin-top: 0%;
+        border-radius: 16px;
+    background-color: #fff4f5;
+    border: 1px solid #b22d31;
+    font-size: 14px;
+    font-family: 'Poppins';
+    font-weight: 600;
+    color: #281a1a;
+    height: 62px;
+    width: 107px;
+    margin-bottom: 20px;
+    margin-right: 6px;
+    margin-left: 0px;
+    padding: 10px 3px 10px 3px;
+    margin-top: 20%;
     }
+
+    .sec_btn button,.frth_btn button{
+        background-color: #b22d31 !important;
+        color: white !important;
+        border-radius: 16px;
+     
+    /* padding: 10px 3px 10px 3px; */
+    }
+
+    .enquiry button:focus{
+        outline: none !important;
+    }
+   
  }

@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import { Link, Navigate } from 'react-router-dom'
 
-// import Contact  from '../Components/Contact';
-// import Join from '../Components/Join';
+import Contact  from '../Components/Contact';
+import Join from '../Components/Join';
 import './ViewProfile.css'
 import UserServices from '../Services/UserServices'
 import SideBar from '../Components/SideBaar'
@@ -30,9 +30,8 @@ const ViewProfile = (props) =>
            
  return (
    <div>
-   {loginStatus==='1' && <Navigate to="/"/>}
-    <div>
-     <SideBar/>
+   <div>
+      <SideBar/>
     <div className="profile">
     <h2>YOUR PROFILE</h2>
     <p>Name: <b>{username}</b></p>
@@ -41,8 +40,8 @@ const ViewProfile = (props) =>
     <h3>Update your Profile? <Link to="/updateProfile" className="link">Update</Link></h3>
     </div>
     </div>
-    {/* <Join/>
-   <Contact/> */}
+    <Join/>
+   <Contact/>
     </div>
  )
  }

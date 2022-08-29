@@ -6,7 +6,7 @@ const SignUpBox = (props) => {
 
         let dialog = (
             <div className="dialogStylesSignUp">
-                <button onClick={props.onClose}  to = "/" className="dialogCloseButtonStylesSignUp">X</button>
+                <button onClick={props.onClose} className="dialogCloseButtonStylesSignUp">X</button>
                 <div>{props.children}</div>
             </div>
         );
@@ -15,7 +15,7 @@ const SignUpBox = (props) => {
             dialog = null;
         }
         return (
-            <div>
+            <div className="dialogbox">
                 {dialog}
             </div>
         );

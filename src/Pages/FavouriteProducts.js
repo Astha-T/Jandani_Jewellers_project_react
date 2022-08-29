@@ -32,9 +32,10 @@ const FavouriteProducts = (props) => {
         })
     },[userId]);
 
-    return(<>
+    return(
+        <div>
         {loginStatus!=='1' && <Navigate to="/"/>}
-        <div className="product_section">
+        <div className="fav_section">
                 <SideBar/>
         <h4>YOUR FAVOURITE PRODUCUTS</h4>
         <div className="row">
@@ -42,10 +43,11 @@ const FavouriteProducts = (props) => {
         <FavProdList products={products}/> 
         </div>
         </div>
+        </div>
         <div className="join"><Join/></div>
         <div><Contact/></div>
         </div>
-        </>
+        
     )
 }
 export default FavouriteProducts;

@@ -49,6 +49,8 @@
     font-size: 14px;
         color: #B22D31;
       text-align: center;
+      padding-top: 30px;
+      padding-left: 60px;
   }
   
   .login  .defaultButton {
@@ -69,21 +71,17 @@
   color: #FFFFFF;
   }
   
-  .login  button:disabled {
+  .login  .defaultbutton:disabled {
     cursor: not-allowed;
   }
   
   @media (max-width : 768px) {
-    .login{
-        top: 100px;
-        
-
-    }
+   
     .login h2{
     margin : 5px;
     }
-  
-    .login input {
+
+  .login input {
       border: 1px solid #f7f7f7;
       background: #f7f7f7;
       border-radius: 38px;
@@ -122,8 +120,8 @@
     }
   
     .login h3 {
-      margin-left: 15%;
-      padding-left: 18%;
+      padding-top: 210px;
+      padding-left: 35px;
     }
   }
   

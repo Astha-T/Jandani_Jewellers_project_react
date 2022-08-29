@@ -1,16 +1,16 @@
 import React from "react"
 
 import './Product_list.css'
-import All_Products from  "./All_Products";
+import All_Productsbycate from  "./All_Productsbycate";
 
-const Product_list = (props) => {
+const Productbycate_list = (props) => {
     return (
         <div className='product-list row'>
             {/* <div className="col-md-1 d-sm-block d-none"></div> */}
          <div className="col-md-1 d-sm-block d-none"></div>
 
             {props.products.map((prod)=> (
-                <All_Products
+                <All_Productsbycate
                 name = {prod.name}
                 image = {prod.image}
                 id = {prod.id}
@@ -25,4 +25,4 @@ const Product_list = (props) => {
     );
 };
 
-export default Product_list;
+export default Productbycate_list;

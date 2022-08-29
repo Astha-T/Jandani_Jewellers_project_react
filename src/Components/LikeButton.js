@@ -15,16 +15,15 @@ const LikeButton = (props) => {
     
     if(loginStatus==='1') {
     
-      if(like===true){
+      if(like==='0'){
         ProductServices.Add_fav().then((response)=>response.json()).then(data=> {
-          if(data.status==='1')
-          {
-            setLike(false)
-          }
         console.log(data)
         setOpen(true)
         setMsg(data.message)
-       
+        if(data.status==='1')
+          {
+            setLike('1')
+          }
     })
   }
 
@@ -50,7 +49,7 @@ const LikeButton = (props) => {
 
     return (
         <div className="like">
-      <button onClick={Like}>
+      <button className="likebutton" onClick={Like}>
     {like===true && <span className='fa fa-heart' style={{color : "white", fontSize: '17px'}}/> }                                                   
     {like===false && <span className='fa fa-heart' style={{color : "red" , fontSize: '17px'}}/>}
     </button>

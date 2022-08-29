@@ -1,25 +1,28 @@
 import React from 'react';
 import {Link} from 'react-router-dom'
-import './SignupLogin.css'
+import './LoginBox.css'
 
 const SignupLoginbox = (props) => {
      
     let dialog = (
-        <div className='dialogStyles'>          
-          <Link to = "/" onClick={props.onClose} className='dialogCloseButtonStyles'>X</Link>
-        <div>{props.children}</div>
+        <div className='dialogStylesLogin'>          
+           <button onClick={props.onClose} className="dialogCloseButtonStylesLogin">X</button>
+          <div>{props.children}</div>
         </div>
     );
 
     if (!props.open) {
         dialog = null;
     }
+
+    if(props.open) {
+        document.body.style.overflow = 'hidden';
+    }
     return (
-        <div>
+        <div >
             {dialog}
         </div>
     );
-
 }
 
 

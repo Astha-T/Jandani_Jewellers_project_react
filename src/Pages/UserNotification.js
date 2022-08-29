@@ -1,7 +1,10 @@
 import { useState} from "react";
 import React from "react";
 import { Navigate } from "react-router-dom";
+import striptags from 'striptags'
 
+import Contact  from '../Components/Contact';
+import Join from '../Components/Join';
 import SideBar from '../Components/SideBaar'
 import NotificationList from "../Extra-files/NotificationList";
 import OtherServices from '../Services/OtherServices';
@@ -21,7 +24,7 @@ const UserNotification = (props) => {
                 return{
                     image : imageUrl+'/'+note.image,
                     title : note.title,
-                    description: note.description
+                    description: striptags(note.description),
                 }
             
           })
@@ -30,7 +33,8 @@ const UserNotification = (props) => {
         )
 
     return(
-        (loginStatus==='1' ?
+        <div>
+        {loginStatus==='1' ?
         <div className="product_section">
                 <SideBar/>
         <h4>YOUR NOTIFICATION</h4>
@@ -40,7 +44,10 @@ const UserNotification = (props) => {
         </div>
         </div>
         </div>
-        : <Navigate to="/"/>)
+        : <Navigate to="/"/>}
+        <Join/>
+        <Contact/>
+        </div>
 
     )
 }

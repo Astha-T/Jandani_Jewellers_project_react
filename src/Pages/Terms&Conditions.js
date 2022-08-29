@@ -1,5 +1,7 @@
 import { useState } from "react";
 import React from 'react'
+import sanitizeHtml from 'sanitize-html'
+import striptags from 'striptags'
 
 import SideBar from "../Components/SideBaar";
 import Join from '../Components/Join';
@@ -14,7 +16,9 @@ const TermsConditions = () => {
        console.log(data)
 
        const updatedTandC = data.result.description
-       setDisplaytermsandConditions(updatedTandC)
+       const text = sanitizeHtml(updatedTandC)
+       const finaltext = striptags(text)
+       setDisplaytermsandConditions(finaltext)
     })
 
     return(

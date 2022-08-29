@@ -89,6 +89,11 @@ color: #FFFFFF;;
     .sign_up h2{
       margin-left: 5px;
     }
+
+    .sign_up {
+      height: fit-content;
+      width: fit-content;
+    }
   
     .sign_up  input {
         margin-left: 2%;

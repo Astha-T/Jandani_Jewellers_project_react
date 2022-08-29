@@ -1,5 +1,7 @@
 import { useState} from "react";
 import React from 'react'
+import sanitizeHtml from 'sanitize-html'
+import striptags from 'striptags'
 
 import SideBar from "../Components/SideBaar";
 import OtherServices from '../Services/OtherServices';
@@ -15,7 +17,9 @@ const PrivacyPolicy1 = () => {
                 console.log(data.result.description);
             
          const updatedPolicy= data.result.description;
-         setDisplayPrivacyPolicy(updatedPolicy);
+         const text = sanitizeHtml(updatedPolicy)
+         const finaltext = striptags(text)
+         setDisplayPrivacyPolicy(finaltext);
         }
         )
 

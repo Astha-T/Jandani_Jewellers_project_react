@@ -35,7 +35,7 @@ Joinus = (data) => {
 Subscribe_here = (data) => {
     
     const email = localStorage.getItem('email')
-    return fetch(urls.Join+email,{
+    return fetch(urls.Subscribe+email,{
         method : "POST",
         mode : "cors",
         headers : {

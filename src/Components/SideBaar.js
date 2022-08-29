@@ -1,12 +1,12 @@
-import React, {useState} from 'react'
-import {Link, nav} from 'react-router-dom'
+import React, {useState,useEffect} from 'react'
+import {Link, Navigate} from 'react-router-dom'
 
 import Logo from './Logo'
 import Dialog from './Dailogue'
 import LoginBox from '../Components/LoginBox'
+import UserService from '../Services/UserServices'
 import SignUpBox from './SignUpBox'
-import Signup from '../Pages/SignUp'
-import Login from '../Pages/Login'
+import SignupLoginbox from './SignupLoginbox'
 import SearchDialog from './SearchDailogue'
 import ProductServices from '../Services/ProductServices'
 import './Sidebar.css'
@@ -14,28 +14,157 @@ import './Sidebar.css'
 const SideBar= (props) => {
   
   const [open,setOpen] = useState(false)
-  const [loginOpen,setLoginOpen] = useState(true)
+  const [loginOpen,setLoginOpen] = useState(false)
   const [signupOpen,setSignUpOpen] = useState(false)
   const [searchOpen,setSearchOpen] = useState(false)
   const [searchbar,setSearchBar] = useState(false)
+  const [Otpopen,setOtpopen] = useState(false)
 
-  const openDailogue  = () => {
-    setLoginOpen(true)
-  }
+  const loginStatus = localStorage.getItem('loginstatus')
+    const Full_name = localStorage.getItem('full_name')
 
-  const displaySearcharBar = () => {
-    setSearchBar(true)
-  }
+
+  var loginphonebox = undefined;
+  var loginpassbox = undefined;
+  var namebox = undefined;
+    var emailbox = undefined;
+    var phonebox = undefined;
+    var passbox = undefined;
+    var confirmPass = undefined;
+    var otpphonebox = undefined;
+   var otpbox = undefined;
+
+    const [loginMsg, setLoginMsg] = useState('');
+    const [islogin,setIsLogin] = useState(loginStatus);
+    const [regMsg,setRegMsg] = useState('');
+    const [isReg,setIsReg] = useState(false);
+    const [otpmsg,setotpMsg] = useState('');
+    const [otpIsValid,setOtpIsValid] = useState(false);
+
+    // useEffect(() => {
+    //   const body = document.querySelector('body');
+    //   body.style.overflow = loginOpen? 'hidden' : 'auto';
+    //   body.style.background = loginOpen ? 'grey' : 'transparent'
+    // }, [loginOpen])
+
+    const submitHandler = (event) =>  { 
+      event.preventDefault();
+       setLoginMsg("Login in Process...")
+       
+        var obj={
+          mobile : loginphonebox.value,
+          password : loginpassbox.value
+        }
+        console.log(obj)
+
+        UserService.loginUser(obj).then(response=>response.json()).then(data=>{
+             if(data.status === '1') {
+                  console.log(data)
+                  localStorage.setItem('user_id', data.user_id);
+                  localStorage.setItem('mobile',data.data.mobile);
+                  localStorage.setItem('loginstatus','1');
+                  localStorage.setItem('full_name', data.data.full_name);
+                  localStorage.setItem('email',data.data.email);
+
+                  setIsLogin('1')
+                  setLoginMsg("Login Successfully...")
+                  window.location.reload(true)
+                  setLoginOpen(false)
+             }
+                else {
+                  setIsLogin('0')
+                   setLoginMsg('Login Failed...')
+                }
+          })
+     }     
+
+     const submitHandler2 = (event) => {
+      event.preventDefault();
+         setRegMsg('Registration in Process...')
+
+           var ob = {
+                name : namebox.value,
+                email : emailbox.value,
+                mobile : phonebox.value,
+                password : passbox.value,
+                confirmPassword : confirmPass.value
+            }
+            console.log(ob)
+
+            UserService.saveData(ob).then(response=>response.json()).then(data=>{
+              if(data.status)
+              {
+                console.log(data)
+                setIsReg(true)
+                setRegMsg('Registration Done...')
+                setSignUpOpen(false)
+                setOtpopen(true)
+                setLoginOpen(false)
+                
+              }
+              else {
+                setRegMsg("Registration Failed...")
+              }
+            })
+  }    
+
+  const submitHandler3 = (event) => {
+    event.preventDefault();
+
+    var ob1= {
+     mobile: otpphonebox.value,
+     otp: otpbox.value
+    }
+    console.log(ob1)
+       
+      UserService.otpVerify(ob1).then(response=>response.json()).then(data=>
+         {
+           if(data.status==="1") {
+             console.log(data)
+             setOtpIsValid(true)
+             setotpMsg("Otp is Valid")
+             setOtpopen(false)
+             setLoginOpen(true)
+           }
+           else {
+             setotpMsg("Please enter correct Otp/Mobile no.")
+           }
+         }
+      )}
+
+  var logout = ()=>{
+  
+    alert("Logging Out...")
+
+    localStorage.setItem('user_id', undefined);
+    localStorage.setItem('mobile',undefined);
+    localStorage.setItem('loginstatus','0');
+    localStorage.setItem('full_name', undefined);
+    localStorage.setItem('email',undefined);
+
+    setIsLogin('0')
+    setIsReg(false)
+    setOtpIsValid(false)
+    setLoginMsg('')
+    setRegMsg('')
+    setotpMsg('')
+
+    window.location.reload(true)
+}
 
   const change= () => {
     if(loginOpen===true){
       setLoginOpen(false)
       setSignUpOpen(true)
     }
-    else {
+    else if(signupOpen===true){
       setLoginOpen(true)
       setSignUpOpen(false)
     }
+  }
+
+  const displaySearcharBar = () => {
+    setSearchBar(true)
   }
   const removeSearchBar = () => {
     setSearchBar(false)
@@ -79,19 +208,7 @@ const SideBar= (props) => {
 });
   
 }
-const loginStatus = localStorage.getItem('loginstatus')
- const Full_name = localStorage.getItem('full_name')
-    var logout = ()=>{
-    
-         localStorage.setItem('user_id', undefined);
-         localStorage.setItem('mobile',undefined);
-         localStorage.setItem('loginstatus',undefined);
-         localStorage.setItem('full_name', undefined);
-         localStorage.setItem('email',undefined);
-         alert("Logging Out...")
-
-    }
-
+   
     // const Warning = () => { 
     //   alert("Logging Out in 5 minutes...")
     // }
@@ -102,6 +219,7 @@ const loginStatus = localStorage.getItem('loginstatus')
     // }
 
     return ( 
+      
       <div className="main_header" id="headerup">
             <nav className="navbar my-navbar navbar-expand-lg navbar-light">
                 <div className="container-fluid">
@@ -144,11 +262,14 @@ const loginStatus = localStorage.getItem('loginstatus')
                             </li>
                         </ul>
                       </li>
-                      {loginStatus==='1' ? <>
-                       <li className="nav-item userli">
+                      
+                      {islogin==='1' ?
+                      <>
+                       <li className="nav-item userli ">
                        <ul>
                      <li>
-                          <span className="fa fa-cog"></span></li>
+                          <span className="fa fa-cog"><Link to="#"
+                            data-toggle="dropdown"></Link></span></li>
                          <li className="dropdown"><Link className="nav-link dropdown-toggle" to="#"
                            data-toggle="dropdown">User Settings</Link>
                              <div className="dropdown-menu">
@@ -171,24 +292,58 @@ const loginStatus = localStorage.getItem('loginstatus')
                          </li>
                      </ul>
                    </li></>
+
                    :
-                   
+
                     <li className="nav-item signupli"> 
                       
-                      <Link className="nav-link signup" to="#" onClick={openDailogue} data-toggle="modal" data-target="#basicModal">Login/Signup</Link>
-                     {loginOpen===true&&  <LoginBox open={loginOpen} onClose={(e) => setLoginOpen(false)}>
-                        <><Login/>
-                        <h3 className='loginh3'>Not having any Account?<button onClick={change} className="link" > SignUp</button></h3> 
-                        </>
-                        </LoginBox>}
-                    {signupOpen===true && <SignUpBox open={signupOpen} onClose={(e) => setSignUpOpen(false)}><><Signup/>
-                        <h3 className='signuph3'>Already a User? <button onClick={change} className="link" >Login</button></h3>
-                        </>
-                        </SignUpBox>}
+                      <Link className="nav-link signup" to="#" onClick={()=>setLoginOpen(true)} data-toggle="modal" data-target="#basicModal">Login/Signup</Link>
                       
-                      </li>
-                    
-                     }
+                        {loginOpen===true && 
+                      <LoginBox open={loginOpen} onClose={(e) => setLoginOpen(false)}>
+                        <div className="login">
+                             <h2>LOGIN</h2>
+                        <form className='loginform' onSubmit ={submitHandler}>
+                        <input className="phone" type="text" placeholder=' Phone number' name="email_phone" ref={c=>loginphonebox=c} required/>
+                        <input className='pass' type="password" placeholder=" Password " name="password" ref={c=>loginpassbox=c} required />
+                        <button onClick={submitHandler} className="defaultButton" type="send">Log-in</button>
+                        <p>{loginMsg}</p>
+                        </form>
+                        <h3 className='loginh3' >Not having any Account?<button onClick={change} className="link" > SignUp</button></h3> 
+                        </div>
+                        </LoginBox>}
+
+                    {signupOpen===true && <SignUpBox open={signupOpen} onClose={(e) => setSignUpOpen(false)}>
+                       <div className='sign_up'>
+                        <h2>SIGN UP</h2>
+                       <form onSubmit={submitHandler2}>
+                       <input type="text" placeholder=' Name ' name='name' ref={c=>namebox=c} required/>
+                       <input type="text" placeholder=' Email ' name='email' ref={c=>emailbox=c} required/>
+                       <input type="text" placeholder=' Phone Numbers ' name='phone' ref={c=>phonebox=c} required />
+                       <input type="password" placeholder=' Password' name='password' ref={c=>passbox=c} required/>
+                      <input type="password" placeholder='Confirm Password' name='confirmpassword' ref={c=>confirmPass=c} required />
+                       <button className="defaultButton" type='send'>Sign Up</button>
+                       <p>{regMsg}</p>
+                       </form>
+                      <h3>Already a User? <button onClick={change} className="link" >Login</button></h3> 
+                      </div> 
+                        </SignUpBox>}
+
+                      <SignupLoginbox open={Otpopen} onClose={(e) => setOtpopen(false)}>
+                         <div className="enterotp">
+                        <div>
+                        <h2>Enter Otp</h2>
+                        <form onSubmit ={submitHandler3}> 
+                        <input type="text" placeholder="Phone No." ref={c=>otpphonebox=c} required/>
+                        <input type="text" placeholder=' OTP' name="otp" ref={c=>otpbox=c} required/>
+                       <button type="send">Submit</button>
+                      <p>{otpmsg}</p>
+                      </form>
+                      </div>
+                      </div>
+                     </SignupLoginbox>
+                      
+                      </li>}
                      </ul>
                   </div>
 

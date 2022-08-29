@@ -13,9 +13,9 @@ import './SignUp.css'
 const Signup = (props) =>
 {
   
-  const [loginOpen,setLoginOpen] =useState(false);
-       const [signupopen,setSignupOpen] = useState(true)
-       const [Otpopen,setOtpOpen] = useState(false)
+  // const [loginOpen,setLoginOpen] =useState(false);
+  //      const [signupopen,setSignupOpen] = useState(true)
+  //      const [Otpopen,setOtpOpen] = useState(false)
 
     var namebox = undefined;
     var emailbox = undefined;
@@ -26,13 +26,13 @@ const Signup = (props) =>
     const [regMsg,setRegMsg] = useState('');
     const [isReg,setIsReg] = useState(false);
 
-   const login = () =>{
-    setSignupOpen(false)
-    setLoginOpen(true)
-   }
+  //  const login = () =>{
+  //   setSignupOpen(false)
+  //   setLoginOpen(true)
+  //  }
     
     const submitHandler = (event) => {
-            
+      event.preventDefault();
          setRegMsg('Registration in Process...')
 
            var ob = {
@@ -57,18 +57,17 @@ const Signup = (props) =>
                 setRegMsg("Registration Failed...")
               }
             })
-           
-       event.preventDefault();
   }    
 
-  const otp = () => {
-      setOtpOpen(true)
-      setLoginOpen(false)
-      setSignupOpen(false)
+  // const otp = () => {
+  //     setOtpOpen(true)
+  //     setLoginOpen(false)
+  //     setSignupOpen(false)
     
-  }
+  // }
     
-    return ( <>
+    return ( isReg ?
+      <Navigate to="/"/> :
         <div className='sign_up'>
             <h2>SIGN UP</h2>
             <form onSubmit={submitHandler}>
@@ -77,13 +76,13 @@ const Signup = (props) =>
             <input type="text" placeholder=' Phone Numbers ' name='phone' ref={c=>phonebox=c} required />
             <input type="password" placeholder=' Password' name='password' ref={c=>passbox=c} required/>
             <input type="password" placeholder='Confirm Password' name='confirmpassword' ref={c=>confirmPass=c} required />
-            <button onClick ={otp} className="defaultButton" type='send'>Sign Up</button>
+            <button className="defaultButton" type='send'>Sign Up</button>
             <p>{regMsg}</p>
             </form>
             {/* <h3>Already a User? <button onClick={login} className="link" >Login</button></h3> */}
        </div>
     
-      </>
+    
       )
 }
 

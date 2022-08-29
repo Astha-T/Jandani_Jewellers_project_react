@@ -11,24 +11,25 @@ import UserService from '../Services/UserServices'
 const Otp = (props) =>
 {
   const [loginOpen,setLoginOpen] =useState(false);
-  const [Otpopen,setOtpOpen] = useState(true)
+  const [Otpopen,setOtpopen] = useState(false)
+  
 
-       var phonebox = undefined;
+       var otpphonebox = undefined;
        var otpbox = undefined;
    
-       const [msg,setMsg] = useState('');
+       const [otpmsg,setotpMsg] = useState('');
        const [otpIsValid,setOtpIsValid] = useState(false);
 
        const login = () =>{
-        setOtpOpen(false)
+        setOtpopen(false)
         setLoginOpen(true)
        }
 
-       const submitHandler = (event) => {
+       const submitHandler3 = (event) => {
          event.preventDefault();
 
          var ob1= {
-          mobile: phonebox.value,
+          mobile: otpphonebox.value,
           otp: otpbox.value
          }
          console.log(ob1)
@@ -38,24 +39,24 @@ const Otp = (props) =>
                 if(data.status==="1") {
                   console.log(data)
                   setOtpIsValid(true)
-                  setMsg("Otp is Valid")
+                  setotpMsg("Otp is Valid")
                 }
                 else {
-                  setMsg("Please enter correct Otp/Mobile no.")
+                  setotpMsg("Please enter correct Otp/Mobile no.")
                 }
               }
            )}
 
        return (<>
-       <SignupLoginbox open={Otpopen} onClose={(e) => setOtpOpen(false)}>
+       <SignupLoginbox open={Otpopen} onClose={(e) => setOtpopen(false)}>
           <div className="enterotp">
           <div>
           <h2>Enter Otp</h2>
-          <form onSubmit ={submitHandler}> 
-          <input type="text" placeholder="Phone No." ref={c=>phonebox=c} required/>
+          <form onSubmit ={submitHandler3}> 
+          <input type="text" placeholder="Phone No." ref={c=>otpphonebox=c} required/>
           <input type="text" placeholder=' OTP' name="otp" ref={c=>otpbox=c} required/>
           <button onClick={login}type="send">Submit</button>
-          <p>{msg}</p>
+          <p>{otpmsg}</p>
           </form>
           </div>
         </div>

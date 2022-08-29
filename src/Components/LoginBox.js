@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { Component, useEffect, useState } from 'react';
 import Login from '../Pages/Login'
 import {Link} from 'react-router-dom'
 import SignUp from '../Pages/SignUp'
@@ -7,6 +7,7 @@ import './LoginBox.css'
 const LoginBox = (props) => {
     
       let dialog = (
+
             <div className='dialogStylesLogin'>          
                <button onClick={props.onClose} className="dialogCloseButtonStylesLogin">X</button>
               <div>{props.children}</div>
@@ -15,9 +16,17 @@ const LoginBox = (props) => {
 
         if (!props.open) {
             dialog = null;
+            document.body.style.overflow = 'unset';
         }
+
+        if(props.open) {
+            document.body.style.overflow = 'hidden';
+          
+        }
+    
+
         return (
-            <div>
+            <div className="dialogbox">
                 {dialog}
             </div>
         );

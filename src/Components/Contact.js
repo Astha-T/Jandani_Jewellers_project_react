@@ -62,7 +62,7 @@ const Contact = (props) =>
             <div className="col-md-4 col2">
                 <h4>Contact Us</h4>
                 <ul>
-                    <li><img src={require("./images/Vector (1).jpg")}/>(208) 555-0112</li>
+                    <li><Link to="tel:208-555-0112"><img src={require("./images/Vector (1).jpg")}/>(208) 555-0112</Link></li>
                     <li><img src={require("./images/Vector (2).jpg")}/>6391 Elgin St. Celina, Delaware 10299</li>
                 </ul>
                 <ul className="subscribe">

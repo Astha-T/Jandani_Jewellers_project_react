@@ -66,9 +66,10 @@ const Login = (props) =>
   <input className="phone" type="text" placeholder=' Phone number' name="email_phone" ref={c=>loginphonebox=c} required/>
   <input className='pass' type="password" placeholder=" Password " name="password" ref={c=>loginpassbox=c} required />
  <button className="defaultButton" type="send">Log-in</button>
- {/* <h3>Not having any Account?<button onClick={signup} className="link" > SignUp</button></h3> */}
+
  <p>{loginMsg}</p>
  </form>
+  {/* <h3>Not having any Account?<button  className="link" > SignUp</button></h3> */}
  </div>
  
 )
