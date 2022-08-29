@@ -1,8 +1,8 @@
 import { useState, useEffect} from "react";
 import React from "react";
 
-import Contact  from '../Components/Contact';
-import Join from '../Components/Join';
+// import Contact  from '../Components/Contact';
+// import Join from '../Components/Join';
 import Product_list from "../Extra-files/Product_list";
 import Store from '../Redux/Store'
 import {ACTION_SHOW_PRODUCT} from '../Redux/Actions/ProductAction'
@@ -19,7 +19,7 @@ const ProductsByCate = (props) => {
     const loginStatus = localStorage.getItem('loginstatus')
 
     useEffect(()=>{
-        if(loginStatus===0)
+        if(loginStatus==='0')
         {
         fetch('https://dev.weblaunchpad.in/jandani_jewellers/api/customer/get_product_by_category?category_id='+categoryId)
         .then(res => res.json())
@@ -80,8 +80,8 @@ const ProductsByCate = (props) => {
         </div>
         </div>
         </div>
-        <div><Join/></div>
-        <div><Contact/></div>
+        {/* <div><Join/></div>
+        <div><Contact/></div> */}
         </div>
     )
 }

@@ -1,13 +1,13 @@
 import React from 'react';
 import {Link} from 'react-router-dom'
-import './SignupLogin.css'
+import './LoginBox.css'
 
 const SignupLoginbox = (props) => {
      
     let dialog = (
-        <div className='dialogStyles'>          
-          <Link to = "/" onClick={props.onClose} className='dialogCloseButtonStyles'>X</Link>
-        <div>{props.children}</div>
+        <div className='dialogStylesLogin'>          
+           <button onClick={props.onClose} className="dialogCloseButtonStylesLogin">X</button>
+          <div>{props.children}</div>
         </div>
     );
 
@@ -19,7 +19,6 @@ const SignupLoginbox = (props) => {
             {dialog}
         </div>
     );
-
 }
 
 

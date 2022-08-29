@@ -1,6 +1,7 @@
 import { useState} from "react";
 import React from "react";
 import { Navigate } from "react-router-dom";
+import striptags from 'striptags'
 
 import SideBar from '../Components/SideBaar'
 import NotificationList from "../Extra-files/NotificationList";
@@ -21,7 +22,7 @@ const UserNotification = (props) => {
                 return{
                     image : imageUrl+'/'+note.image,
                     title : note.title,
-                    description: note.description
+                    description: striptags(note.description),
                 }
             
           })

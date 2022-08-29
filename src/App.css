@@ -10,11 +10,6 @@
     height: 30px;
     width: 100% !important;
     padding: 5px;
-
+    display: block;
 }
 
-.app table {
-    width: 100% !important;
-    padding: 0;
-    margin: 0;
-}

@@ -8,7 +8,7 @@
     border: 1px solid white;
 
 }
-.like button {
+.like .likebutton {
     padding-top: 5px;
     background-color: rgba(245, 214, 217, 0.8);
     border: 1px solid white !important;
@@ -16,7 +16,7 @@
     vertical-align: middle;
 }
 
-.fa {
+.fa-heart {
     display: inline-block;
     font: normal normal normal 14px/1 FontAwesome;
     font-size: inherit;

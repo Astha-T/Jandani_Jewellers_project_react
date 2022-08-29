@@ -13,7 +13,7 @@
     text-align: center;
    
 }
-.aboutus h3 {
+.aboutus .data {
     text-align: center;
     margin-left: 50px;
     margin-top: 30px;
@@ -30,7 +30,7 @@
     .aboutus h2{
         margin-left: 0px;
     }
-    .aboutus h3{
+    .aboutus .data{
         text-align: left;
     margin-left: 0px;
     margin-top: 30px;

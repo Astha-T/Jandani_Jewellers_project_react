@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import React from 'react'
 import { Link } from 'react-router-dom'
+import sanitizeHtml from 'sanitize-html'
+import striptags from 'striptags'
 
 import SideBar from "../Components/SideBaar";
 import './SingleProduct.css';
@@ -8,8 +10,8 @@ import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/navigation";
 import "swiper/css/thumbs";
-import Join from '../Components/Join';
-import Contact from "../Components/Contact";
+// import Join from '../Components/Join';
+// import Contact from "../Components/Contact";
 import Enquiry from "../Components/Enquiry";
 import BookJewellery from "../Components/BookJewellery";
 import GetQuotation from "../Components/GetQuotation";
@@ -39,7 +41,9 @@ const SingleProduct = (props) => {
         setDisplayProductName(updatedproductName)
 
         const updatedDescription = data.result.description
-        setDisplayProductDes(updatedDescription)
+        const text = sanitizeHtml(updatedDescription)
+        const finaltext = striptags(text)
+        setDisplayProductDes(finaltext)
 
       })
   }, [productId])
@@ -134,8 +138,8 @@ const SingleProduct = (props) => {
         </div>
 
       </div>
-      <Join/>
-      <Contact />
+      {/* <Join/>
+      <Contact /> */}
     </>
   )
 

@@ -13,19 +13,6 @@
   text-align: center;
 }
 
-.details_section h4 {
-  text-align: left;
-  margin: 20px 20px 20px 0px;
-  font-family: 'Poppins';
-  font-weight: 600;
-  color: #191919;
-  font-size: 32px;
-  text-transform: uppercase;
-}
-.details_section p{
-  text-transform: uppercase;
-}
-
 .product_section figure {
   background: #FFFFFF;
   box-shadow: 0px 4px 19px rgb(0 0 0 / 7%);
@@ -78,7 +65,9 @@ a:hover {
       padding: 28px 0px 30px 0px;
       width: 150px !important;
   }
-
+ .product_section .like .likebutton {
+   display: none;
+ }
 
   .product_section figure img {
       height: 108px;

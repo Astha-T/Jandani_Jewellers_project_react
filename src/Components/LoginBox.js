@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { Component, useEffect, useState } from 'react';
 import Login from '../Pages/Login'
 import {Link} from 'react-router-dom'
 import SignUp from '../Pages/SignUp'
@@ -16,6 +16,13 @@ const LoginBox = (props) => {
         if (!props.open) {
             dialog = null;
         }
+
+        useEffect(() => {
+        if(props.open) {
+            document.body.style.overflow = 'hidden';
+        }
+    })
+
         return (
             <div>
                 {dialog}

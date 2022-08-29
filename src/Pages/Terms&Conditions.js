@@ -1,11 +1,13 @@
 import { useState } from "react";
 import React from 'react'
+import sanitizeHtml from 'sanitize-html'
+import striptags from 'striptags'
 
 import SideBar from "../Components/SideBaar";
-import Join from '../Components/Join';
+// import Join from '../Components/Join';
 import OtherServices from "../Services/OtherServices";
 import './Terms&Conditions.css';
-import Contact from "../Components/Contact";
+// import Contact from "../Components/Contact";
 
 const TermsConditions = () => {
  const [displayTermsandConditions, setDisplaytermsandConditions] = useState("");
@@ -14,7 +16,9 @@ const TermsConditions = () => {
        console.log(data)
 
        const updatedTandC = data.result.description
-       setDisplaytermsandConditions(updatedTandC)
+       const text = sanitizeHtml(updatedTandC)
+       const finaltext = striptags(text)
+       setDisplaytermsandConditions(finaltext)
     })
 
     return(
@@ -22,8 +26,8 @@ const TermsConditions = () => {
            <SideBar/>
             <h2>Terms and Conditions</h2>
             <h3>{displayTermsandConditions}</h3>
-            <Join/>
-            <Contact/>
+            {/* <Join/>
+            <Contact/> */}
         </div>
     )
 

@@ -27,6 +27,8 @@
     "react-script-tag": "^1.1.2",
     "react-scripts": "5.0.1",
     "redux": "^4.2.0",
+    "sanitize-html": "^2.7.1",
+    "striptags": "^3.2.0",
     "swiper": "^8.3.2",
     "ui": "^0.2.4",
     "web-vitals": "^2.1.4"
