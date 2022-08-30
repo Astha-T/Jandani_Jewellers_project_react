@@ -1,6 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom'
-import './LoginBox.css'
+import './SLoginBox.css'
 
 const SignupLoginbox = (props) => {
      
@@ -15,9 +15,6 @@ const SignupLoginbox = (props) => {
         dialog = null;
     }
 
-    if(props.open) {
-        document.body.style.overflow = 'hidden';
-    }
     return (
         <div className="dialogbox">
             {dialog}

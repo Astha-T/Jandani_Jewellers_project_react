@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import  './Join.css'
-import Dialog from '../Components/Dailogue'
+import Dialog from './Dailogue'
+import Login from '../Pages/Login'
 import OtherServices from '../Services/OtherServices'
 
 const Join = () =>

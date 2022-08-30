@@ -27,7 +27,7 @@ const AboutUs = () => {
     return(
         <div className='aboutus'>
             <SideBar/>
-            <h2>About Us</h2>
+            <h2 className="abh2">About Us</h2>
             <h3 className='data'>{displayData}</h3>
 
             <Join/>

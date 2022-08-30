@@ -26,8 +26,7 @@ const All_Products = (props) => {
           setMsg(data.message)
           if(data.status==='1')
             {
-              setLike('1')
-              window.location.reload(true)
+              setLike(1)
             }
       })
     }
@@ -39,8 +38,13 @@ const All_Products = (props) => {
           setMsg(data.message)
           if(data.status==='1')
           {
-          setLike('0')
-          window.location.reload(true)
+            setMsg(data.message)
+          setLike(0)
+          }
+
+          else if(data.status=='0')
+          {
+            setMsg('Please click again to remove this product fom your favorite list')
           }
       })
       }

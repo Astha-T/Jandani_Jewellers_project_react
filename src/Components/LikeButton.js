@@ -9,7 +9,7 @@ const LikeButton = (props) => {
   const loginStatus = localStorage.getItem('loginstatus')
     const [msg,setMsg] = useState('')
     const [open,setOpen] = useState(false)
-    const [like,setLike] = useState(true)
+    const [like,setLike] = useState(props.favorite)
 
     const Like= () => {
     
@@ -27,7 +27,7 @@ const LikeButton = (props) => {
     })
   }
 
-  else {
+  else if(like==='1') {
     ProductServices.Remove_fav().then((response)=>response.json()).then(data=> {
       console.log(data)
       if(data.status===1)

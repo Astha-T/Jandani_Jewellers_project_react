@@ -83,9 +83,7 @@ color: #FFFFFF;;
   
   
   @media only screen and (max-width: 600px) {
-    /* .sign_up{
-        left: 5px;
-    } */
+    
     .sign_up h2{
       margin-left: 5px;
     }

@@ -97,15 +97,6 @@ a:hover {
   height: 150px;
 }
 
-/* .content_section {
-  overflow: hidden;
-  background: #b22d31;
-  border: 1px solid #b22d31;
-  border-radius: 40px;
-  margin: 50px 65px 0px 65px;
-  padding: 40px;
-  text-align: center;
-} */
 
 .content_section .noteh4 {
   color: #fff;
@@ -115,16 +106,6 @@ a:hover {
   font-family: 'Poppins';
 }
 
-/* .content_section p {
-  font-weight: 400;
-  font-size: 16px;
-  color: #fff;
-  text-align: center;
-  font-family: 'Poppins';
-  width: 50%;
-  margin: 0 auto;
-  font-style: normal;
-} */
 
 .content_section button {
   background: #ffb800;

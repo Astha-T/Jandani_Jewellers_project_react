@@ -19,6 +19,7 @@ const SideBar= (props) => {
   const [searchOpen,setSearchOpen] = useState(false)
   const [searchbar,setSearchBar] = useState(false)
   const [Otpopen,setOtpopen] = useState(false)
+  const [menu,setMenu] = useState(false)
 
   const loginStatus = localStorage.getItem('loginstatus')
     const Full_name = localStorage.getItem('full_name')
@@ -164,6 +165,15 @@ const SideBar= (props) => {
     }
   }
 
+  const Changemenu = () => {
+    if(menu===true){
+      setMenu(false)
+    }
+    else {
+      setMenu(true)
+    }
+  }
+
   const displaySearcharBar = () => {
     setSearchBar(true)
   }
@@ -228,7 +238,7 @@ const SideBar= (props) => {
                    <Logo/>
                     </Link>
                   
-                 <button
+                 <button onClick={Changemenu}
                     className="navbar-toggler border-0"
                     type="button"
                     data-toggle="collapse"
@@ -237,11 +247,17 @@ const SideBar= (props) => {
                     aria-expanded="false"
                     aria-label="Toggle navigation">
 
-                    <span
+                   {menu===false ? <span
                       className="iconify fa fa-bars"
                       data-icon="fa-solid:bars"
                       data-inline="false"
                     ></span>
+
+                    :<span
+                    className="iconify fa fa-times"
+                    data-icon="fa-solid:bars"
+                    data-inline="false"
+                  ></span>}
                   </button>
                   <div className="collapse navbar-collapse" id="navbarNav">
                     <ul className="navbar-nav ml-auto">
@@ -249,7 +265,7 @@ const SideBar= (props) => {
                         <Link className="nav-link" to="/"
                           >Home <span className="sr-only">(current)</span></Link>
                       </li>
-                      <li className="nav-item userli">
+                      {/* <li className="nav-item userli">
                         <ul>
                           <li>
                            <span className="fa fa-search"><Link to="#"
@@ -262,11 +278,22 @@ const SideBar= (props) => {
                               </div>
                             </li>
                         </ul>
+                      </li> */}
+                      <li className="nav-item nav-active">
+                      <Link className="nav-link" to="/privacy_policy"
+                          >Privacy Policy <span className="sr-only">(current)</span></Link>
                       </li>
-                      
+                      <li className="nav-item nav-active">
+                      <Link className="nav-link" to="/terms_and_conditions"
+                          >Terms and Conditions <span className="sr-only">(current)</span></Link>
+                      </li>
+                      <li className="nav-item nav-active">
+                      <Link className="nav-link" to="/aboutus"
+                          >About Us <span className="sr-only">(current)</span></Link>
+                      </li>
                       {islogin==='1' ?
                       <>
-                       <li className="nav-item userli ">
+                       {/* <li className="nav-item userli ">
                        <ul>
                      <li>
                           <span className="fa fa-cog"><Link to="#"
@@ -280,7 +307,19 @@ const SideBar= (props) => {
                              </div>
                            </li>
                            </ul>
-                     </li>
+                     </li> */}
+                     <li className="nav-item nav-active">
+                      <Link className="nav-link" to="/view_profile"
+                          >Your Profile <span className="sr-only">(current)</span></Link>
+                      </li>
+                      <li className="nav-item nav-active">
+                      <Link className="nav-link" to="/favourite_products"
+                          >Favourite Products <span className="sr-only">(current)</span></Link>
+                      </li>
+                      <li className="nav-item nav-active">
+                      <Link className="nav-link" to="/notifications"
+                          >Notifications <span className="sr-only">(current)</span></Link>
+                      </li>
                      <li className="nav-item userli">
                      <ul>
                        <li>

@@ -35,10 +35,14 @@ const All_Productsbycate = (props) => {
         ProductServices.Remove_fav().then(response=>response.json()).then(data=> {
           console.log(data)
           setOpen(true)
-          setMsg(data.message)
           if(data.status==='1')
           {
           setLike('0')
+          setMsg(data.message)
+          }
+          else if(data.status==='0')
+          {
+            setMsg('Please click again to remove this product fom your favorite list')
           }
       })
       }

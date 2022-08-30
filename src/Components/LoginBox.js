@@ -16,21 +16,9 @@ const LoginBox = (props) => {
 
         if (!props.open) {
             dialog = null;
-            document.body.style.overflow = 'unset';
         }
 
-
-        if(props.open) {
-            document.body.style.overflow = 'hidden';
-          
-        }
-    
-
-        useEffect(() => {
-        if(props.open) {
-            document.body.style.overflow = 'hidden';
-        }
-    })
+        
             return (
             <div className="dialogbox">
                 {dialog}

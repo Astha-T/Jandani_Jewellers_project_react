@@ -58,7 +58,7 @@ const SingleProduct = (props) => {
 
             <Swiper
               style={{
-                "--swiper-navigation-color": "#ffd700",
+                "--swiper-navigation-color": "black",
                 "--swiper-pagination-color": "#fff",
               }}
               loop={true}
@@ -128,12 +128,12 @@ const SingleProduct = (props) => {
           <div className="col-md-6 slider_txt ">
             <h4 className="">{displayProductName}</h4>
             <p className="pro_detail">{displayProductDes}</p>
-            <ul className="buton_lst">
+            {/* <ul className="buton_lst">
           <li><Enquiry/></li>   
           <li className="sec_btn"><GetQuotation/></li>
           <li><BookJewellery/></li> 
           <li className="frth_btn"><BooKAppointment/></li>
-          </ul>
+          </ul> */}
           </div>
         </div>
 

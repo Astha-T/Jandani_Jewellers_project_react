@@ -4,7 +4,7 @@
 
 }
 
-.aboutus h2{
+.aboutus .abh2{
     color: #a52a2a;
     margin-top: 100px;
     margin-left: 50px;
@@ -27,7 +27,7 @@
 
 @media all and (max-width: 600px){
 
-    .aboutus h2{
+    .aboutus .abh2{
         margin-left: 0px;
     }
     .aboutus .data{
