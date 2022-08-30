@@ -51,24 +51,26 @@ const UpdateProfile = (props) =>
     
     return ( 
       <div>
-      <div>
+        {loginStatus==='0' ? <Navigate to="/" />
+       : <div>
          <SideBar/>
-        <div className='update'>
-            <h2>Update Profile</h2>
-            <form onSubmit={submitHandler}>
+        <div className="up">
+        <h2>Update Profile</h2>
+            <form className="upForm" onSubmit={submitHandler}>
+            
             <input type="text" placeholder=' Name ' name='name' ref={c=>namebox=c} required/>
             <input type="text" placeholder=' Email ' name='email' ref={c=>emailbox=c} required/>
             <input type="text" placeholder=' Phone Numbers ' name='phone' ref={c=>phonebox=c} required />
             <input type="password" placeholder=' Password' name='password' ref={c=>passbox=c} required/>
             <input type="password" placeholder='Confirm Password' name='confirmpassword' ref={c=>confirmPass=c} required />
-            <button  type='send'>Submit</button>
+            <button className="defaultButton" type='send'>Submit</button>
             <p>{regMsg}</p>
             </form>
            
            </div>
-           {/* <Join/>
-            <Contact/> */}
-           </div>
+           <Join/>
+            <Contact/>
+           </div>}
     </div>
   
     )

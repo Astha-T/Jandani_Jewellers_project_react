@@ -30,7 +30,8 @@ const ViewProfile = (props) =>
            
  return (
    <div>
-   <div>
+      {loginStatus==='0' ? <Navigate to="/" />
+   :<> <div>
       <SideBar/>
     <div className="profile">
     <h2>YOUR PROFILE</h2>
@@ -41,8 +42,8 @@ const ViewProfile = (props) =>
     </div>
     </div>
     <Join/>
-   <Contact/>
-    </div>
+   <Contact/> </>}
+    </div> 
  )
  }
 export default ViewProfile;

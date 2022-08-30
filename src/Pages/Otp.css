@@ -83,6 +83,8 @@ padding-left: 150px;
   @media (max-width : 768px) {
   .enterotp{
         left: 5px;
+        width: fit-content;
+        height: fit-content;
     }
     .enterotp  h2 {
       font-weight: 700;

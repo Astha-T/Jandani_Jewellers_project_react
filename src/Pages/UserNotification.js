@@ -35,9 +35,9 @@ const UserNotification = (props) => {
     return(
         <div>
         {loginStatus==='1' ?
-        <div className="product_section">
+        <div className="note_section">
                 <SideBar/>
-        <h4>YOUR NOTIFICATION</h4>
+        <h4 className="noteh4">YOUR NOTIFICATION</h4>
         <div className="row">
         <div className="col-md-12">
         <NotificationList notification={notification}/> 

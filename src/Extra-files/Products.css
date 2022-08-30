@@ -99,6 +99,32 @@
           flex: 0 0 50%;
           max-width: 50% !important;
       }
+      .figureProd .like {
+        border-radius: 50% !important;
+        background-color: transparent;
+        margin-left: 60px;
+        position: absolute;
+        z-index: 99;
+        right: 10%;
+        border: 1px solid white;
+    
+    }
+    .figureProd .like .likebutton {
+        padding-top: 5px;
+        background-color: rgba(245, 214, 217, 0.8);
+        border: 1px solid white !important;
+        border-radius: 50%;
+        vertical-align: middle;
+    }
+    
+    .figureProd .like .likebutton .fa-heart {
+        display: inline-block;
+        font: normal normal normal 14px/1 FontAwesome;
+        font-size: inherit;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+    }
+    
   .figureProd {
             height: 158px;
             background: #FFFFFF;

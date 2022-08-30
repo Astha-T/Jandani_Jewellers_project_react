@@ -88,7 +88,7 @@ const SideBar= (props) => {
             console.log(ob)
 
             UserService.saveData(ob).then(response=>response.json()).then(data=>{
-              if(data.status)
+              if(data.status==='1' || data.message === 'You are already exist')
               {
                 console.log(data)
                 setIsReg(true)
@@ -97,7 +97,7 @@ const SideBar= (props) => {
                 setOtpopen(true)
                 
               }
-              else {
+              else if(data.status==='0' && data.message !== 'You are already exist'){
                 setRegMsg("Registration Failed...")
               }
             })
@@ -117,7 +117,7 @@ const SideBar= (props) => {
            if(data.status==="1") {
              console.log(data)
              setOtpIsValid(true)
-             setotpMsg("Otp is Valid")
+             setotpMsg("Otp is Valid. You can now Login to your Account")
              setOtpopen(false)
              setLoginOpen(true)
            }
@@ -151,10 +151,16 @@ const SideBar= (props) => {
     if(loginOpen===true){
       setLoginOpen(false)
       setSignUpOpen(true)
+      setLoginMsg('')
+      setRegMsg('')
+      setotpMsg('')
     }
     else if(signupOpen===true){
       setLoginOpen(true)
       setSignUpOpen(false)
+      setLoginMsg('')
+      setRegMsg('')
+      setotpMsg('')
     }
   }
 
@@ -324,7 +330,7 @@ const SideBar= (props) => {
                       </div> 
                         </SignUpBox>}
 
-                      <SignupLoginbox open={Otpopen} onClose={(e) => setOtpopen(false)}>
+                      {Otpopen ===true && <SignupLoginbox open={Otpopen} onClose={(e) => setOtpopen(false)}>
                          <div className="enterotp">
                         <div>
                         <h2>Enter Otp</h2>
@@ -336,7 +342,7 @@ const SideBar= (props) => {
                       </form>
                       </div>
                       </div>
-                     </SignupLoginbox>
+                     </SignupLoginbox>}
                       
                       </li>}
                      </ul>

@@ -1,12 +1,12 @@
 import { useState, useEffect} from "react";
 import React from 'react'
 
-// import Contact  from '../Components/Contact';
-// import Join from '../Components/Join';
+import Contact  from '../Components/Contact';
+import Join from '../Components/Join';
 import Store from '../Redux/Store' 
 import {ACTION_SHOW_PRODUCT} from '../Redux/Actions/ProductAction'
 import Product_list from "../Extra-files/ProductList";
-import './Products.css'
+import './ProductByCate.css'
 import SideBar from "../Components/SideBaar";
 
 const Products = (props) => {
@@ -75,7 +75,7 @@ const Products = (props) => {
 
     return(
         <div>
-            <div className="product_section">
+            <div className="productbycate_section">
                 <SideBar/>
         <h4>Shop by Products</h4>
         <div className="row">
@@ -84,8 +84,8 @@ const Products = (props) => {
         </div>
         </div>
         </div>
-        {/* <div><Join/></div>
-          <div><Contact/></div> */}
+        <div><Join/></div>
+          <div><Contact/></div>
         </div>
     )
 }

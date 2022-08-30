@@ -19,7 +19,7 @@ const SignupLoginbox = (props) => {
         document.body.style.overflow = 'hidden';
     }
     return (
-        <div >
+        <div className="dialogbox">
             {dialog}
         </div>
     );
