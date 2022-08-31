@@ -6,12 +6,15 @@ import {connect} from "react-redux"
 import OtherServices from '../Services/OtherServices'
 import Dialog from '../Components/Dailogue'
 import './Contact.css'
+import DBox from './DialogBoxNew'
+import Options from './Options'
 
 const Contact = (props) =>
 {
     var emailbox= undefined;
     const [msg,setMsg] = useState('');
     const [open,setOpen] = useState(false)
+    const [newOpen,setnewOpen] = useState(false)
     
     const Subscribe = () => {
       
@@ -32,8 +35,7 @@ const Contact = (props) =>
          )}
 
          else {
-            setOpen(true)
-        setMsg("Please Login to your account!!!")
+            setnewOpen(true)
          }}
 
   return (
@@ -77,6 +79,9 @@ const Contact = (props) =>
         <Dialog open={open} onClose={(e) => setOpen(false)}>
         {msg}
         </Dialog>
+        <DBox open={newOpen} onClose={(e) => setnewOpen(false)}>
+            <Options/>
+        </DBox>
     </footer>
     
 </div>

@@ -12,11 +12,12 @@
     padding: 2px 5px;
     border-radius: 20px;
     background-color: #B22D31;
+    /* background-color: black; */
     cursor: pointer;
 
 }
 .prod h6 {
-    color:white;
+    color: white;
     font-weight: 500;
     font-size: 18px;
     margin: 0%;

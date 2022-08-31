@@ -25,7 +25,8 @@
   
   .productbycate_section figure:hover{
     border-radius: 24px;
-    background: #f5d6d9cc;
+    /* background: #f5d6d9cc; */
+    background-color: white;
   }
   
   .productbycate_section figure img {

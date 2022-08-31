@@ -1,6 +1,6 @@
 import React from 'react';
 
-import CategoryList from '../Pages/CategoryList'
+import Category from '../Components/Category'
 import Slider from '../Components/Slider'
 import SideBar from '../Components/SideBaar';
 // import Contact  from '../Components/Contact';
@@ -14,7 +14,7 @@ const Home = (props) => {
         <div className='home'> 
           <div><SideBar/></div>
           <div><Slider/></div> 
-          <div><CategoryList/></div>
+          <div><Category/></div>
          
 </div>
      )

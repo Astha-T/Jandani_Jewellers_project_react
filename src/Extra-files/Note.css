@@ -69,8 +69,8 @@
           }
       
           .note p {
-              background: #f5d6d9cc;
-              border: 1px solid #f5d6d9cc;
+              background: white;
+              border: 1px solid white;
               border-radius: 50%;
               margin: 0 auto;
               position: absolute;

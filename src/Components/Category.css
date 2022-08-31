@@ -1,3 +1,110 @@
-.cat {
- padding-top: 25px;
-}
+.category-list {
+      
+    margin-left: 0px;
+  margin-right: 0px;
+  padding: 0px;
+  margin: 0px
+  }
+  h4 {
+    text-align: center;
+    margin-bottom: 50px;
+    margin-top: 30px;
+  }
+   .figureCate {
+  
+          background: #FFFFFF;
+          box-shadow: 0px 4px 19px rgb(0 0 0 / 7%);
+          border-radius: 24px;
+          height: 210px;
+          padding: 30px 10px 0px 0px;
+  
+          width: 180px;
+  
+          /* width: 100%; */
+  
+          text-align: center;
+        }
+        .circle{
+          display: block;
+        }
+      .figureCate:hover{
+  
+          box-shadow: 0px 5px 22px rgb(17 17 18 / 7%);
+          border-radius: 24px;
+          background: white !important;
+        }
+    .figureCate img {
+          vertical-align: top;
+          border-style: none;
+          padding: 0px 15px;
+          width: 150px;
+          object-fit: contain;
+          /* height: 100px !important; */
+        }
+        
+        h5 {
+          font-weight: 500;
+          font-size: 18px;
+          font-style: normal;
+          color: #191919;
+          text-align: center;
+          margin-bottom: 10px;
+        }
+  
+        h3 {
+  
+           color: white;
+           font-size: 1px;
+        }
+        
+     .figureCate p {
+  
+            display: none;
+        }
+        
+  
+        a {
+          color: #191919 !important;
+        }
+        
+        a:hover {
+          color: #b22d31 !important;
+          text-decoration: none;
+        }
+      
+     .figureCate img {
+          height: 155px;
+          z-index: 9;
+          position: relative;
+          width: 150px;
+     }
+        .figureCate img {
+          height: 155px;
+          z-index: 9;
+          position: relative;
+          width: 100%;
+        }
+  
+        @media only screen and (max-width: 600px) {
+  
+      .figureCate {
+  
+              height: 158px;
+              padding: 28px 0px 0px 0px;
+              width: 150px;
+          }
+  
+       .figureCate img {
+              height: 108px;
+              z-index: 9;
+              position: relative;
+              width: 150px;
+          }
+      
+      h5 {
+        padding-bottom: 5px;
+      }
+      
+          
+        }
+        
