@@ -1,20 +1,20 @@
-.login {
+.loginnew {
     background: #FFFFFF;
     border-radius: 33px;
   }
-  .login .loginform {
+  .loginnew .loginformnew {
     position: absolute;
     right: 19%;
-    top: 10%;
+    top: 50%;
 }
   
-  .login  p {
+  .loginnew p {
     font-size: 14px;
         color: #B22D31;
         
   }
   
-  .login  h2 {
+  .loginnew h2 {
     font-weight: 700;
     font-size: 20px;
     font-family: 'Poppins';
@@ -23,16 +23,16 @@
     text-align: left;
    
   }
-  .login .phone {
+  .loginnew .phone {
   margin-left: 10%;
     margin-top: 90px;
   }
-  .login .pass {
+  .loginnew .pass {
     margin-top: 5px !important;
     margin-left: 10%;
   }
   
-  .login input {
+  .loginnew input {
     border: 1px solid #f7f7f7;
     background: #f7f7f7;
     border-radius: 38px;
@@ -44,7 +44,7 @@
     padding: 3% 8% ;
   }
   
-  .login p {
+  .loginnewp {
     font-size: 14px;
         color: #B22D31;
       text-align: center;
@@ -52,7 +52,7 @@
       padding-left: 60px;
   }
   
-  .login  .defaultButton {
+  .loginnew .defaultButtonnew {
   margin-left: 100px;
   margin-bottom: 20px;
   margin-top: 20px;
@@ -70,11 +70,11 @@
   color: #FFFFFF;
   }
   
-  .login  .defaultbutton:disabled {
+  .loginnew .defaultbuttonnew:disabled {
     cursor: not-allowed;
   }
   
-  .sign_up{
+  .sign_upnew{
     position: absolute;
     width: 371px;
     height: 348px;
@@ -83,13 +83,13 @@
     padding: 5px;
     }
     
-   .sign_up  p {
+   .sign_upnew p {
       font-size: 14px;
           color: #B22D31;
           margin-top: 10px;
     }
     
-   .sign_up  h2 {
+   .sign_upnew h2 {
     font-weight: 700;
     font-size: 20px;
     font-family: 'Poppins';
@@ -97,7 +97,7 @@
     text-align: left;
     }
     
-   .sign_up input {
+   .sign_upnew input {
     border: 1px solid #f7f7f7;
     background: #f7f7f7;
     border-radius: 38px;
@@ -109,13 +109,13 @@
     padding: 3% 8% ;
     }
     
-   .sign_up p {
+   .sign_upnew p {
       font-size: 14px;
           color: #B22D31;
           margin-left: 40%;
     }
     
-   .sign_up .defaultButton {
+   .sign_upnew .defaultButtonnew {
     margin-left: 30%;
   margin-bottom: 20px;
   margin-top: 20px;
@@ -133,10 +133,10 @@
   color: #FFFFFF;;
     }
     
-   .sign_up .defaultButton:disabled {
+   .sign_upnew .defaultButtonnew:disabled {
       cursor: not-allowed;
     }
-   .sign_up  h3{
+   .sign_upnew h3{
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
@@ -145,18 +145,18 @@
     color: #191919;
     padding-left: 150px;
     }
-    .sign_up h3 .link {
+    .sign_upnew h3 .link {
       color: #B22D31;
       border: none;
       background-color: transparent;
     }
     
-    .sign_up h3 .link a{
+    .sign_upnew h3 .link a{
       font-weight: bold;
       text-align: center;
     }
 
-    .enterotp {
+    .enterotpnew {
         position: absolute;
         width: 371px;
         height: 348px;
@@ -165,13 +165,13 @@
         padding: 5px;
         }
         
-      .enterotp  p {
+      .enterotpnew p {
           font-size: 14px;
               color: #B22D31;
               
         }
         
-      .enterotp  h2 {
+      .enterotpnew h2 {
         font-weight: 700;
         font-size: 20px;
         font-family: 'Poppins';
@@ -180,7 +180,7 @@
          
         }
         
-      .enterotp input {
+      .enterotpnew input {
         border: 1px solid #f7f7f7;
         background: #f7f7f7;
         border-radius: 38px;
@@ -192,13 +192,13 @@
         padding: 3% 8% ;
         }
         
-      .enterotp p {
+      .enterotpnew p {
           font-size: 14px;
               color: #B22D31;
             text-align: center;
         }
         
-      .enterotp  button {
+      .enterotpnew  button {
         margin-left: 30%;
       margin-bottom: 20px;
       margin-top: 20px;
@@ -216,10 +216,10 @@
       color: #FFFFFF;
         }
         
-      .enterotp  button:disabled {
+      .enterotpnew  button:disabled {
           cursor: not-allowed;
         }
-      .enterotp  h3{
+      .enterotpnew  h3{
         font-family: 'Inter';
       font-style: normal;
       font-weight: 400;
@@ -228,21 +228,21 @@
       color: #191919;
       padding-left: 150px;
         }
-      .enterotp h3 .link {
+      .enterotpnew h3 .link {
           color: #B22D31;
         }
         
-      .enterotp h3 .link a{
+      .enterotpnew h3 .link a{
           font-weight: bold;
         }
 
         @media (max-width : 768px) {
    
-            .login h2{
+            .loginnew h2{
             margin : 5px;
             }
         
-          .login input {
+          .loginnew input {
               border: 1px solid #f7f7f7;
               background: #f7f7f7;
               border-radius: 38px;
@@ -255,16 +255,16 @@
               align-items: center;
             }
           
-            .login .phone {
+            .loginnew .phone {
               margin-left: 25%;
               height: 40px;
             }
-            .login .pass {
+            .loginnew .pass {
               margin-top: 10px !important;
               margin-left: 25%;
               height: 40px;
             }
-            .login .defaultButton {
+            .loginnew .defaultButtonnew {
               margin-left: 110px;
               margin-bottom: 5px;
               margin-top: 20px;
@@ -282,25 +282,25 @@
               color: #FFFFFF;
             }
           
-            .login h3 {
+            .loginnew h3 {
               padding-top: 220px;
               padding-left: 35px;
             }
 
-            .sign_up h2{
+            .sign_upnew h2{
                 margin-left: 5px;
               }
           
-              .sign_up {
+              .sign_upnew {
                 height: fit-content;
                 width: fit-content;
               }
             
-              .sign_up  input {
+              .sign_upnew input {
                   margin-left: 2%;
               }
             
-              .sign_up .defaultButton {
+              .sign_upnew .defaultButtonnew {
                 margin-left: 15%;
               margin-bottom: 10px;
               margin-top: 15px;
@@ -317,7 +317,7 @@
               line-height: 19px;
               color: #FFFFFF;;
                 }
-              .sign_up input {
+              .sign_upnew input {
                 border: 1px solid #f7f7f7;
                 background: #f7f7f7;
                 border-radius: 20px;
@@ -328,17 +328,17 @@
                 margin: 10px 5px 0px 5px;
                 padding: 3% 8% ;
                 }
-              .sign_up h3 {
+              .sign_upnew h3 {
                 margin-left: 0;
                 padding-left: 18%;
               }
 
-              .enterotp{
+              .enterotpnew{
                 left: 5px;
                 width: fit-content;
                 height: fit-content;
             }
-            .enterotp  h2 {
+            .enterotpnew h2 {
               font-weight: 700;
               font-size: 20px;
               font-family: 'Poppins';
@@ -346,7 +346,7 @@
               text-align: left;
                
               }
-              .enterotp input {
+              .enterotpnew input {
                 border: 1px solid #f7f7f7;
                 background: #f7f7f7;
                 border-radius: 20px;
@@ -360,7 +360,7 @@
                 }
                 
           
-          .enterotp button {
+          .enterotpnew button {
             margin-left: 20%;
             margin-bottom: 20px;
             margin-top: 20px;

@@ -65,9 +65,9 @@ const Login = (props) =>
  <form className='loginform' onSubmit ={submitHandler}>
   <input className="phone" type="text" placeholder=' Phone number' name="email_phone" ref={c=>loginphonebox=c} required/>
   <input className='pass' type="password" placeholder=" Password " name="password" ref={c=>loginpassbox=c} required />
- <button className="defaultButton" type="send">Log-in</button>
+ <button className="defaultButtonl" type="send">Log-in</button>
 
- <p>{loginMsg}</p>
+ <p className='msg'>{loginMsg}</p>
  </form>
   {/* <h3>Not having any Account?<button  className="link" > SignUp</button></h3> */}
  </div>

@@ -18,6 +18,29 @@
     font-family: 'Poppins';
 }
 
+.loginh3j{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #191919;
+    padding-left: 0px;
+    
+    padding-top: 300px;
+  }
+  
+ .loginh3j .link {
+    color: #B22D31;
+    border: none;
+    background-color: transparent;
+  }
+  
+.loginh3j .link a{
+    font-weight: bold;
+    text-align: center;
+  }
+
  .content p {
     font-weight: 400;
     font-size: 16px;
@@ -29,7 +52,7 @@
     font-style: normal;
 }
 
-.content button {
+.content .joinbtn {
     background: #ffb800;
     border: 1px solid #ffb800;
     border-radius: 80px;
@@ -40,6 +63,28 @@
     font-size: 18px;
     color: #000;
 }
+.signuph3j{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #191919;
+    padding-left: 100px !important;
+    /* margin-top: 100px; */
+    padding-top: 20px;
+  }
+  
+ .signuph3j .link {
+    color: #B22D31;
+    border: none;
+    background-color: transparent;
+  }
+  
+ .signuph3j .link a{
+    font-weight: bold;
+    text-align: center;
+  }
 
 @media only screen and (max-width: 600px) {
 
@@ -52,14 +97,22 @@
     font-size: 21px;
 }
 
+.loginh3j {
+   padding-left: 0px !important;
+}
 .content_section p {
     width: 80%;
     font-size: 12px;
 }
 
-.content_section button {
+.content_section .joinbtn {
     font-weight: 600;
     font-size: 16px;
     color: #000;
+}
+
+.signuph3j{
+    padding-left: 0 !important;
+    padding-top: 10px;
 }
 }

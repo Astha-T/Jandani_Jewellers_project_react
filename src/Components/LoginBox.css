@@ -17,9 +17,9 @@
 
 .dialogbox {
   width: 100%;
-  height: 800px;
+  height: 100%;
   background-color: #808080de;
-  position: absolute;
+  position: fixed;
   left: 0;
   right: 0;
   bottom: 0;

@@ -55,8 +55,8 @@ const Otp = (props) =>
           <form onSubmit ={submitHandler3}> 
           <input type="text" placeholder="Phone No." ref={c=>otpphonebox=c} required/>
           <input type="text" placeholder=' OTP' name="otp" ref={c=>otpbox=c} required/>
-          <button onClick={login}type="send">Submit</button>
-          <p>{otpmsg}</p>
+          <button className="defaultButtono" onClick={login}type="send">Submit</button>
+          <p className='msgo'>{otpmsg}</p>
           </form>
           </div>
         </div>

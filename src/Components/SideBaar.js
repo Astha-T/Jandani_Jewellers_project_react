@@ -346,8 +346,8 @@ const SideBar= (props) => {
                         <form className='loginform' onSubmit ={submitHandler}>
                         <input className="phone" type="text" placeholder=' Phone number' name="email_phone" ref={c=>loginphonebox=c} required/>
                         <input className='pass' type="password" placeholder=" Password " name="password" ref={c=>loginpassbox=c} required />
-                        <button onClick={submitHandler} className="defaultButton" type="send">Log-in</button>
-                        <p>{loginMsg}</p>
+                        <button onClick={submitHandler} className="defaultButtonl" type="send">Log-in</button>
+                        <p className='msg'>{loginMsg}</p>
                         </form>
                         <h3 className='loginh3' >Not having any Account?<button onClick={change} className="link" > SignUp</button></h3> 
                         </div>
@@ -362,8 +362,8 @@ const SideBar= (props) => {
                        <input type="text" placeholder=' Phone Numbers ' name='phone' ref={c=>phonebox=c} required />
                        <input type="password" placeholder=' Password' name='password' ref={c=>passbox=c} required/>
                       <input type="password" placeholder='Confirm Password' name='confirmpassword' ref={c=>confirmPass=c} required />
-                       <button className="defaultButton" type='send'>Sign Up</button>
-                       <p>{regMsg}</p>
+                       <button className="defaultButtonsa" type='send'>Sign Up</button>
+                       <p className='msgs'>{regMsg}</p>
                        </form>
                       <h3>Already a User? <button onClick={change} className="link" >Login</button></h3> 
                       </div> 
@@ -376,8 +376,8 @@ const SideBar= (props) => {
                         <form onSubmit ={submitHandler3}> 
                         <input type="text" placeholder="Phone No." ref={c=>otpphonebox=c} required/>
                         <input type="text" placeholder=' OTP' name="otp" ref={c=>otpbox=c} required/>
-                       <button type="send">Submit</button>
-                      <p>{otpmsg}</p>
+                       <button className="defaultButtono"type="send">Submit</button>
+                      <p className='msgo'>{otpmsg}</p>
                       </form>
                       </div>
                       </div>

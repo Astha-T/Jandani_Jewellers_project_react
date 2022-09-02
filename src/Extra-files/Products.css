@@ -140,6 +140,10 @@
             position: relative;
             width: 100px !important;
         }
+
+        .sign_up .defaultButtons{
+          margin-left: -5px !important;
+        }
         
       }
       

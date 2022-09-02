@@ -76,8 +76,8 @@ const Signup = (props) =>
             <input type="text" placeholder=' Phone Numbers ' name='phone' ref={c=>phonebox=c} required />
             <input type="password" placeholder=' Password' name='password' ref={c=>passbox=c} required/>
             <input type="password" placeholder='Confirm Password' name='confirmpassword' ref={c=>confirmPass=c} required />
-            <button className="defaultButton" type='send'>Sign Up</button>
-            <p>{regMsg}</p>
+            <button className="defaultButtons" type='send'>Sign Up</button>
+            <p className='msgs'>{regMsg}</p>
             </form>
             {/* <h3>Already a User? <button onClick={login} className="link" >Login</button></h3> */}
        </div>

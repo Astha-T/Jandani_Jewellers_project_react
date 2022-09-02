@@ -9,7 +9,7 @@
     top: 10%;
 }
   
-  .login  p {
+  .login  .msg {
     font-size: 14px;
         color: #B22D31;
         
@@ -45,15 +45,16 @@
     padding: 3% 8% ;
   }
   
-  .login p {
+  .login .msg {
     font-size: 14px;
+    font-weight: 700 !important;
         color: #B22D31;
       text-align: center;
       padding-top: 20px;
       padding-left: 60px;
   }
   
-  .login  .defaultButton {
+  .login  .defaultButtonl {
   margin-left: 100px;
   margin-bottom: 20px;
   margin-top: 20px;
@@ -71,7 +72,7 @@
   color: #FFFFFF;
   }
   
-  .login  .defaultbutton:disabled {
+  .login  .defaultbuttonl:disabled {
     cursor: not-allowed;
   }
   
@@ -103,7 +104,7 @@
       margin-left: 25%;
       height: 40px;
     }
-    .login .defaultButton {
+    .login .defaultButtonl {
       margin-left: 110px;
       margin-bottom: 5px;
       margin-top: 20px;

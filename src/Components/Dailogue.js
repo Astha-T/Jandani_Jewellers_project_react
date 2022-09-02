@@ -1,6 +1,3 @@
-import { faBottleDroplet } from '@fortawesome/free-solid-svg-icons';
-import { getSuggestedQuery } from '@testing-library/react';
-import { removeData } from 'jquery';
 import React from 'react';
 
 let dialogStyles = {

@@ -20,7 +20,7 @@ const LoginBox = (props) => {
 
         
             return (
-            <div className="dialogbox">
+            <div className='dialogbox'>
                 {dialog}
             </div>
         );

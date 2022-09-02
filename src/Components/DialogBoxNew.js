@@ -18,7 +18,7 @@ const DBox = (props) => {
         }
 
            return (
-            <div  >
+            <div >
                 {dialog}
             </div>
         );

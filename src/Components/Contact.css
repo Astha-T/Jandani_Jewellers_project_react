@@ -43,6 +43,7 @@
 .footer .col2 h4 , .footer .quickcol h4{
     margin: 10px 20px 20px 0px;
     color: #b22d31;
+    padding-right: 240px;
     font-size: 21px;
     font-weight: 600;
     font-family: 'Poppins';
@@ -142,6 +143,29 @@ ul.subscribe {
     .subscribe input {
         width: 200px;
     }
+
+    .sign_up .defaultButtonsa {
+        margin-left: 25%;
+      margin-bottom: 20px;
+      margin-top: 20px;
+      cursor: pointer;
+      height: 50px;
+      width: 70%;
+      border: #B22D31;
+      background: #B22D31;
+      border-radius: 39px;
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 19px;
+      color: #FFFFFF;;
+        }
+        
+       .sign_up .defaultButtonsa:disabled {
+          cursor: not-allowed;
+        }
+        
     @media only screen and (max-width: 600px) {
 
         .footer {
@@ -154,6 +178,16 @@ ul.subscribe {
             font-weight: 400;
             font-size: 15px;
             width: 100%;
+        }
+
+        .footer .col2 h4 , .footer .quickcol h4{
+            margin: 10px 20px 20px 0px;
+            color: #b22d31;
+            padding-right: 0px;
+            font-size: 21px;
+            text-align: left;
+            font-weight: 600;
+            font-family: 'Poppins';
         }
     
         .footer .col2 ul li a {
@@ -173,5 +207,24 @@ ul.subscribe {
         .subscribe input {
             width: 200px;
         }
+
+        .sign_up .defaultButtonsa {
+            margin-left: 18%;
+          margin-bottom: 10px;
+          margin-top: 15px;
+          cursor: pointer;
+          height: 30px;
+          width: 150px;
+          border: #B22D31;
+          background: #B22D31;
+          border-radius: 20px;
+          font-family: 'Inter';
+          font-style: normal;
+          font-weight: 700;
+          font-size: 15px;
+          line-height: 19px;
+          color: #FFFFFF;;
+            }
+    
     }
 

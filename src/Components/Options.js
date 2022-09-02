@@ -1,5 +1,6 @@
 import React ,{useState} from 'react'
 import UserService from '../Services/UserServices'
+import './Options.css'
 
 const Options = () => {
      
@@ -130,19 +131,19 @@ console.log(ob1)
   return(
     <div>
             {loginOpen===true &&
-            <div className="login">
+            <div className="loginnew">
                <h2>LOGIN</h2>
-               <form className='loginform' onSubmit ={submitHandler}>
+               <form className='loginformnew' onSubmit ={submitHandler}>
                <input className="phone" type="text" placeholder=' Phone number' name="email_phone" ref={c=>loginphonebox=c} required/>
                <input className='pass' type="password" placeholder=" Password " name="password" ref={c=>loginpassbox=c} required />
-               <button onClick={submitHandler} className="defaultButton" type="send">Log-in</button>
+               <button onClick={submitHandler} className="defaultButtonnew" type="send">Log-in</button>
                <p>{loginMsg}</p>
                </form>
-               <h3 className='loginh3' >Not having any Account?<button onClick={change} className="link" > SignUp</button></h3> 
+               <h3 className='loginh3new' >Not having any Account?<button onClick={change} className="link" > SignUp</button></h3> 
             </div>}
 
             {signupOpen===true &&
-            <div className='sign_up'>
+            <div className='sign_upnew'>
                <h2>SIGN UP</h2>
                <form onSubmit={submitHandler2}>
                <input type="text" placeholder=' Name ' name='name' ref={c=>namebox=c} required/>
@@ -150,14 +151,14 @@ console.log(ob1)
                <input type="text" placeholder=' Phone Numbers ' name='phone' ref={c=>phonebox=c} required />
                <input type="password" placeholder=' Password' name='password' ref={c=>passbox=c} required/>
                <input type="password" placeholder='Confirm Password' name='confirmpassword' ref={c=>confirmPass=c} required />
-               <button className="defaultButton" type='send'>Sign Up</button>
+               <button className="defaultButtonnew" type='send'>Sign Up</button>
                <p>{regMsg}</p>
                </form>
                <h3>Already a User? <button onClick={change} className="link" >Login</button></h3> 
             </div> }
             
             {Otpopen===true &&
-            <div className="enterotp">
+            <div className="enterotpnew">
                <div>
                <h2>Enter Otp</h2>
                <form onSubmit ={submitHandler3}> 

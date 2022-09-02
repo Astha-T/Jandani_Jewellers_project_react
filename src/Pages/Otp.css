@@ -8,9 +8,11 @@
   padding: 5px;
   }
   
-.enterotp  p {
+.enterotp .msgo {
     font-size: 14px;
         color: #B22D31;
+        text-align: center;
+        margin-left: 100px;
         
   }
   
@@ -35,13 +37,14 @@
   padding: 3% 8% ;
   }
   
-.enterotp p {
+.enterotp .msgo {
     font-size: 14px;
+    font-weight: 700 !important;
         color: #B22D31;
       text-align: center;
   }
   
-.enterotp  button {
+.enterotp .defaultButtono{
   margin-left: 30%;
 margin-bottom: 20px;
 margin-top: 20px;
@@ -59,7 +62,7 @@ line-height: 19px;
 color: #FFFFFF;
   }
   
-.enterotp  button:disabled {
+.enterotp .defaultButtono:disabled {
     cursor: not-allowed;
   }
 .enterotp  h3{
@@ -80,7 +83,7 @@ padding-left: 150px;
   }
   
   
-  @media (max-width : 768px) {
+  @media (max-width : 600px) {
   .enterotp{
         left: 5px;
         width: fit-content;
@@ -103,12 +106,14 @@ padding-left: 150px;
         text-align: left;
         width: 250px;
         height: 40px;
-        margin: 10px 20px 10px 0px;
-        padding: 0% 20% ;
+        margin: 10px 25px 10px 0px;
+        padding: 0% 5% ;
         }
         
-  
-  .enterotp button {
+  .enterotp .msgo {
+    margin-left: 0px;
+  }
+  .enterotp .defaultButtono {
     margin-left: 20%;
     margin-bottom: 20px;
     margin-top: 20px;
