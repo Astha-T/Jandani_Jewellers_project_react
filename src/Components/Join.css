@@ -86,6 +86,28 @@
     text-align: center;
   }
 
+  .sign_up .defaultButtonsj {
+    margin-left: 24%;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  cursor: pointer;
+  height: 50px;
+  width: 70%;
+  border: #B22D31;
+  background: #B22D31;
+  border-radius: 39px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  color: #FFFFFF;;
+    }
+    
+   .sign_up .defaultButtonsj:disabled {
+      cursor: not-allowed;
+    }
+
 @media only screen and (max-width: 600px) {
 
 .content_section {
@@ -115,4 +137,22 @@
     padding-left: 0 !important;
     padding-top: 10px;
 }
+
+.sign_up .defaultButtonsj {
+    margin-left: 0% !important;
+  margin-bottom: 10px;
+  margin-top: 15px;
+  cursor: pointer;
+  height: 30px;
+  width: 150px;
+  border: #B22D31;
+  background: #B22D31;
+  border-radius: 20px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 19px;
+  color: #FFFFFF;
+    }
 }

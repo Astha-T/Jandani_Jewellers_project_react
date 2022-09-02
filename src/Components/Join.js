@@ -190,7 +190,7 @@ const Join = () =>
                        <input type="text" placeholder=' Phone Numbers ' name='phone' ref={c=>phonebox=c} required />
                        <input type="password" placeholder=' Password' name='password' ref={c=>passbox=c} required/>
                       <input type="password" placeholder='Confirm Password' name='confirmpassword' ref={c=>confirmPass=c} required />
-                       <button className="defaultButtons" type='send'>Sign Up</button>
+                       <button className="defaultButtonsj" type='send'>Sign Up</button>
                        <p className='msgs'>{regMsg}</p>
                        </form>
                       <h3 className='signuph3j'>Already a User? <button onClick={change} className="link" >Login</button></h3> 
