@@ -41,9 +41,9 @@
 }
 
 .footer .col2 h4 , .footer .quickcol h4{
-    margin: 10px 20px 20px 0px;
+    margin: 10px 18px 20px 0px;
     color: #b22d31;
-    padding-right: 240px;
+    padding-right: 238px;
     font-size: 21px;
     font-weight: 600;
     font-family: 'Poppins';
@@ -76,7 +76,7 @@
     font-family: 'Poppins';
     font-size: 14px;
     font-style: normal;
-    margin-left: 2px;
+    margin-left: 8px;
 }
 
 .subscribe input {
@@ -165,7 +165,7 @@ ul.subscribe {
        .sign_up .defaultButtonsa:disabled {
           cursor: not-allowed;
         }
-        
+
     @media only screen and (max-width: 600px) {
 
         .footer {
