@@ -3,7 +3,7 @@ import React from 'react'
 
 import SideBar from '../Components/SideBaar'
 import Contact  from '../Components/Contact';
-import Join from '../Components/Join';
+// import Join from '../Components/Join';
 import FavProdList from "../Extra-files/FavProdList";
 import './FavouriteProducts.css'
 import { Navigate } from "react-router-dom";
@@ -44,7 +44,7 @@ const FavouriteProducts = (props) => {
         </div>
         </div>
         </div>
-        <div className="join"><Join/></div>
+        {/*<div className="join"><Join/></div>*/}
         <div><Contact/></div>
         </div>
         

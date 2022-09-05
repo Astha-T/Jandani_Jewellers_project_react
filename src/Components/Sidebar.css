@@ -72,6 +72,7 @@ a.nav-link {
     border: 0;
     background: transparent;
     font-size: 18px;
+    /* margin-right: 17px; */
     
  
   }
@@ -150,9 +151,7 @@ a.nav-link {
   .list {
     display: block;
   }
-  .fa-close {
-    margin-right: 17px;
-}
+ 
 
 .loginh3{
     font-family: 'Inter';
@@ -234,6 +233,9 @@ a.nav-link {
         margin-left: 50px;
         margin-right: 20px;
 
+    }
+    .a {
+        display: none;
     }
     .searchbutton{
         position: absolute;

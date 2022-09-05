@@ -13,4 +13,8 @@
     display: block;
     
 }
+.row .col-md-8 ul li{
+    display: inline-block;
+    padding-left: 7%;
+}
 

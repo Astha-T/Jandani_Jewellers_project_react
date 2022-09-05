@@ -9,9 +9,9 @@
       background: #FFFFFF;
       box-shadow: 0px 4px 19px rgb(0 0 0 / 7%);
       border-radius: 24px;
-      height: 216px;
+      height: 200px;
       padding: 30px 0px 19px 0px;
-      width: 120px !important;
+      width: 250px !important;
       text-align: center;
     }
       
@@ -19,7 +19,8 @@
         vertical-align: middle;
         border-style: none;
         padding: 11px 10px;
-        width: 120px;
+        margin: 2px 0px ;
+        width: 220px !important;
         object-fit: contain;
       }
       
@@ -28,9 +29,8 @@
         font-size: 18px;
         font-style: normal;
         color: #191919;
-        text-align: center;
-        /* margin-left: 30%; */
-        height: 100px;
+        text-align: center !important;
+        height: 40px;
       }
 
       h3 {
@@ -48,21 +48,15 @@
         text-decoration: none;
       }
       
-
- .figureProd img {
-        height: 155px;
-        z-index: 9;
-        position: relative;
-        width: 120px;
-      }
-    
  .figureProd .like {
         border-radius: 50% !important;
         background-color: transparent;
         margin-left: 60px;
+        /* padding-bottom: 10px; */
         position: absolute;
         z-index: 99;
-        right: 10%;
+        right: 20%;
+        top: 2%;
         border: 1px solid white;
     
     }
@@ -124,8 +118,10 @@
             height: 158px;
             background: #FFFFFF;
             /* box-shadow: 0px 4px 10px rgb(0 0 0 / 7%); */
-            margin:0;
+            margin-left:0 !important;
+            padding-left: 0 !important ;
             padding: 0;
+            width: 160px !important;
             border-radius: 24px;
             text-align: center;
         }
@@ -136,10 +132,10 @@
         
     
    .figureProd img {
-            height: 108px;
+            height: 148px !important;
             z-index: 9;
             position: relative;
-            width: 100px !important;
+            width: 120px !important;
         }
 
         .sign_up .defaultButtons{

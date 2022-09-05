@@ -187,13 +187,15 @@ const Contact = (props) =>
             <div className="col-md-4 col2">
                 <h4>Contact Us</h4>
                 <ul>
-                    <li><Link to="tel:208-555-0112"><img src={require("./images/Vector (1).jpg")}/>(208) 555-0112</Link></li>
+                    <li><a className="nav-link" href="tel:9522588588"><i className="fas fa-phone-alt"></i> 9522 588 588</a>
+
+</li>
                     <li><img src={require("./images/Vector (2).jpg")}/>6391 Elgin St. Celina, Delaware 10299</li>
                 </ul>
-                <ul className="subscribe">
+               {/* <ul className="subscribe">
                     <li><input type="text" placeholder="Email" ref={c=>emailbox=c} required/></li>
                     <li><button onClick={Subscribe} type='submit'>Subscribe</button></li>
-                </ul>
+  </ul>*/}
             </div>
             <div className="col-md-12 col3">
                 <h6 className="text-center">Copyright © 2022 JandaniJewellers</h6>

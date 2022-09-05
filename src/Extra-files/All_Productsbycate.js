@@ -149,8 +149,6 @@ const All_Productsbycate = (props) => {
         if(like==='0'){
           ProductServices.Add_fav().then(response=>response.json()).then(data=> {
           console.log(data)
-          setOpen(true)
-          setMsg(data.message)
           if(data.status==='1')
             {
               setLike('1')
@@ -161,14 +159,13 @@ const All_Productsbycate = (props) => {
     else if(like==='1') {
         ProductServices.Remove_fav().then(response=>response.json()).then(data=> {
           console.log(data)
-          setOpen(true)
           if(data.status==='1')
           {
           setLike('0')
-          setMsg(data.message)
           }
           else if(data.status==='0')
           {
+            setOpen(true)
             setMsg('Please click again to remove this product fom your favorite list')
           }
       })

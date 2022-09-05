@@ -193,6 +193,9 @@ const SideBar= (props) => {
     console.log(searchWord)
     localStorage.setItem('keyValue',searchWord)
 
+    const userId = localStorage.getItem('user_id');
+    const keyValue = localStorage.getItem('keyValue')
+
     ProductServices.Search_ProductbyKeyWord(searchWord).then(response=>response.json()).then(data=>{
       console.log(data.result)
       if(data.status==='0') {
@@ -205,15 +208,12 @@ const SideBar= (props) => {
     const newFilter = data.result.map((value) => {
      return(value.name)
     });
-  
-    console.log(newFilter)
     
     if (searchWord === "") {
       setProducts([]);
       setSearchOpen(false)
     } else {
       setProducts(newFilter);
-     console.log(products)
     }
   }
 });
@@ -279,18 +279,18 @@ const SideBar= (props) => {
                             </li>
                         </ul>
                       </li> */}
-                      <li className="nav-item nav-active">
-                      <Link className="nav-link" to="/privacy_policy"
-                          >Privacy Policy <span className="sr-only">(current)</span></Link>
-                      </li>
-                      <li className="nav-item nav-active">
-                      <Link className="nav-link" to="/terms_and_conditions"
-                          >Terms and Conditions <span className="sr-only">(current)</span></Link>
-                      </li>
-                      <li className="nav-item nav-active">
-                      <Link className="nav-link" to="/aboutus"
-                          >About Us <span className="sr-only">(current)</span></Link>
-                      </li>
+                      {/* <li className="nav-item nav-active">
+                    <Link className="nav-link" to="/privacy_policy"
+                      //     >Privacy Policy <span className="sr-only">(current)</span></Link>
+                      // </li>
+                      // <li className="nav-item nav-active">
+                      // <Link className="nav-link" to="/terms_and_conditions"
+                      //     >Terms and Conditions <span className="sr-only">(current)</span></Link>
+                      // </li>
+                      // <li className="nav-item nav-active">
+                      // <Link className="nav-link" to="/aboutus"
+                      //     >About Us <span className="sr-only">(current)</span></Link>
+                      // </li>*/}
                       {islogin==='1' ?
                       <>
                        {/* <li className="nav-item userli ">
@@ -322,13 +322,12 @@ const SideBar= (props) => {
                       </li>
                      <li className="nav-item userli">
                      <ul>
-                       <li>
-                        <span className="fa fa-user"></span></li>
-                       <li className="dropdown"><Link className="nav-link dropdown-toggle" to="#"
-                         data-toggle="dropdown">Hi {Full_name}</Link>
-                           <div className="dropdown-menu">
+                       
+                       <li ><Link className="nav-link dropdown-toggle" onClick={logout} to="#"
+                         >Logout</Link>
+                           {/*<div className="dropdown-menu">
                              <Link className="dropdown-item" to="#" onClick={logout}>Logout</Link>
-                           </div>
+                    </div>*/}
                          </li>
                      </ul>
                    </li></>
@@ -387,9 +386,9 @@ const SideBar= (props) => {
                      </ul>
                   </div>
 
-                  <form className="searchform" role="search" onSubmit={handleFilter}>
+                  <form className="searchform" role="search">
                   {searchbar===false && <button type="submit" onClick={displaySearcharBar} className='searchbutton'><span className="fa fa-search"
-                       ></span></button>} &nbsp;&nbsp;
+                       ></span></button>} 
                           {searchbar===true &&<> <input className="searchbar" type="text" 
                           placeholder="Search For..." name="keyword" ref={c=>keyWord=c} required
                            onChange={handleFilter}/>

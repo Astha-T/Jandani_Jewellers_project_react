@@ -1,5 +1,7 @@
 .product-list {
     width: 100%;
-
+    height: fit-content;
+margin-bottom: 0% !important;
+padding-bottom: 0% !important;
 }
 

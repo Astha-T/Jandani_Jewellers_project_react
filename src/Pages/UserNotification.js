@@ -4,7 +4,7 @@ import { Navigate } from "react-router-dom";
 import striptags from 'striptags'
 
 import Contact  from '../Components/Contact';
-import Join from '../Components/Join';
+// import Join from '../Components/Join';
 import SideBar from '../Components/SideBaar'
 import NotificationList from "../Extra-files/NotificationList";
 import OtherServices from '../Services/OtherServices';
@@ -45,7 +45,7 @@ const UserNotification = (props) => {
         </div>
         </div>
         : <Navigate to="/"/>}
-        <Join/>
+        {/*<Join/>*/}
         <Contact/>
         </div>
 

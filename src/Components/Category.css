@@ -16,7 +16,7 @@
           box-shadow: 0px 4px 19px rgb(0 0 0 / 7%);
           border-radius: 24px;
           height: 210px;
-          padding: 30px 10px 0px 0px;
+          padding: 30px 5px 0px 0px;
   
           width: 180px;
   
@@ -79,27 +79,28 @@
           position: relative;
           width: 150px;
      }
-        .figureCate img {
+        /* .figureCate img {
           height: 155px;
           z-index: 9;
           position: relative;
           width: 100%;
         }
-  
+   */
         @media only screen and (max-width: 600px) {
   
       .figureCate {
   
               height: 158px;
               padding: 28px 0px 0px 0px;
-              width: 150px;
+              width: 170px;
+              margin-right: 5%;
           }
   
        .figureCate img {
               height: 108px;
               z-index: 9;
               position: relative;
-              width: 150px;
+              width: 165px;
           }
       
       h5 {

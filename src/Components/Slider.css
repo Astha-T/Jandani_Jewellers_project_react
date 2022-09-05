@@ -11,7 +11,7 @@
     margin-left: 0px;
     
     overflow: hidden;
-    padding: 70px 35px 20px 35px;
+    padding: 70px 3px 20px 3px;
     width: 100%;
 }
 
@@ -39,6 +39,10 @@
     color: #fff;
 }
 
+.swiper-pagination-bullets{
+padding-left: 5%;
+color: #fff !important;
+}
 
 .sec_section .icon {
   
@@ -51,17 +55,21 @@
     .sec_section .banner img {
         margin-top: 30px !important;
         height: 41vh;
+        width: 100%;
         object-fit: fill;
     }
     .slider-section .carousel-item img{
         height: 41vh;
+        width: 100%;
       }
       .sec_section .banner .swiper {
         height: 100%;
+        width: 100%;
     }
     .sec_section .banner .swiper-button-next:after, .sec_section .banner .swiper-button-prev:after{
         font-size: 28px;
         color: #fff;
+        width: 100%;
     }
 }
 

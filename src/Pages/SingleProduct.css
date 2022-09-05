@@ -3,7 +3,9 @@
   height: 100%;
 }
 
-
+.swiper-slide-thumb-active{
+  background-color: black !important;
+}
 
 .swiper-slide {
   text-align: center;
@@ -33,7 +35,7 @@
     border-radius: 20px;
 }
 .swiper_img img{
-  width: 450px;
+  width: 100%;
   height: 400px;
 }
 .option_img img{
@@ -98,6 +100,7 @@ background-image: url('https://pngtree.com/free-white-background');
 background-repeat: no-repeat;
 background-size: 0% 0%;
 border: 1px solid transparent;
+margin-bottom: 0% !important;
 /* border-radius: 50px; */
 }
 
@@ -265,14 +268,19 @@ h4{
       margin-top: 0px;
   }
   
+.producttitle {
+  margin: 0;
+  padding: 0;
+}
+  
   .product .carousel-item img {
       object-fit: contain;
       margin: 0 auto;
-     
+
   }
 
   .swiper_img img{
-  width: 260px;
+  width: 100%;
   height: 300px;
 }
   .buton_lst{
@@ -280,11 +288,11 @@ h4{
     padding: 0px;
   }
   .slider_txt {
-    padding: 23% 6% 4% 6%;
+    padding: 5% 5% 0% 5%;
     font-size: 15px;
     font-family: 'Poppins';
     font-weight: 400;
-    text-align: left;
+    text-align: center !important;
     margin-bottom: 5px;
 }
 .slider_row {

@@ -14,7 +14,6 @@ const SearchProduct = (props) => {
 
        ProductServices.Search_ProductbyKeyWord().then((response)=>response.json()).then(data=> {
          const updatedProd= data.result.map((productData)=> {
-            console.log(data)
             if(data.status===1) {
                 localStorage.setItem('product_id', data.result.id)
                  Store.dispatch({...ACTION_SHOW_PRODUCT,payload: {

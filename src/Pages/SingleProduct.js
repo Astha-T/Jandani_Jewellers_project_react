@@ -10,7 +10,7 @@ import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/navigation";
 import "swiper/css/thumbs";
-import Join from '../Components/Join';
+// import Join from '../Components/Join';
 import Contact from "../Components/Contact";
 // import Enquiry from "../Components/Enquiry";
 // import BookJewellery from "../Components/BookJewellery";
@@ -54,6 +54,9 @@ const SingleProduct = (props) => {
 
       <div className="container">
         <div className="row slider_row">
+        <div className="col-md-12">
+        <h4 className="producttitle">{displayProductName}</h4>
+        </div>
           <div className="col-md-6">
 
             <Swiper
@@ -126,7 +129,7 @@ const SingleProduct = (props) => {
 
           </div>
           <div className="col-md-6 slider_txt ">
-            <h4 className="">{displayProductName}</h4>
+          
             <p className="pro_detail">{displayProductDes}</p>
             {/* <ul className="buton_lst">
           <li><Enquiry/></li>   
@@ -138,7 +141,7 @@ const SingleProduct = (props) => {
         </div>
 
       </div>
-      <Join/>
+      {/*<Join/>*/}
       <Contact />
     </>
   )

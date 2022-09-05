@@ -3,7 +3,7 @@ import React from "react";
 
 import Productbycate_list from "../Extra-files/Productbycate_list";
 import Contact  from '../Components/Contact';
-import Join from '../Components/Join';
+// import Join from '../Components/Join';
 // import Product_list from "../Extra-files/Product_list";
 
 import Store from '../Redux/Store'
@@ -76,12 +76,10 @@ const ProductsByCate = (props) => {
             <SideBar/>
         <h4>Shop by Products</h4>
         <div className="row">
-        <div className="col-md-12">
             <Productbycate_list products={products}/> 
         </div>
         </div>
-        </div>
-        <div><Join/></div>
+        {/*<div><Join/></div>*/}
         <div><Contact/></div>
         </div>
     )

@@ -5,7 +5,7 @@ import striptags from 'striptags'
 
 import SideBar from "../Components/SideBaar";
  import Contact from "../Components/Contact";
- import Join from '../Components/Join'
+//  import Join from '../Components/Join'
 // import Contact from "../Components/Contact";
 import OtherServices from '../Services/OtherServices';
 import './AboutUs.css'
@@ -30,7 +30,7 @@ const AboutUs = () => {
             <h2 className="abh2">About Us</h2>
             <h3 className='data'>{displayData}</h3>
 
-            <Join/>
+            {/*<Join/>*/}
             <Contact/> 
 
             {/* <Contact/> */}

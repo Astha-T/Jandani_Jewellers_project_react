@@ -7,7 +7,7 @@ const Productbycate_list = (props) => {
     return (
         <div className='product-list row'>
             {/* <div className="col-md-1 d-sm-block d-none"></div> */}
-         <div className="col-md-1 d-sm-block d-none"></div>
+        
 
             {props.products.map((prod)=> (
                 <All_Productsbycate
@@ -18,9 +18,7 @@ const Productbycate_list = (props) => {
                 />
             ))}    
 
-        {/* <div className="col-md-1 d-sm-block d-none"></div>       */}
-
-        <div className="col-md-1 d-sm-block d-none"></div>      
+        {/* <div className="col-md-1 d-sm-block d-none"></div>       */} 
         </div>
     );
 };

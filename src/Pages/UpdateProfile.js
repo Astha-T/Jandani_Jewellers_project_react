@@ -4,7 +4,7 @@ import UserService from '../Services/UserServices'
 import {Navigate} from 'react-router-dom'
 import SideBar from '../Components/SideBaar';
 import './UpdateProfile.css';
-import Join from '../Components/Join';
+// import Join from '../Components/Join';
 import Contact from '../Components/Contact'
 
 const UpdateProfile = (props) =>
@@ -68,7 +68,7 @@ const UpdateProfile = (props) =>
             </form>
            
            </div>
-           <Join/>
+           {/*<Join/>*/}
             <Contact/>
            </div>}
     </div>
