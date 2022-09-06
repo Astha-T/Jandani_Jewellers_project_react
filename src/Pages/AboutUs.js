@@ -2,7 +2,7 @@ import { useState} from "react";
 import React from 'react'
 import sanitizeHtml from 'sanitize-html'
 import striptags from 'striptags'
-
+import { useNavigate } from "react-router-dom";
 import SideBar from "../Components/SideBaar";
  import Contact from "../Components/Contact";
 //  import Join from '../Components/Join'
@@ -11,6 +11,9 @@ import OtherServices from '../Services/OtherServices';
 import './AboutUs.css'
 
 const AboutUs = () => {
+    
+    const navigate = useNavigate();
+
     const [displayData, setDisplayData] = useState('');
 
        OtherServices.About_us().then((response)=>response.json()).then(data=> {
@@ -27,6 +30,10 @@ const AboutUs = () => {
     return(
         <div className='aboutus'>
             <SideBar/>
+            <div className='d-flex justify-content-center align-items-center btndiv'>
+            <button onClick={() => navigate(-1)} className="prevBtn" ><span className="fa fa-arrow-left"/></button>
+          <button onClick={() => navigate(-1)} className="prevBtn" ><span className="fa fa-arrow-right"/></button>
+          </div>
             <h2 className="abh2">About Us</h2>
             <h3 className='data'>{displayData}</h3>
 

@@ -5,7 +5,7 @@
   
   
   .productbycate_section h4 {
-    margin: 80px 20px 30px 20px;
+    margin: 20px 20px 30px 20px !important;
     font-family: 'Poppins';
     font-weight: 600;
     color: #191919;
@@ -41,7 +41,7 @@
    
     .productbycate_section h4 {
       text-align: center;
-      margin-top: 100px;
+      margin-top: 20px;
     }
   }
   

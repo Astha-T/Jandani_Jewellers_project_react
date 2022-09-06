@@ -52,7 +52,7 @@ const Login = (props) =>
                     setLoginMsg("Login Successfully...")
                }
                   else {
-                     setLoginMsg('Login Failed...')
+                     setLoginMsg('Please enter a valid phone number/password')
                   }
                
             })
@@ -62,12 +62,11 @@ const Login = (props) =>
    <Navigate to="/"/> :
  <div className="login">
  <h2>LOGIN</h2>
+ <p className='msg'>{loginMsg}</p>
  <form className='loginform' onSubmit ={submitHandler}>
   <input className="phone" type="text" placeholder=' Phone number' name="email_phone" ref={c=>loginphonebox=c} required/>
   <input className='pass' type="password" placeholder=" Password " name="password" ref={c=>loginpassbox=c} required />
  <button className="defaultButtonl" type="send">Log-in</button>
-
- <p className='msg'>{loginMsg}</p>
  </form>
   {/* <h3>Not having any Account?<button  className="link" > SignUp</button></h3> */}
  </div>

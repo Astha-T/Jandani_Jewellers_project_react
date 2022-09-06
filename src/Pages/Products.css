@@ -55,23 +55,12 @@ a:hover {
   height: 150px;
 }
 
-.loginh3all{
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 17px;
-  color: #191919;
-  padding-left: 0px;
- 
-  padding-top: 280px;
-}
 
 .signUph3{
  padding-left: 80px !important;
 }
 
-.loginh3all .link {
+/* .loginh3all .link {
   color: #B22D31;
   border: none;
   background-color: transparent;
@@ -80,7 +69,7 @@ a:hover {
 .loginh3all .link a{
   font-weight: bold;
   text-align: center;
-}
+} */
 
 @media only screen and (max-width: 600px) {
   .product_section {
@@ -105,17 +94,6 @@ a:hover {
   .product_section h4 {
     text-align: center;
     margin-top: 100px;
-  }
-
-  .loginh3all{
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 17px;
-    color: #191919;
-    padding-top: 280px;
-    padding-left: 0px !important;
   }
 
   .signUph3{

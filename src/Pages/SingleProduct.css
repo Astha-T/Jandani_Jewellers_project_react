@@ -7,6 +7,10 @@
   background-color: black !important;
 }
 
+hr{
+ background-color: transparent;
+}
+
 .swiper-slide {
   text-align: center;
   font-size: 18px;
@@ -44,7 +48,9 @@
 }
 .pro_detail{
   /* height: 300px; */
-  overflow-x: hidden;
+  text-align: justify;
+  font-weight: 500px;
+  font-size: 17px;
 }
 
 .swiper {
@@ -54,7 +60,7 @@
   margin-right: auto;
 }
 .slider_row{
-  padding-top: 13%;
+  padding-top: 2%;
   padding-bottom: 0%;
 }
 .swiper-button-next:after, .swiper-button-prev:after{
@@ -204,8 +210,10 @@ margin-bottom: 0% !important;
 .slider_col{
   height: 500px;
 }
-h4{
+.producttitle{
   text-transform: uppercase;
+  text-align: right;
+  margin-right: 200px;
 }
 
 .buton_lst li{
@@ -237,8 +245,8 @@ h4{
   margin-bottom: 5px;
 }
 .slider_col p{
-  padding: 2% 10% 4% 2%;
-  text-align: left;
+ 
+  text-align: justify;
 }
   
 .details_section{
@@ -267,12 +275,22 @@ h4{
       text-align: justify;
       margin-top: 0px;
   }
-  
+  hr {
+   background-color: #000;
+    }
+
 .producttitle {
   margin: 0;
-  padding: 0;
+  padding: 10px 20px;
+  text-align: left;
+  font-size: 22px;
 }
-  
+  .pro_detail{
+    text-align: justify;
+    font-weight: 500;
+    font-size: 14px;
+    padding: 15px 20px;
+  }
   .product .carousel-item img {
       object-fit: contain;
       margin: 0 auto;
@@ -296,7 +314,7 @@ h4{
     margin-bottom: 5px;
 }
 .slider_row {
-  padding-top: 40%;
+  padding-top: 4%;
   padding-bottom: 2%;
 }
 .enquiry button{

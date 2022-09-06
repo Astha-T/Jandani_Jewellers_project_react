@@ -12,6 +12,7 @@ const All_Productsbycate = (props) => {
     
     const loginStatus = localStorage.getItem('loginstatus')
     const [msg,setMsg] = useState('')
+    const [otpvalue,setOtpValue] = useState('')
     const [open,setOpen] = useState(false)
     const [like,setLike] = useState(props.favorite)
     const [loginOpen,setLoginOpen] = useState(false)
@@ -61,20 +62,20 @@ const All_Productsbycate = (props) => {
                     localStorage.setItem('email',data.data.email);
   
                     setIsLogin('1')
-                    setLoginMsg("Login Successfully...")
+                    setLoginMsg(data.message)
                     window.location.reload(true)
                     setLoginOpen(false)
                }
                   else {
                     setIsLogin('0')
-                     setLoginMsg('Login Failed...')
+                     setLoginMsg(data.message)
                   }
             })
        }     
   
        const submitHandler2 = (event) => {
         event.preventDefault();
-           setRegMsg('Registration in Process...')
+           
   
              var ob = {
                   name : namebox.value,
@@ -84,19 +85,29 @@ const All_Productsbycate = (props) => {
                   confirmPassword : confirmPass.value
               }
               console.log(ob)
-  
               UserService.saveData(ob).then(response=>response.json()).then(data=>{
-                if(data.status==='1' || data.message === 'You are already exist')
+                if(data.status==='1')
                 {
                   console.log(data)
                   setIsReg(true)
-                  setRegMsg('Registration Done...')
+                  setRegMsg(data.message)
+                  setOtpValue(data.data.mobile)
                   setSignUpOpen(false)
                   setOtpopen(true)
                   
                 }
-                else if(data.status==='0' && data.message !== 'You are already exist'){
-                  setRegMsg("Registration Failed...")
+                else if(data.status==='0' && data.message === 'You are already exist')
+                {
+                  console.log(data)
+                  setIsReg(false)
+                  setRegMsg("You are already registered")
+                  // setSignUpOpen(false)
+                  // setLoginOpen(true)
+
+                  
+                }
+                else if(data.status==='0' && data.message !== 'You are already exist' ){
+                  setRegMsg(data.message)
                 }
               })
     }    
@@ -144,6 +155,8 @@ const All_Productsbycate = (props) => {
 
     const Like= () => {
 
+      localStorage.setItem('product_id', props.id)
+
     if(loginStatus==='1') {
     
         if(like==='0'){
@@ -163,11 +176,11 @@ const All_Productsbycate = (props) => {
           {
           setLike('0')
           }
-          else if(data.status==='0')
-          {
-            setOpen(true)
-            setMsg('Please click again to remove this product fom your favorite list')
-          }
+          // else if(data.status==='0')
+          // {
+          //   setOpen(true)
+          //   setMsg('Please click again to remove this product fom your favorite list')
+          // }
       })
       }
       
@@ -201,11 +214,11 @@ const All_Productsbycate = (props) => {
                       <LoginBox open={loginOpen} onClose={(e) => setLoginOpen(false)}>
                         <div className="login">
                              <h2>LOGIN</h2>
+                             <p className='msg'>{loginMsg}</p>
                         <form className='loginform' onSubmit ={submitHandler}>
                         <input className="phone" type="text" placeholder=' Phone number' name="email_phone" ref={c=>loginphonebox=c} required/>
                         <input className='pass' type="password" placeholder=" Password " name="password" ref={c=>loginpassbox=c} required />
                         <button onClick={submitHandler} className="defaultButtonl" type="send">Log-in</button>
-                        <p className='msg'>{loginMsg}</p>
                         </form>
                         <h3 className='loginh3all' >Not having any Account?<button onClick={change} className="link" > SignUp</button></h3> 
                         </div>
@@ -214,6 +227,7 @@ const All_Productsbycate = (props) => {
                     {signupOpen===true && <SignUpBox open={signupOpen} onClose={(e) => setSignUpOpen(false)}>
                        <div className='sign_up'>
                         <h2>SIGN UP</h2>
+                        <p className='msgs'>{regMsg}</p>
                        <form onSubmit={submitHandler2}>
                        <input type="text" placeholder=' Name ' name='name' ref={c=>namebox=c} required/>
                        <input type="text" placeholder=' Email ' name='email' ref={c=>emailbox=c} required/>
@@ -221,7 +235,7 @@ const All_Productsbycate = (props) => {
                        <input type="password" placeholder=' Password' name='password' ref={c=>passbox=c} required/>
                       <input type="password" placeholder='Confirm Password' name='confirmpassword' ref={c=>confirmPass=c} required />
                        <button className="defaultButtons" type='send'>Sign Up</button>
-                       <p className='msgs'>{regMsg}</p>
+                       
                        </form>
                       <h3 className='signUph3'>Already a User? <button onClick={change} className="link" >Login</button></h3> 
                       </div> 
@@ -231,11 +245,12 @@ const All_Productsbycate = (props) => {
                          <div className="enterotp">
                         <div>
                         <h2>Enter Otp</h2>
+                        <p className='msgo'>{otpmsg}</p>
                         <form onSubmit ={submitHandler3}> 
-                        <input type="text" placeholder="Phone No." ref={c=>otpphonebox=c} required/>
+                        <input type="text" value={otpvalue}  ref={c=>otpphonebox=c}required/>
                         <input type="text" placeholder=' OTP' name="otp" ref={c=>otpbox=c} required/>
-                       <button className="defaultButtono" type="send">Submit</button>
-                      <p className='msgo'>{otpmsg}</p>
+                       <button className="defaultButtonoall" type="send">Submit</button>
+
                       </form>
                       </div>
                       </div>
@@ -247,7 +262,7 @@ const All_Productsbycate = (props) => {
             {/*</p> */}
         </Link>
         </figure>
-   <h3>{props.id}</h3>
+   <h3 className='prodID'>{props.id}</h3>
    <h3>{props.favorite}</h3>
    <h5 style={{color: 'black'}}><Link  onClick={setProductId} to="/singleProduct">{props.name}</Link></h5>
    </div>

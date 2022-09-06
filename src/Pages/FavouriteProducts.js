@@ -6,10 +6,12 @@ import Contact  from '../Components/Contact';
 // import Join from '../Components/Join';
 import FavProdList from "../Extra-files/FavProdList";
 import './FavouriteProducts.css'
-import { Navigate } from "react-router-dom";
+import { Navigate, useNavigate } from "react-router-dom";
 
 const FavouriteProducts = (props) => {
     
+    const navigate = useNavigate();
+
     const loginStatus = localStorage.getItem('loginstatus')
     const [products,setProducts] = useState([])
 
@@ -37,6 +39,10 @@ const FavouriteProducts = (props) => {
         {loginStatus!=='1' && <Navigate to="/"/>}
         <div className="fav_section">
                 <SideBar/>
+                <div className='d-flex justify-content-center align-items-center btndiv'>
+      <button onClick={() => navigate(-1)} className="prevBtn" ><span className="fa fa-arrow-left"/></button>
+    <button onClick={() => navigate(+1)} className="prevBtn" ><span className="fa fa-arrow-right"/></button>
+    </div>
         <h4>YOUR FAVOURITE PRODUCUTS</h4>
         <div className="row">
         <div className="col-md-12">

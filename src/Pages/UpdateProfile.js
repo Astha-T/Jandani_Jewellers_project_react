@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 import UserService from '../Services/UserServices'
-import {Navigate} from 'react-router-dom'
+import {Navigate,useNavigate} from 'react-router-dom'
 import SideBar from '../Components/SideBaar';
 import './UpdateProfile.css';
 // import Join from '../Components/Join';
@@ -15,6 +15,8 @@ const UpdateProfile = (props) =>
     var passbox = undefined;
     var confirmPass = undefined;
 
+    const navigate = useNavigate();
+    
     const loginStatus = localStorage.getItem('loginstatus')
     const [regMsg,setRegMsg] = useState('');
     const [isReg,setIsReg] = useState(false);
@@ -54,6 +56,10 @@ const UpdateProfile = (props) =>
         {loginStatus==='0' ? <Navigate to="/" />
        : <div>
          <SideBar/>
+         <div className='d-flex justify-content-center align-items-center btndiv'>
+      <button onClick={() => navigate(-1)} className="prevBtn" ><span className="fa fa-arrow-left"/></button>
+    <button onClick={() => navigate(-1)} className="prevBtn" ><span className="fa fa-arrow-right"/></button>
+    </div>
         <div className="up">
         <h2>Update Profile</h2>
             <form className="upForm" onSubmit={submitHandler}>

@@ -6,12 +6,14 @@
   .login .loginform {
     position: absolute;
     right: 19%;
-    top: 10%;
+    top: 15%;
 }
   
   .login  .msg {
     font-size: 14px;
         color: #B22D31;
+        margin-top: 0%;
+        padding-top: 0%;
         
   }
   
@@ -46,17 +48,17 @@
   }
   
   .login .msg {
-    font-size: 14px;
+    font-size: 20px;
     font-weight: 700 !important;
         color: #B22D31;
       text-align: center;
       padding-top: 20px;
-      padding-left: 60px;
+      
   }
   
   .login  .defaultButtonl {
   margin-left: 100px;
-  margin-bottom: 20px;
+
   margin-top: 20px;
   cursor: pointer;
   height: 50px;
@@ -79,9 +81,14 @@
   @media (max-width : 768px) {
    
     .login h2{
-    margin : 5px;
+    margin-bottom : 2px !important;
     }
 
+    .login .loginform {
+      position: absolute;
+      right: 19%;
+      top: 12%;
+  }
   .login input {
       border: 1px solid #f7f7f7;
       background: #f7f7f7;
@@ -122,9 +129,14 @@
       color: #FFFFFF;
     }
   
-    .login h3 {
-      padding-top: 220px;
-      padding-left: 35px;
+
+    .login .msg {
+      font-size: 13px;
+      font-weight: 700 !important;
+          color: #B22D31;
+        text-align: center;
+        
     }
+    
   }
   

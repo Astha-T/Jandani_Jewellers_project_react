@@ -1,4 +1,5 @@
 import { useState, useEffect} from "react";
+import { useNavigate } from "react-router-dom";
 import React from "react";
 
 import Productbycate_list from "../Extra-files/Productbycate_list";
@@ -18,6 +19,8 @@ const ProductsByCate = (props) => {
     const categoryId = localStorage.getItem('category_id'); 
     const userId =  localStorage.getItem('user_id')
     const loginStatus = localStorage.getItem('loginstatus')
+
+    const navigate = useNavigate();
 
     useEffect(()=>{
         if(loginStatus==='0')
@@ -73,9 +76,15 @@ const ProductsByCate = (props) => {
     return(
         <div>
         <div className="productbycate_section">
+        
             <SideBar/>
+            <div className='d-flex justify-content-center align-items-center btndiv'>
+          <button onClick={() => navigate(-1)} className="prevBtn" ><span className="fa fa-arrow-left"/></button>
+        <button onClick={() => navigate(+1)} className="nextBtn" ><span className="fa fa-arrow-right"/></button>
+        </div>
         <h4>Shop by Products</h4>
         <div className="row">
+        
             <Productbycate_list products={products}/> 
         </div>
         </div>

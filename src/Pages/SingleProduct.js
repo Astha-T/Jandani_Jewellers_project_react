@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import React from 'react'
-import { Link } from 'react-router-dom'
+import {useNavigate } from 'react-router-dom'
 import sanitizeHtml from 'sanitize-html'
 import striptags from 'striptags'
 
@@ -21,14 +21,19 @@ import { FreeMode, Navigation, Thumbs } from "swiper";
 import { Pagination } from "swiper";
 
 const SingleProduct = (props) => {
+  const navigate = useNavigate();
+  const loginStatus = localStorage.getItem('loginstatus')
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
   const [displayProductName, setDisplayProductName] = useState('');
   const [displayProductImage, setDisplayProductImage] = useState();
   const [displayProductDes, setDisplayProductDes] = useState('');
-
+  const userId = localStorage.getItem('user_id');
   const productId = localStorage.getItem('product_id');
-  console.log(productId)
+
+  console.log(productId,userId)
   useEffect(() => {
+
+    if(loginStatus==='0') {
     fetch('https://dev.weblaunchpad.in/jandani_jewellers/api/customer/get_single_product?product_id=' + productId)
       .then(res => res.json())
       .then(data => {
@@ -45,17 +50,41 @@ const SingleProduct = (props) => {
         const finaltext = striptags(text)
         setDisplayProductDes(finaltext)
 
-      })
-  }, [productId])
+      })}
+
+      else if(loginStatus==='1'){
+        fetch('https://dev.weblaunchpad.in/jandani_jewellers/api/customer/get_single_product?product_id='+productId+'&user_id='+userId)
+      .then(res => res.json())
+      .then(data => {
+        console.log(data)
+
+        const updatedproductImage = data.result.image
+        setDisplayProductImage(updatedproductImage)
+
+        const updatedproductName = data.result.name
+        setDisplayProductName(updatedproductName)
+
+        const updatedDescription = data.result.description
+        const text = sanitizeHtml(updatedDescription)
+        const finaltext = striptags(text)
+        setDisplayProductDes(finaltext)
+
+      })}
+      
+  }, [productId,userId])
 
   return (
     <>
       <SideBar />
-
+      <div className='d-flex justify-content-center align-items-center btndiv'>
+      <button onClick={() => navigate(-1)} className="prevBtn" ><span className="fa fa-arrow-left"/></button>
+    <button onClick={() => navigate(+1)} className="nextBtn" ><span className="fa fa-arrow-right"/></button>
+    </div>
       <div className="container">
         <div className="row slider_row">
         <div className="col-md-12">
         <h4 className="producttitle">{displayProductName}</h4>
+        
         </div>
           <div className="col-md-6">
 
@@ -129,7 +158,7 @@ const SingleProduct = (props) => {
 
           </div>
           <div className="col-md-6 slider_txt ">
-          
+          <hr className="hr"/>
             <p className="pro_detail">{displayProductDes}</p>
             {/* <ul className="buton_lst">
           <li><Enquiry/></li>   

@@ -1,6 +1,6 @@
 import { useState} from "react";
 import React from "react";
-import { Navigate } from "react-router-dom";
+import { Navigate, useNavigate } from "react-router-dom";
 import striptags from 'striptags'
 
 import Contact  from '../Components/Contact';
@@ -11,6 +11,8 @@ import OtherServices from '../Services/OtherServices';
 import './UserNotification.css'
  
 const UserNotification = (props) => {
+
+    const navigate = useNavigate();
     
     const loginStatus = localStorage.getItem('loginstatus')
     const [notification,setNotification] = useState([]);
@@ -37,6 +39,10 @@ const UserNotification = (props) => {
         {loginStatus==='1' ?
         <div className="note_section">
                 <SideBar/>
+                <div className='d-flex justify-content-center align-items-center btndiv'>
+      <button onClick={() => navigate(-1)} className="prevBtn" ><span className="fa fa-arrow-left"/></button>
+    <button onClick={() => navigate(-1)} className="prevBtn" ><span className="fa fa-arrow-right"/></button>
+    </div>
         <h4 className="noteh4">YOUR NOTIFICATION</h4>
         <div className="row">
         <div className="col-md-12">

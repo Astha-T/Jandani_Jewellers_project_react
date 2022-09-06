@@ -8,12 +8,14 @@ import UserService from '../Services/UserServices'
 import SignUpBox from './SignUpBox'
 import SignupLoginbox from './SignupLoginbox'
 import SearchDialog from './SearchDailogue'
+import SearchProduct from './SearchProducts'
 import ProductServices from '../Services/ProductServices'
 import './Sidebar.css'
 
 const SideBar= (props) => {
   
   const [open,setOpen] = useState(false)
+  const [otpvalue,setOtpValue] = useState('')
   const [loginOpen,setLoginOpen] = useState(false)
   const [signupOpen,setSignUpOpen] = useState(false)
   const [searchOpen,setSearchOpen] = useState(false)
@@ -64,20 +66,20 @@ const SideBar= (props) => {
                   localStorage.setItem('email',data.data.email);
 
                   setIsLogin('1')
-                  setLoginMsg("Login Successfully...")
+                  setLoginMsg(data.message)
                   window.location.reload(true)
                   setLoginOpen(false)
              }
-                else {
+                else if(loginStatus==='0'){
                   setIsLogin('0')
-                   setLoginMsg('Login Failed...')
+                   setLoginMsg(data.message)
                 }
           })
      }     
 
      const submitHandler2 = (event) => {
       event.preventDefault();
-         setRegMsg('Registration in Process...')
+        //  setRegMsg('Registration in Process...')
 
            var ob = {
                 name : namebox.value,
@@ -89,17 +91,28 @@ const SideBar= (props) => {
             console.log(ob)
 
             UserService.saveData(ob).then(response=>response.json()).then(data=>{
-              if(data.status==='1' || data.message === 'You are already exist')
+              if(data.status==='1')
               {
                 console.log(data)
                 setIsReg(true)
-                setRegMsg('Registration Done...')
+                setRegMsg(data.message)
                 setSignUpOpen(false)
                 setOtpopen(true)
-                
+                setOtpValue(data.data.mobile)
+                setotpMsg("You Registerd Successfully!!!")
               }
-              else if(data.status==='0' && data.message !== 'You are already exist'){
-                setRegMsg("Registration Failed...")
+
+              else if (data.status==='0' && data.message=== 'You are already exist'){
+                console.log(data)
+                setIsReg(true)
+                setLoginMsg('You are already registered. Please Login.')
+                setSignUpOpen(false)
+                setLoginOpen(true)
+                //setTimeout(setSignUpOpen(false),150000)
+                // setTimeout(setLoginOpen(true), 150000)
+              }
+              else if(data.status==='0' && data.message!== 'You are already exist' ){
+                setRegMsg(data.message)
               }
             })
   }    
@@ -118,7 +131,7 @@ const SideBar= (props) => {
            if(data.status==="1") {
              console.log(data)
              setOtpIsValid(true)
-             setotpMsg("Otp is Valid. You can now Login to your Account")
+             setLoginMsg("You can now Login to your Account")
              setOtpopen(false)
              setLoginOpen(true)
            }
@@ -320,17 +333,15 @@ const SideBar= (props) => {
                       <Link className="nav-link" to="/notifications"
                           >Notifications <span className="sr-only">(current)</span></Link>
                       </li>
-                     <li className="nav-item userli">
-                     <ul>
                        
-                       <li ><Link className="nav-link dropdown-toggle" onClick={logout} to="#"
-                         >Logout</Link>
+                     <li className="nav-item signupli"> 
+                      
+                     <Link className="nav-link signup" onClick={logout} to="#">Logout</Link>
                            {/*<div className="dropdown-menu">
                              <Link className="dropdown-item" to="#" onClick={logout}>Logout</Link>
                     </div>*/}
                          </li>
-                     </ul>
-                   </li></>
+                     </>
 
                    :
 
@@ -342,11 +353,12 @@ const SideBar= (props) => {
                       <LoginBox open={loginOpen} onClose={(e) => setLoginOpen(false)}>
                         <div className="login">
                              <h2>LOGIN</h2>
-                        <form className='loginform' onSubmit ={submitHandler}>
+                             <p className='msg'>{loginMsg}</p>
+                        <form className='loginform' onSubmit={submitHandler}>
                         <input className="phone" type="text" placeholder=' Phone number' name="email_phone" ref={c=>loginphonebox=c} required/>
                         <input className='pass' type="password" placeholder=" Password " name="password" ref={c=>loginpassbox=c} required />
                         <button onClick={submitHandler} className="defaultButtonl" type="send">Log-in</button>
-                        <p className='msg'>{loginMsg}</p>
+                        
                         </form>
                         <h3 className='loginh3' >Not having any Account?<button onClick={change} className="link" > SignUp</button></h3> 
                         </div>
@@ -355,6 +367,7 @@ const SideBar= (props) => {
                     {signupOpen===true && <SignUpBox open={signupOpen} onClose={(e) => setSignUpOpen(false)}>
                        <div className='sign_up'>
                         <h2>SIGN UP</h2>
+                        <p className='msgs'>{regMsg}</p>
                        <form onSubmit={submitHandler2}>
                        <input type="text" placeholder=' Name ' name='name' ref={c=>namebox=c} required/>
                        <input type="text" placeholder=' Email ' name='email' ref={c=>emailbox=c} required/>
@@ -362,7 +375,7 @@ const SideBar= (props) => {
                        <input type="password" placeholder=' Password' name='password' ref={c=>passbox=c} required/>
                       <input type="password" placeholder='Confirm Password' name='confirmpassword' ref={c=>confirmPass=c} required />
                        <button className="defaultButtonsa" type='send'>Sign Up</button>
-                       <p className='msgs'>{regMsg}</p>
+                       
                        </form>
                       <h3>Already a User? <button onClick={change} className="link" >Login</button></h3> 
                       </div> 
@@ -372,11 +385,12 @@ const SideBar= (props) => {
                          <div className="enterotp">
                         <div>
                         <h2>Enter Otp</h2>
+                        <p className='msgo'>{otpmsg}</p>
                         <form onSubmit ={submitHandler3}> 
-                        <input type="text" placeholder="Phone No." ref={c=>otpphonebox=c} required/>
+                        <input type="text" value={otpvalue} style={{color: 'black'}} required/>
                         <input type="text" placeholder=' OTP' name="otp" ref={c=>otpbox=c} required/>
                        <button className="defaultButtono"type="send">Submit</button>
-                      <p className='msgo'>{otpmsg}</p>
+                      
                       </form>
                       </div>
                       </div>
@@ -394,7 +408,7 @@ const SideBar= (props) => {
                            onChange={handleFilter}/>
                           <button type="button" onClick={removeSearchBar} className='searchbutton'>
                           <span className="fa fa-close"></span></button></>}
-                          <SearchDialog open={searchOpen} onClose={(e) => setSearchOpen(false)}/>
+                         <SearchDialog open={searchOpen} onClose={(e) => setSearchOpen(false)}><SearchProduct/></SearchDialog>
                           <Dialog oepn={open} onClose={(e) => setOpen(false)}>{msg}</Dialog>
                          
                   </form>

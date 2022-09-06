@@ -7,9 +7,12 @@ import SideBar from "../Components/SideBaar";
 import OtherServices from '../Services/OtherServices';
 import './PrivacyPolicy.css'
 import Contact from "../Components/Contact";
+import { useNavigate } from "react-router-dom";
 // import Join from '../Components/Join';
 
 const PrivacyPolicy1 = () => {
+    
+    const navigate = useNavigate();
     const [displayPrivacyPolicy, setDisplayPrivacyPolicy] = useState('');
 
        OtherServices.privacy_Policy().then((response)=>response.json()).then(data=> {
@@ -26,6 +29,10 @@ const PrivacyPolicy1 = () => {
     return(
         <div className='privacypolicy'>
             <SideBar/>
+            <div className='d-flex justify-content-center align-items-center btndiv'>
+            <button onClick={() => navigate(-1)} className="prevBtn" ><span className="fa fa-arrow-left"/></button>
+          <button onClick={() => navigate(-1)} className="prevBtn" ><span className="fa fa-arrow-right"/></button>
+          </div>
             <h2 className="privacyh2">Privacy Policy</h2>
             <h3 className="privacyh3">{displayPrivacyPolicy}</h3>
             {/*<Join/>*/}

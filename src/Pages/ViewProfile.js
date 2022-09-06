@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Link, Navigate } from 'react-router-dom'
+import { Link, Navigate,useNavigate } from 'react-router-dom'
 
 import Contact  from '../Components/Contact';
 // import Join from '../Components/Join';
@@ -9,7 +9,7 @@ import SideBar from '../Components/SideBaar'
 
 const ViewProfile = (props) => 
 {
-
+   const navigate = useNavigate();
    const loginStatus = localStorage.getItem('loginstatus')
        const [username,setUserName] = useState('');
        const [useremail,setUserEmail] = useState('');
@@ -33,6 +33,10 @@ const ViewProfile = (props) =>
       {loginStatus==='0' ? <Navigate to="/" />
    :<> <div>
       <SideBar/>
+      <div className='d-flex justify-content-center align-items-center btndiv'>
+      <button onClick={() => navigate(-1)} className="prevBtn" ><span className="fa fa-arrow-left"/></button>
+    <button onClick={() => navigate(-1)} className="prevBtn" ><span className="fa fa-arrow-right"/></button>
+    </div>
     <div className="profile">
     <h2>YOUR PROFILE</h2>
     <p>Name: <b>{username}</b></p>
