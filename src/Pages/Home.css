@@ -11,7 +11,7 @@
     color: white;
     border: none;
     margin-top: 80px;
-  margin-right: 1150px;
+  margin-right: 1100px;
 }
 
 .nextBtn {
@@ -21,6 +21,16 @@
     border: none;
     margin-top: 80px;
 
+}
+
+.disabled{
+    border-radius: 50%;
+    background-color: #B22D31;
+    color: white;
+    border: none;
+    margin-top: 80px;
+    opacity: 0.5;
+    cursor: not-allowed !important;
 }
 
 @media only screen and (max-width: 600px) {
@@ -37,7 +47,7 @@
         color: white;
         border: none;
         margin-top: 80px;
-      margin-right: 250px;
+      margin-right: 200px;
     }
     
 }

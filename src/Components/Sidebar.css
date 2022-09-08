@@ -10,8 +10,8 @@
 }
 
 .signup {
-    border: 1px solid #b22d31;
-    border-radius: 40px;
+    border: none;
+   border-radius: 0%;
     background: #fff4f5;
     color: #b22d31 !important;
     padding: 4px 10px !important;
@@ -94,7 +94,12 @@ a.nav-link {
     right: 7%;
     top: 100%;
   }
+.loginsignup{
+    border: none;
+    margin: 0;
+    background-color: transparent;
 
+}
   .searchbutton2 {
     background: transparent;
     font-size: 15px;
@@ -151,7 +156,23 @@ a.nav-link {
   .list {
     display: block;
   }
- 
+ .loginbuttona{
+    border: none;
+   margin: 0px 10px;
+    height: 35px;
+    padding: 5px;
+    
+    background: #fff4f5;
+    color: #191919 !important;
+    font-size: 15px;
+    font-weight: 500;
+    font-family: 'Poppins';
+    font-style: normal;
+ }
+
+ .loginbuttona:hover {
+    color: #b22d31;
+ }
 
 .loginh3{
     font-family: 'Inter';
@@ -234,6 +255,11 @@ a.nav-link {
         margin-right: 20px;
 
     }
+    .loginbuttona{
+        margin: 0 !important;
+        font-weight: 600;
+    }
+    
     .a {
         display: none;
     }
@@ -255,12 +281,6 @@ a.nav-link {
 
     }
 
-    .fa-user, .fa-cog{
-        margin-top: 5px;
-        margin-left: 150px;
-        margin-right: 10px;
-        display: none;
-    }
 
     .nav-item li .fa-search{
         display: none !important;
@@ -548,12 +568,7 @@ a.nav-link {
     #navbarNav{
         padding-left: 21px;
     }
-    .navbar-form-search{
-        position: absolute;
-        top: 3px !important;
-        right: 25px;
 
-    }
     .userli ul{
     padding: 0px 20px 0px 20px;
     margin: 16px 10px 10px -9px;

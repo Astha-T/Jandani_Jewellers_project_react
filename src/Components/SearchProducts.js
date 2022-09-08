@@ -13,7 +13,7 @@ const SearchProduct = (props) => {
     const keyWord = localStorage.getItem('keyValue')
 
     useEffect(()=>{
-      fetch('https://dev.weblaunchpad.in/jandani_jewellers/api/customer/search-product?user_id='+userId+"&key_word="+keyWord)
+      fetch('https://dev.weblaunchpad.in/jandani_jewellers/api/customer/search-product?key_word='+keyWord)
       .then(res => res.json())
       .then(data => {
         console.log(data)

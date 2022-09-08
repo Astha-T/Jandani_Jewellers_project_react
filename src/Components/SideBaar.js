@@ -8,7 +8,6 @@ import UserService from '../Services/UserServices'
 import SignUpBox from './SignUpBox'
 import SignupLoginbox from './SignupLoginbox'
 import SearchDialog from './SearchDailogue'
-import SearchProduct from './SearchProducts'
 import ProductServices from '../Services/ProductServices'
 import './Sidebar.css'
 
@@ -195,6 +194,7 @@ const SideBar= (props) => {
     setSearchOpen(false)
   }
 
+  
   const [products, setProducts] = useState([]); 
   const [msg,setMsg] = useState('');
   
@@ -228,11 +228,12 @@ const SideBar= (props) => {
     } else {
       setProducts(newFilter);
     }
+    console.log(products)
   }
 });
   
 }
-   
+  
     // const Warning = () => { 
     //   alert("Logging Out in 5 minutes...")
     // }
@@ -250,8 +251,9 @@ const SideBar= (props) => {
                   <Link className="navbar-brand" to="#">
                    <Logo/>
                     </Link>
-                  
-                 <button onClick={Changemenu}
+                 
+                {loginStatus==='1' &&
+                 <button onClick= {Changemenu}
                     className="navbar-toggler border-0"
                     type="button"
                     data-toggle="collapse"
@@ -260,7 +262,7 @@ const SideBar= (props) => {
                     aria-expanded="false"
                     aria-label="Toggle navigation">
 
-                   {menu===false ? <span
+                   {menu===false  ? <span
                       className="iconify fa fa-bars"
                       data-icon="fa-solid:bars"
                       data-inline="false"
@@ -271,7 +273,35 @@ const SideBar= (props) => {
                     data-icon="fa-solid:bars"
                     data-inline="false"
                   ></span>}
-                  </button>
+                  </button>}
+              {/*: <button onClick={()=>setLoginOpen(true)}
+              //   className="navbar-toggler border-0"
+              //   type="button"
+              //   data-toggle="collapse"
+              //   data-target="#navbarNav"
+              //   aria-controls="navbarNav"
+              //   aria-expanded="false"
+              //   aria-label="Toggle navigation">
+
+              //   <span
+              //     className="iconify fa fa-user"
+              //     data-icon="fa-solid:user"
+              //     data-inline="false"
+              //   ></span>
+
+              // </button>}
+
+                  {/* <button onClick={()=>setLoginOpen(true)} 
+                  // className="navbar-toggler border-0"
+                  // type="button" 
+                  //   aria-label="Toggle navigation"
+                  // >
+                  //   <span
+                  //   className="iconify fa fa-user"
+                  //   data-icon="fa-user"
+                  //   data-inline="false"
+                   // ></span></button>*/}
+
                   <div className="collapse navbar-collapse" id="navbarNav">
                     <ul className="navbar-nav ml-auto">
                       <li className="nav-item nav-active">
@@ -304,7 +334,7 @@ const SideBar= (props) => {
                       // <Link className="nav-link" to="/aboutus"
                       //     >About Us <span className="sr-only">(current)</span></Link>
                       // </li>*/}
-                      {islogin==='1' ?
+                      {islogin==='1' &&
                       <>
                        {/* <li className="nav-item userli ">
                        <ul>
@@ -341,79 +371,71 @@ const SideBar= (props) => {
                              <Link className="dropdown-item" to="#" onClick={logout}>Logout</Link>
                     </div>*/}
                          </li>
-                     </>
+                     </>}
 
-                   :
-
-                    <li className="nav-item signupli"> 
-                      
-                      <Link className="nav-link signup" to="#" onClick={()=>setLoginOpen(true)} data-toggle="modal" data-target="#basicModal">Login/Signup</Link>
-                      
-                        {loginOpen===true && 
-                      <LoginBox open={loginOpen} onClose={(e) => setLoginOpen(false)}>
-                        <div className="login">
-                             <h2>LOGIN</h2>
-                             <p className='msg'>{loginMsg}</p>
-                        <form className='loginform' onSubmit={submitHandler}>
-                        <input className="phone" type="text" placeholder=' Phone number' name="email_phone" ref={c=>loginphonebox=c} required/>
-                        <input className='pass' type="password" placeholder=" Password " name="password" ref={c=>loginpassbox=c} required />
-                        <button onClick={submitHandler} className="defaultButtonl" type="send">Log-in</button>
-                        
-                        </form>
-                        <h3 className='loginh3' >Not having any Account?<button onClick={change} className="link" > SignUp</button></h3> 
-                        </div>
-                        </LoginBox>}
-
-                    {signupOpen===true && <SignUpBox open={signupOpen} onClose={(e) => setSignUpOpen(false)}>
-                       <div className='sign_up'>
-                        <h2>SIGN UP</h2>
-                        <p className='msgs'>{regMsg}</p>
-                       <form onSubmit={submitHandler2}>
-                       <input type="text" placeholder=' Name ' name='name' ref={c=>namebox=c} required/>
-                       <input type="text" placeholder=' Email ' name='email' ref={c=>emailbox=c} required/>
-                       <input type="text" placeholder=' Phone Numbers ' name='phone' ref={c=>phonebox=c} required />
-                       <input type="password" placeholder=' Password' name='password' ref={c=>passbox=c} required/>
-                      <input type="password" placeholder='Confirm Password' name='confirmpassword' ref={c=>confirmPass=c} required />
-                       <button className="defaultButtonsa" type='send'>Sign Up</button>
-                       
-                       </form>
-                      <h3>Already a User? <button onClick={change} className="link" >Login</button></h3> 
-                      </div> 
-                        </SignUpBox>}
-
-                      {Otpopen ===true && <SignupLoginbox open={Otpopen} onClose={(e) => setOtpopen(false)}>
-                         <div className="enterotp">
-                        <div>
-                        <h2>Enter Otp</h2>
-                        <p className='msgo'>{otpmsg}</p>
-                        <form onSubmit ={submitHandler3}> 
-                        <input type="text" value={otpvalue} style={{color: 'black'}} required/>
-                        <input type="text" placeholder=' OTP' name="otp" ref={c=>otpbox=c} required/>
-                       <button className="defaultButtono"type="send">Submit</button>
-                      
-                      </form>
-                      </div>
-                      </div>
-                     </SignupLoginbox>}
-                      
-                      </li>}
                      </ul>
                   </div>
-
+               
+                  
+                  {loginStatus==='0' && <button className='loginbuttona' onClick={()=>setLoginOpen(true)}>Login</button>}
                   <form className="searchform" role="search">
                   {searchbar===false && <button type="submit" onClick={displaySearcharBar} className='searchbutton'><span className="fa fa-search"
                        ></span></button>} 
-                          {searchbar===true &&<> <input className="searchbar" type="text" 
+                          {searchbar===true &&<> <input id="search-autocomplete" className="searchbar" type="text" 
                           placeholder="Search For..." name="keyword" ref={c=>keyWord=c} required
                            onChange={handleFilter}/>
                           <button type="button" onClick={removeSearchBar} className='searchbutton'>
                           <span className="fa fa-close"></span></button></>}
-                         <SearchDialog open={searchOpen} onClose={(e) => setSearchOpen(false)}><SearchProduct/></SearchDialog>
-                          <Dialog oepn={open} onClose={(e) => setOpen(false)}>{msg}</Dialog>
-                         
                   </form>
+                  <SearchDialog open={searchOpen}  onClose={(e) => setSearchOpen(false)}/> 
                   </div>
               </nav>
+              {loginOpen===true && 
+                <LoginBox open={loginOpen} onClose={(e) => setLoginOpen(false)}>
+                  <div className="login">
+                       <h2>LOGIN</h2>
+                       <p className='msg'>{loginMsg}</p>
+                  <form className='loginform' onSubmit={submitHandler}>
+                  <input className="phone" type="text" placeholder=' Phone number' name="email_phone" ref={c=>loginphonebox=c} required/>
+                  <input className='pass' type="password" placeholder=" Password " name="password" ref={c=>loginpassbox=c} required />
+                  <button onClick={submitHandler} className="defaultButtonl" type="send">Log-in</button>
+                  
+                  </form>
+                  <h3 className='loginh3' >Not having any Account?<button onClick={change} className="link" > SignUp</button></h3> 
+                  </div>
+                  </LoginBox>}
+
+              {signupOpen===true && <SignUpBox open={signupOpen} onClose={(e) => setSignUpOpen(false)}>
+                 <div className='sign_up'>
+                  <h2>SIGN UP</h2>
+                  <p className='msgs'>{regMsg}</p>
+                 <form onSubmit={submitHandler2}>
+                 <input type="text" placeholder=' Name ' name='name' ref={c=>namebox=c} required/>
+                 <input type="text" placeholder=' Email ' name='email' ref={c=>emailbox=c} required/>
+                 <input type="text" placeholder=' Phone Numbers ' name='phone' ref={c=>phonebox=c} required />
+                 <input type="password" placeholder=' Password' name='password' ref={c=>passbox=c} required/>
+                <input type="password" placeholder='Confirm Password' name='confirmpassword' ref={c=>confirmPass=c} required />
+                 <button className="defaultButtonsa" type='send'>Sign Up</button>
+                 
+                 </form>
+                <h3>Already a User? <button onClick={change} className="link" >Login</button></h3> 
+                </div> 
+                  </SignUpBox>}
+
+                {Otpopen ===true && <SignupLoginbox open={Otpopen} onClose={(e) => setOtpopen(false)}>
+                   <div className="enterotp">
+                  <div>
+                  <h2>Enter Otp</h2>
+                  <p className='msgo'>{otpmsg}</p>
+                  <form onSubmit ={submitHandler3}> 
+                  <input type="text" value={otpvalue} style={{color: 'black'}} required/>
+                  <input type="text" placeholder=' OTP' name="otp" ref={c=>otpbox=c} required/>
+                 <button className="defaultButtono"type="send">Submit</button>
+                
+                </form>
+                </div>
+                </div>
+               </SignupLoginbox>}
         </div>
     )
 }

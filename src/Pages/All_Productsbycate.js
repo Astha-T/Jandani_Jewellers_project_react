@@ -89,21 +89,21 @@ const All_Productsbycate = (props) => {
                 if(data.status==='1')
                 {
                   console.log(data)
-                setIsReg(true)
-                setRegMsg(data.message)
-                setSignUpOpen(false)
-                setOtpopen(true)
-                setOtpValue(data.data.mobile)
-                setotpMsg("You Registerd Successfully!!!")
+                  setIsReg(true)
+                  setRegMsg(data.message)
+                  setSignUpOpen(false)
+                  setOtpopen(true)
+                  setOtpValue(data.data.mobile)
+                  setotpMsg("You Registerd Successfully!!!")
                   
                 }
                 else if(data.status==='0' && data.message === 'You are already exist')
                 {
                   console.log(data)
-                setIsReg(true)
-                setLoginMsg('You are already registered. Please Login.')
-                setSignUpOpen(false)
-                setLoginOpen(true)
+                  setIsReg(true)
+                  setLoginMsg('You are already registered. Please Login.')
+                  setSignUpOpen(false)
+                  setLoginOpen(true)
                   // setSignUpOpen(false)
                   // setLoginOpen(true)
 
@@ -127,11 +127,11 @@ const All_Productsbycate = (props) => {
         UserService.otpVerify(ob1).then(response=>response.json()).then(data=>
            {
              if(data.status==="1") {
-              console.log(data)
-              setOtpIsValid(true)
-              setLoginMsg("You can now Login to your Account")
-              setOtpopen(false)
-              setLoginOpen(true)
+               console.log(data)
+               setOtpIsValid(true)
+               setotpMsg("Otp is Valid. You can now Login to your Account")
+               setOtpopen(false)
+               setLoginOpen(true)
              }
              else {
                setotpMsg("Please enter correct Otp/Mobile no.")

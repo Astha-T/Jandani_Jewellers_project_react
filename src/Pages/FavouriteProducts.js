@@ -40,8 +40,8 @@ const FavouriteProducts = (props) => {
         <div className="fav_section">
                 <SideBar/>
                 <div className='d-flex justify-content-center align-items-center btndiv'>
-      <button onClick={() => navigate(-1)} className="prevBtn" ><span className="fa fa-arrow-left"/></button>
-    <button onClick={() => navigate(+1)} className="prevBtn" ><span className="fa fa-arrow-right"/></button>
+      <button onClick={() => navigate(-1)} className="prevBtn" ><span className="fa fa-arrow-left"/> Prev</button>
+    <button onClick={() => navigate(1)} className="disabled" ><span className="fa fa-arrow-right"/> Next</button>
     </div>
         <h4>YOUR FAVOURITE PRODUCUTS</h4>
         <div className="row">

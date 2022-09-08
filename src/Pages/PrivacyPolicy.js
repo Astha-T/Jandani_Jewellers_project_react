@@ -30,8 +30,8 @@ const PrivacyPolicy1 = () => {
         <div className='privacypolicy'>
             <SideBar/>
             <div className='d-flex justify-content-center align-items-center btndiv'>
-            <button onClick={() => navigate(-1)} className="prevBtn" ><span className="fa fa-arrow-left"/></button>
-          <button onClick={() => navigate(-1)} className="prevBtn" ><span className="fa fa-arrow-right"/></button>
+            <button onClick={() => navigate(-1)} className="prevBtn" ><span className="fa fa-arrow-left"/> Prev</button>
+          <button onClick={() => navigate('/')} className="nextBtn" ><span className="fa fa-arrow-right"/> Next</button>
           </div>
             <h2 className="privacyh2">Privacy Policy</h2>
             <h3 className="privacyh3">{displayPrivacyPolicy}</h3>

@@ -34,8 +34,8 @@ const ViewProfile = (props) =>
    :<> <div>
       <SideBar/>
       <div className='d-flex justify-content-center align-items-center btndiv'>
-      <button onClick={() => navigate(-1)} className="prevBtn" ><span className="fa fa-arrow-left"/></button>
-    <button onClick={() => navigate(-1)} className="prevBtn" ><span className="fa fa-arrow-right"/></button>
+      <button onClick={() => navigate(-1)} className="prevBtn" ><span className="fa fa-arrow-left"/> Prev</button>
+    <button onClick={() => navigate('/updateProfile')} className="nextBtn" ><span className="fa fa-arrow-right"/> Next</button>
     </div>
     <div className="profile">
     <h2>YOUR PROFILE</h2>

@@ -5,9 +5,7 @@
         margin-top: 10px;
   }
   
-  .profile p b {
-      color: #B22D31;
-  }
+  
   .profile  h2 {
     font-weight: 700;
     font-size: 20px;
@@ -66,6 +64,7 @@
   }
   .profile h3 .link {
     color: #B22D31;
+    /* text-align: center; */
   }
   
   .profile h3 .link a{
@@ -90,14 +89,16 @@
     }
   
     .profile p {
-      margin-left: 7%;
+      text-align: center;
+      margin-left: 18%;
     }
     .profile button {
         margin-left: 2px;
     }
   
     .profile h3 {
-        margin-left: 20px;
+        margin-left: 18%;
+        text-align: center;
     }
   }
   

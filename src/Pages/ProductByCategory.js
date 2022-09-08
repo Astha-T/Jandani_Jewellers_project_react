@@ -7,8 +7,6 @@ import Contact  from '../Components/Contact';
 // import Join from '../Components/Join';
 // import Product_list from "../Extra-files/Product_list";
 
-import Store from '../Redux/Store'
-import {ACTION_SHOW_PRODUCT} from '../Redux/Actions/ProductAction'
 import './ProductByCate.css'
 import SideBar from "../Components/SideBaar";
 
@@ -29,18 +27,18 @@ const ProductsByCate = (props) => {
         .then(res => res.json())
         .then(data => {
             console.log(data)
+            
          const updatedProd= data.result.map((productData)=> {
             if(data.status==='1') {
                 localStorage.setItem('product_id', data.result.id)
-                 Store.dispatch({...ACTION_SHOW_PRODUCT,payload: {
-                    'product_id': data.result.id
-                      }})
+                
                 return{
                     name : productData.name,
                     image : productData.image,
                     id : productData.id
                 }
             }
+           
             });
         
           setProducts(updatedProd);
@@ -54,9 +52,6 @@ const ProductsByCate = (props) => {
          const updatedProd= data.result.map((productData)=> {
             if(data.status==='1') {
                 localStorage.setItem('product_id', data.result.id)
-                 Store.dispatch({...ACTION_SHOW_PRODUCT,payload: {
-                    'product_id': data.result.id
-                      }})
         
                 return{
                     name : productData.name,
@@ -79,8 +74,8 @@ const ProductsByCate = (props) => {
         
             <SideBar/>
             <div className='d-flex justify-content-center align-items-center btndiv'>
-          <button onClick={() => navigate(-1)} className="prevBtn" ><span className="fa fa-arrow-left"/></button>
-        <button onClick={() => navigate(+1)} className="nextBtn" ><span className="fa fa-arrow-right"/></button>
+          <button onClick={() => navigate(-1)} className="prevBtn" ><span className="fa fa-arrow-left"/> Prev</button>
+        <button  className="disabled" ><span className="fa fa-arrow-right"/> Next</button>
         </div>
         <h4>Shop by Products</h4>
         <div className="row">

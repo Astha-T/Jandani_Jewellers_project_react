@@ -6,7 +6,7 @@ const SearchDialog = (props) => {
 
         let dialog = (
             <div className='dialogStyles'> 
-              {props.children}
+              <SearchProduct/>
             </div>
         );
 

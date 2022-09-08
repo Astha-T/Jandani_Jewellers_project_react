@@ -5,7 +5,7 @@
 }
 
 .aboutus .abh2{
-    color: #a52a2a;
+  
     margin-top: 40px;
     margin-left: 50px;
     font-family: 'Poppins';
@@ -14,7 +14,8 @@
    
 }
 .aboutus .data {
-    text-align: center;
+    /* text-align: center; */
+    text-align: justify;
     margin-left: 50px;
     margin-top: 30px;
     padding: 5px 50px;
@@ -31,7 +32,7 @@
         margin-left: 0px;
     }
     .aboutus .data{
-        text-align: left;
+        text-align: justify;
     margin-left: 0px;
     margin-top: 30px;
     padding: 5px 20px;
