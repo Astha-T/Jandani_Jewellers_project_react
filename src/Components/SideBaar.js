@@ -305,7 +305,7 @@ const SideBar= (props) => {
                   <div className="collapse navbar-collapse" id="navbarNav">
                     <ul className="navbar-nav ml-auto">
                       <li className="nav-item nav-active">
-                        <Link className="nav-link" to="/"
+                        <Link className="nav-link home" to="/"
                           >Home <span className="sr-only">(current)</span></Link>
                       </li>
                       {/* <li className="nav-item userli">

@@ -18,10 +18,10 @@ const Home = (props) => {
         <div className='home'> 
         
           <div><SideBar/></div>
-          <div className=' d-flex justify-content-center align-items-center btndiv'>
+          {/*<div className=' d-flex justify-content-center align-items-center btndiv'>
           <button onClick={() => navigate(-1)} className="prevBtn" ><span className="fa fa-arrow-left"/> Prev </button>
         <button onClick={() => navigate('/productbycate_list')} className="nextBtn" ><span className="fa fa-arrow-right"/> Next </button>
-        </div> 
+     </div> */}
           <div><Slider/></div>
          
           <div><Category/></div>
